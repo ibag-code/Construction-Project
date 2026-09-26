@@ -1,0 +1,785 @@
+import './website.css'
+
+export function Website() {
+  return (
+    <>
+      <header>
+        <img
+          src="../images/craft logo.png"
+          alt="Craft logo"
+          class="craft-logo-head"
+        />
+
+        <div class="nav-container">
+          <a href="" class="nav-btn">
+            Home
+          </a>
+          <a href="" class="nav-btn">
+            About us
+          </a>
+          <a href="" class="nav-btn">
+            What We do
+          </a>
+          <a href="" class="nav-btn">
+            FaQs
+          </a>
+          <a href="" class="nav-btn">
+            Post a Job
+          </a>
+        </div>
+
+        <div class="cta-container">
+          <a href="Craft-signin.html" class="cta-button-outline">
+            Sign In
+          </a>
+          <a href="Craft-signup.html" class="cta-button">
+            Sign Up
+          </a>
+        </div>
+      </header>
+
+      <section class="hero-section">
+        <img src="../images/hero craft.png" alt="" class="hero-craft-bg" />
+        <div class="shadow-effect"></div>
+
+        <div class="content-container">
+          <h1 class="faktum-text">
+            <span>Turn your skills into</span>
+            <span>real opportunities.</span>
+          </h1>
+
+          <p class="sub-heading">
+            Create a professional profile, showcase your completed work, and
+            connect with clients looking for trusted artisans.
+          </p>
+
+          <div class="cta-container-content">
+            <a href="" class="cta-button">
+              Grow My Career
+            </a>
+            <a href="" class="cta-button-outline">
+              See Available Jobs
+            </a>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img
+            src="../images/HERO IMAGE.png"
+            alt="hero section image"
+            class="image-container"
+          />
+        </div>
+      </section>
+
+      <section class="available-project">
+        <div class="available-project-header">
+          <div class="project-wrapper">
+            <h1 class="project-header">New opportunities near you</h1>
+
+            <p class="project-subheading">
+              Create a professional profile, showcase your completed work, and
+              connect with clients looking for trusted construction artisans.
+            </p>
+          </div>
+          <a href="" class="cta-button">
+            View all project
+          </a>
+        </div>
+
+        <div class="flex-grid">
+          <div class="project-container">
+            <div class="normal-card">
+              <img
+                src="../images/bricklayer.png"
+                alt=""
+                class="project-image"
+              />
+
+              <div class="location-tag">
+                <h4 class="location"> LEKKI LAGOS</h4>
+
+                <span class="status-tag">
+                  <span class="status-dot"></span>
+                  Posted now
+                </span>
+              </div>
+
+              <h3 class="project-name">Bricklayer Needed for a Duplex</h3>
+
+              <h1 class="project-price">₦600,000 - ₦850,000</h1>
+            </div>
+
+            <div class="hover-card">
+              <h3 class="project-name">Bricklayer Needed for a Duplex</h3>
+
+              <img
+                src="../images/bricklayer.png"
+                alt=""
+                class="project-image"
+              />
+
+              <p class="project-subheading">
+                Blockwork required for a newly started
+              </p>
+
+              <a href="" class="cta-button-hover cta-button">
+                Apply
+              </a>
+            </div>
+          </div>
+
+          <div class="project-container">
+            <div class="normal-card">
+              <img src="../images/plumber.png" alt="" class="project-image" />
+
+              <div class="location-tag">
+                <h4 class="location">IKEJA, LAGOS</h4>
+
+                <span class="status-tag">
+                  <span class="status-dot"></span>
+                  Posted now
+                </span>
+              </div>
+
+              <h3 class="project-name">Bathroom Plumbing Installation</h3>
+
+              <h1 class="project-price">₦600,000 - ₦850,000</h1>
+            </div>
+
+            <div class="hover-card">
+              <h3 class="project-name">Bathroom Plumbing Installation</h3>
+
+              <img src="../images/plumber.png" alt="" class="project-image" />
+
+              <p class="project-subheading">
+                A plumber is needed to install pipes and bathroom fittings in a
+                three-bedroom apartment.{" "}
+              </p>
+
+              <a href="" class="cta-button-hover cta-button">
+                Apply
+              </a>
+            </div>
+          </div>
+
+          <div class="project-container">
+            <div class="normal-card">
+              <img src="../images/painter.png" alt="" class="project-image" />
+
+              <div class="location-tag">
+                <h4 class="location"> GWAGWALADA, ABUJA</h4>
+
+                <span class="status-tag">
+                  <span class="status-dot"></span>
+                  Posted now
+                </span>
+              </div>
+
+              <h3 class="project-name">Interior Painting for New Apartment</h3>
+
+              <h1 class="project-price">₦300,000 - ₦450,000</h1>
+            </div>
+
+            <div class="hover-card">
+              <h3 class="project-name">Interior Painting for New Apartment</h3>
+
+              <img src="../images/painter.png" alt="" class="project-image" />
+
+              <p class="project-subheading">
+                Experienced painters are needed for the interior finishing of a
+                four-bedroom house.{" "}
+              </p>
+
+              <a href="" class="cta-button-hover cta-button">
+                Apply
+              </a>
+            </div>
+          </div>
+
+          <div class="project-container">
+            <div class="normal-card">
+              <img src="../images/tiler.png" alt="" class="project-image" />
+
+              <div class="location-tag">
+                <h4 class="location"> IBADAN OYO</h4>
+
+                <span class="status-tag">
+                  <span class="status-dot"></span>
+                  Posted now
+                </span>
+              </div>
+
+              <h3 class="project-name">
+                Floor Tiling for Residential Building
+              </h3>
+
+              <h1 class="project-price">Open to Quote</h1>
+            </div>
+
+            <div class="hover-card">
+              <h3 class="project-name">
+                Floor Tiling for Residential Building
+              </h3>
+
+              <img src="../images/tiler.png" alt="" class="project-image" />
+
+              <p class="project-subheading">
+                Tiler needed for approximately 180 square metres of floor
+                space.{" "}
+              </p>
+
+              <a href="" class="cta-button-hover cta-button">
+                Apply
+              </a>
+            </div>
+          </div>
+
+          <div class="project-container">
+            <div class="normal-card">
+              <img
+                src="../images/electrician.png"
+                alt=""
+                class="project-image"
+              />
+
+              <div class="location-tag">
+                <h4 class="location"> ILORIN, KWARA</h4>
+
+                <span class="status-tag">
+                  <span class="status-dot"></span>
+                  Posted now
+                </span>
+              </div>
+
+              <h3 class="project-name">Electrical Wiring for a Shop</h3>
+
+              <h1 class="project-price">₦150,000 - ₦220,000</h1>
+            </div>
+
+            <div class="hover-card">
+              <h3 class="project-name">Electrical Wiring for a Shop</h3>
+
+              <img
+                src="../images/electrician.png"
+                alt=""
+                class="project-image"
+              />
+
+              <p class="project-subheading">
+                Complete electrical wiring and fitting installation for a new
+                retail shop.
+              </p>
+
+              <a href="" class="cta-button-hover cta-button">
+                Apply
+              </a>
+            </div>
+
+            <div class="location-tag">
+              <h4 class="location"> ILORIN, KWWARA</h4>
+
+              <span class="status-tag">
+                <span class="status-dot"></span>
+                Posted now
+              </span>
+            </div>
+
+            <h3 class="project-name">Need electrical wiring for a shop</h3>
+
+            <h1 class="project-price">₦150,000 - ₦220,000</h1>
+          </div>
+
+          <div class="project-container">
+            <div class="normal-card">
+              <img src="../images/roofing.png" alt="" class="project-image" />
+
+              <div class="location-tag">
+                <h4 class="location">ABEOKUTA, OGUN</h4>
+
+                <span class="status-tag">
+                  <span class="status-dot"></span>
+                  Posted now
+                </span>
+              </div>
+
+              <h3 class="project-name">Roofing team needed</h3>
+
+              <h1 class="project-price">Open to Proposal</h1>
+            </div>
+
+            <div class="hover-card">
+              <h3 class="project-name">Roofing team needed</h3>
+
+              <img src="../images/roofing.png" alt="" class="project-image" />
+
+              <p class="project-subheading">
+                A roofing team is required for a newly completed bungalow
+                structure.{" "}
+              </p>
+
+              <a href="" class="cta-button-hover cta-button">
+                Apply
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-choose-us-section available-project">
+        <div class="available-project-header">
+          <div class="project-wrapper">
+            <h1 class="project-header">
+              Built to help skilled artisans move forward
+            </h1>
+
+            <p class="project-subheading">
+              Craft gives you the tools to showcase your work, find suitable
+              projects, build trust, and grow your income.
+            </p>
+          </div>
+        </div>
+
+        <div class="image-feature">
+          <div class="text-wrapper">
+            <div
+              class="feature-content active"
+              data-image="../images/showcase.png"
+            >
+              <h3 class="feature-title">
+                {" "}
+                Showcase your skills professionally
+              </h3>
+              <p class="feature-subheading">
+                Build a strong profile and portfolio that helps clients
+                understand your experience and the quality of your work.
+              </p>
+            </div>
+
+            <div
+              class="feature-content"
+              data-image="../images/find-project.png"
+            >
+              <h3 class="feature-title">Find projects that match your craft</h3>
+              <p class="feature-subheading">
+                Discover construction opportunities based on your trade,
+                location, experience, and availability.
+              </p>
+            </div>
+
+            <div
+              class="feature-content"
+              data-image="../images/reach-client.png"
+            >
+              <h3 class="feature-title">Reach clients beyond referrals</h3>
+              <p class="feature-subheading">
+                Get discovered by homeowners, developers, and contractors
+                outside your immediate network.
+              </p>
+            </div>
+
+            <div class="feature-content" data-image="../images/build-trust.png">
+              <h3 class="feature-title">Build trust through real work</h3>
+              <p class="feature-subheading">
+                Use completed projects, client reviews, and verified information
+                to strengthen your reputation.
+              </p>
+            </div>
+          </div>
+
+          <div class="image-wrapper">
+            <img
+              src="../images/showcase.png"
+              alt="showcase-image"
+              class="feature-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-work-section available-project">
+        <div class="available-project-header">
+          <div class="project-wrapper">
+            <h1 class="project-header">Getting started is super-easy</h1>
+
+            <p class="project-subheading">
+              Create your profile, showcase your completed projects, connect
+              with matching opportunities, deliver great work, and grow your
+              reputation on Craft.
+            </p>
+          </div>
+        </div>
+
+        <div class="how-flex-grid">
+          <div class="how-project-container">
+            <img
+              src="../images/create account.png"
+              alt="Create your account"
+              class="project-image"
+            />
+
+            <h5 class="about-heading">Create your account</h5>
+
+            <p class="about-subheading">
+              Join Craft as an artisan and add your basic information, trade,
+              location, and contact details.
+            </p>
+          </div>
+
+          <div class="how-project-container">
+            <img
+              src="../images/build portfolio.png"
+              alt="Build your profile & portfolio"
+              class="project-image"
+            />
+
+            <h5 class="about-heading">Build your profile & portfolio</h5>
+
+            <p class="about-subheading">
+              Showcase your skills, experience, and completed projects so
+              clients can see what you are capable of.
+            </p>
+          </div>
+
+          <div class="how-project-container">
+            <img
+              src="../images/matching project.png"
+              alt="Apply for matching projects"
+              class="project-image"
+            />
+
+            <h5 class="about-heading">Apply for matching projects</h5>
+
+            <p class="about-subheading">
+              Discover and apply for construction projects that match your
+              trade, experience, location, and availability.
+            </p>
+          </div>
+
+          <div class="how-project-container">
+            <img
+              src="../images/deliver great worl.png"
+              alt="Deliver great work"
+              class="project-image"
+            />
+
+            <h5 class="about-heading">Deliver great work</h5>
+
+            <p class="about-subheading">
+              Communicate with the client, understand the project requirements,
+              and complete the work professionally.
+            </p>
+          </div>
+
+          <div class="how-project-container">
+            <img
+              src="../images/get paid.png"
+              alt="Get paid"
+              class="project-image"
+            />
+
+            <h5 class="about-heading">Get paid</h5>
+
+            <p class="about-subheading">
+              Receive payment for your completed work and build a strong
+              reputation through client reviews.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="faq-question">
+          <h1 class="project-header">
+            We answered questions <br />
+            so you don't have to ask them.
+          </h1>
+        </div>
+
+        <div class="accordion-wrapper">
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">What is Craft for artisans?</div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer accord-active">
+              Craft is a platform that helps skilled construction artisans
+              create a professional profile, showcase their completed work, and
+              connect with homeowners, developers, and contractors looking for
+              reliable workers.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">
+                Who can join Craft as an artisan?
+              </div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer  ">
+              Craft is for skilled workers in construction-related trades,
+              including bricklayers, masons, plumbers, electricians, painters,
+              carpenters, tilers, welders, roofers, POP installers, and other
+              hands-on professionals.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">
+                Do I need to have a portfolio before joining?
+              </div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              No. You can start by creating your profile first. If you already
+              have pictures of your past work, you can upload them to build
+              trust faster. If not, you can add your portfolio later as you
+              complete more projects.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">
+                How does Craft help me get projects?
+              </div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              No. You can start by creating your profile first. If you already
+              have pictures of your past work, you can upload them to build
+              trust faster. If not, you can add your portfolio later as you
+              complete more projects.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">
+                Can I apply for projects myself?
+              </div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              Yes. You can browse available construction projects and apply for
+              the ones that match your skills, experience, location, and
+              schedule.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">
+                What should I add to my profile?
+              </div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              Your profile should include your trade, skills, years of
+              experience, location, service area, availability, short bio,
+              portfolio images, completed projects, and any proof of work that
+              can help clients trust you.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">
+                Why is my portfolio important?
+              </div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              Your portfolio shows clients what you can do before they contact
+              you. It helps you prove your skill, build credibility, and stand
+              out from other artisans who only depend on word of mouth.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">How do i get paid?</div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              After completing a project, you receive payment based on the
+              agreement between you and the client. Craft helps make the process
+              more organized by connecting you with serious project
+              opportunities.
+            </div>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-head">
+              <div class="accordion-question">How do Client contact me?</div>
+
+              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+            </div>
+
+            <div class="accordion-answer ">
+              {" "}
+              Clients can contact you through your profile or after you apply to
+              a project. They can message you, ask questions about your
+              experience, and discuss the project details before hiring.{" "}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="shadow-effect-foot"></div>
+
+        <div class="brand-side-and-footer-coloumn">
+          <div class="brand-goal">
+            <h2 class="craft-foot-logo">Craft</h2>
+            <p class="craft-goal">
+              {" "}
+              Helping skilled artisans showcase their work, build trust, and
+              connect with better construction opportunities.{" "}
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <div class="link-nav">
+              <h5 class="link-title">Quick Links</h5>
+
+              <div class="foot-nav-container">
+                <a href="" class="foot-nav-btn">
+                  Home
+                </a>
+                <a href="" class="foot-nav-btn">
+                  How it works
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Available Project
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Browse Artisan
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Contact
+                </a>
+              </div>
+            </div>
+
+            <div class="link-nav">
+              <h5 class="link-title">For Artisan</h5>
+
+              <div class="foot-nav-container">
+                <a href="" class="foot-nav-btn">
+                  {" "}
+                  Create profile{" "}
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Build portfoilio
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Find Project
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Get verified
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Get paid
+                </a>
+              </div>
+            </div>
+
+            <div class="link-nav">
+              <h5 class="link-title">Employer</h5>
+
+              <div class="foot-nav-container">
+                <a href="" class="foot-nav-btn">
+                  Create Account
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Post job
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Hire Artisan
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Pay Artisan
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Project Support
+                </a>
+              </div>
+            </div>
+
+            <div class="link-nav">
+              <h5 class="link-title">Company</h5>
+
+              <div class="foot-nav-container">
+                <a href="" class="foot-nav-btn">
+                  About Craft
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Blog
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Help center
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Privacy policy
+                </a>
+                <a href="" class="foot-nav-btn">
+                  Term of Service
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright-and-social-media">
+          <p class="copyright-text">
+            {" "}
+            <span class="copy">©</span>Craft. All rights reserved.
+          </p>
+
+          <div class="social-media-icon">
+            <i class="hgi hgi-stroke hgi-rounded hgi-facebook-02"></i>
+
+            <i class="hgi hgi-stroke hgi-rounded hgi-instagram"></i>
+
+            <i class="hgi hgi-stroke hgi-rounded hgi-linkedin-02"></i>
+
+            <i class="hgi hgi-stroke hgi-rounded hgi-new-twitter"></i>
+          </div>
+        </div>
+
+        <div class="big-craft-logo">
+          <img
+            src="../images/Craft footer logo.png"
+            alt="craft-logo"
+            class="big-craft-logo"
+          />
+        </div>
+      </footer>
+    </>
+  );
+}

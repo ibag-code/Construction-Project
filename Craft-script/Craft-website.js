@@ -19,7 +19,7 @@ function tabDisplay (index) {
 
 
     const newTabImage = featureTab[index].dataset.image;
-    console.log(newTabImage)
+    // console.log(newTabImage)
 
     tabImage.src = newTabImage;
 
