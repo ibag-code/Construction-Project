@@ -1,324 +1,392 @@
-import './website.css'
+import { useState, useEffect } from "react";
+import "./website.css";
+
+const features = [
+  {
+    id: 0,
+    heading: "Showcase your skills professionally",
+    subheading:
+      "Build a strong profile and portfolio that helps clients understand your experience and the quality of your work.",
+    image: "/images/showcase.png"
+  },
+  {
+    id: 1,
+    heading: "Find projects that match your craft",
+    subheading:
+      "Discover construction opportunities based on your trade, location, experience, and availability.",
+    image: "/images/find-project.png"
+  },
+  {
+    id: 2,
+    heading: "Reach clients beyond referrals",
+    subheading:
+      "Get discovered by homeowners, developers, and contractors outside your immediate network.",
+    image: "/images/reach-client.png"
+  },
+  {
+    id: 3,
+    heading: "Build trust through real work",
+    subheading:
+      "Use completed projects, client reviews, and verified information to strengthen your reputation.",
+    image: "/images/build-trust.png"
+  },
+];
+
+// console.log(feature)
 
 export function Website() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const set = setInterval(() => {
+      setCurrentIndex(() => {
+        let nextIndex = currentIndex + 1;
+
+        if (nextIndex === features.length) {
+          nextIndex = 0;
+        }
+        return nextIndex;
+      });
+    }, 4000);
+
+    return () => clearInterval(set);
+  });
+
+//   console.log(features[currentIndex].image)
+
   return (
     <>
       <header>
         <img
-          src="../images/craft logo.png"
+          src="../images/craft-logo.png"
           alt="Craft logo"
-          class="craft-logo-head"
+          className="craft-logo-head"
         />
 
-        <div class="nav-container">
-          <a href="" class="nav-btn">
+        <div className="nav-container">
+          <a href="" className="nav-btn">
             Home
           </a>
-          <a href="" class="nav-btn">
+          <a href="" className="nav-btn">
             About us
           </a>
-          <a href="" class="nav-btn">
+          <a href="" className="nav-btn">
             What We do
           </a>
-          <a href="" class="nav-btn">
+          <a href="" className="nav-btn">
             FaQs
           </a>
-          <a href="" class="nav-btn">
+          <a href="" className="nav-btn">
             Post a Job
           </a>
         </div>
 
-        <div class="cta-container">
-          <a href="Craft-signin.html" class="cta-button-outline">
+        <div className="cta-container">
+          <a href="Craft-signin.html" className="cta-button-outline">
             Sign In
           </a>
-          <a href="Craft-signup.html" class="cta-button">
+          <a href="Craft-signup.html" className="cta-button">
             Sign Up
           </a>
         </div>
       </header>
 
-      <section class="hero-section">
-        <img src="../images/hero craft.png" alt="" class="hero-craft-bg" />
-        <div class="shadow-effect"></div>
+      <section className="hero-section">
+        <img src="../images/hero craft.png" alt="" className="hero-craft-bg" />
+        <div className="shadow-effect"></div>
 
-        <div class="content-container">
-          <h1 class="faktum-text">
+        <div className="content-container">
+          <h1 className="faktum-text">
             <span>Turn your skills into</span>
             <span>real opportunities.</span>
           </h1>
 
-          <p class="sub-heading">
+          <p className="sub-heading">
             Create a professional profile, showcase your completed work, and
             connect with clients looking for trusted artisans.
           </p>
 
-          <div class="cta-container-content">
-            <a href="" class="cta-button">
+          <div className="cta-container-content">
+            <a href="" className="cta-button">
               Grow My Career
             </a>
-            <a href="" class="cta-button-outline">
+            <a href="" className="cta-button-outline">
               See Available Jobs
             </a>
           </div>
         </div>
 
-        <div class="image-container">
+        <div className="image-container">
           <img
             src="../images/HERO IMAGE.png"
             alt="hero section image"
-            class="image-container"
+            className="image-container"
           />
         </div>
       </section>
 
-      <section class="available-project">
-        <div class="available-project-header">
-          <div class="project-wrapper">
-            <h1 class="project-header">New opportunities near you</h1>
+      <section className="available-project">
+        <div className="available-project-header">
+          <div className="project-wrapper">
+            <h1 className="project-header">New opportunities near you</h1>
 
-            <p class="project-subheading">
+            <p className="project-subheading">
               Create a professional profile, showcase your completed work, and
               connect with clients looking for trusted construction artisans.
             </p>
           </div>
-          <a href="" class="cta-button">
+          <a href="" className="cta-button">
             View all project
           </a>
         </div>
 
-        <div class="flex-grid">
-          <div class="project-container">
-            <div class="normal-card">
+        <div className="flex-grid">
+          <div className="project-container">
+            <div className="normal-card">
               <img
                 src="../images/bricklayer.png"
                 alt=""
-                class="project-image"
+                className="project-image"
               />
 
-              <div class="location-tag">
-                <h4 class="location"> LEKKI LAGOS</h4>
+              <div className="location-tag">
+                <h4 className="location"> LEKKI LAGOS</h4>
 
-                <span class="status-tag">
-                  <span class="status-dot"></span>
+                <span className="status-tag">
+                  <span className="status-dot"></span>
                   Posted now
                 </span>
               </div>
 
-              <h3 class="project-name">Bricklayer Needed for a Duplex</h3>
+              <h3 className="project-name">Bricklayer Needed for a Duplex</h3>
 
-              <h1 class="project-price">₦600,000 - ₦850,000</h1>
+              <h1 className="project-price">₦600,000 - ₦850,000</h1>
             </div>
 
-            <div class="hover-card">
-              <h3 class="project-name">Bricklayer Needed for a Duplex</h3>
+            <div className="hover-card">
+              <h3 className="project-name">Bricklayer Needed for a Duplex</h3>
 
               <img
                 src="../images/bricklayer.png"
                 alt=""
-                class="project-image"
+                className="project-image"
               />
 
-              <p class="project-subheading">
+              <p className="project-subheading">
                 Blockwork required for a newly started
               </p>
 
-              <a href="" class="cta-button-hover cta-button">
+              <a href="" className="cta-button-hover cta-button">
                 Apply
               </a>
             </div>
           </div>
 
-          <div class="project-container">
-            <div class="normal-card">
-              <img src="../images/plumber.png" alt="" class="project-image" />
+          <div className="project-container">
+            <div className="normal-card">
+              <img
+                src="../images/plumber.png"
+                alt=""
+                className="project-image"
+              />
 
-              <div class="location-tag">
-                <h4 class="location">IKEJA, LAGOS</h4>
+              <div className="location-tag">
+                <h4 className="location">IKEJA, LAGOS</h4>
 
-                <span class="status-tag">
-                  <span class="status-dot"></span>
+                <span className="status-tag">
+                  <span className="status-dot"></span>
                   Posted now
                 </span>
               </div>
 
-              <h3 class="project-name">Bathroom Plumbing Installation</h3>
+              <h3 className="project-name">Bathroom Plumbing Installation</h3>
 
-              <h1 class="project-price">₦600,000 - ₦850,000</h1>
+              <h1 className="project-price">₦600,000 - ₦850,000</h1>
             </div>
 
-            <div class="hover-card">
-              <h3 class="project-name">Bathroom Plumbing Installation</h3>
+            <div className="hover-card">
+              <h3 className="project-name">Bathroom Plumbing Installation</h3>
 
-              <img src="../images/plumber.png" alt="" class="project-image" />
+              <img
+                src="../images/plumber.png"
+                alt=""
+                className="project-image"
+              />
 
-              <p class="project-subheading">
+              <p className="project-subheading">
                 A plumber is needed to install pipes and bathroom fittings in a
                 three-bedroom apartment.{" "}
               </p>
 
-              <a href="" class="cta-button-hover cta-button">
+              <a href="" className="cta-button-hover cta-button">
                 Apply
               </a>
             </div>
           </div>
 
-          <div class="project-container">
-            <div class="normal-card">
-              <img src="../images/painter.png" alt="" class="project-image" />
+          <div className="project-container">
+            <div className="normal-card">
+              <img
+                src="../images/painter.png"
+                alt=""
+                className="project-image"
+              />
 
-              <div class="location-tag">
-                <h4 class="location"> GWAGWALADA, ABUJA</h4>
+              <div className="location-tag">
+                <h4 className="location"> GWAGWALADA, ABUJA</h4>
 
-                <span class="status-tag">
-                  <span class="status-dot"></span>
+                <span className="status-tag">
+                  <span className="status-dot"></span>
                   Posted now
                 </span>
               </div>
 
-              <h3 class="project-name">Interior Painting for New Apartment</h3>
+              <h3 className="project-name">
+                Interior Painting for New Apartment
+              </h3>
 
-              <h1 class="project-price">₦300,000 - ₦450,000</h1>
+              <h1 className="project-price">₦300,000 - ₦450,000</h1>
             </div>
 
-            <div class="hover-card">
-              <h3 class="project-name">Interior Painting for New Apartment</h3>
+            <div className="hover-card">
+              <h3 className="project-name">
+                Interior Painting for New Apartment
+              </h3>
 
-              <img src="../images/painter.png" alt="" class="project-image" />
+              <img
+                src="../images/painter.png"
+                alt=""
+                className="project-image"
+              />
 
-              <p class="project-subheading">
+              <p className="project-subheading">
                 Experienced painters are needed for the interior finishing of a
                 four-bedroom house.{" "}
               </p>
 
-              <a href="" class="cta-button-hover cta-button">
+              <a href="" className="cta-button-hover cta-button">
                 Apply
               </a>
             </div>
           </div>
 
-          <div class="project-container">
-            <div class="normal-card">
-              <img src="../images/tiler.png" alt="" class="project-image" />
+          <div className="project-container">
+            <div className="normal-card">
+              <img src="../images/tiler.png" alt="" className="project-image" />
 
-              <div class="location-tag">
-                <h4 class="location"> IBADAN OYO</h4>
+              <div className="location-tag">
+                <h4 className="location"> IBADAN OYO</h4>
 
-                <span class="status-tag">
-                  <span class="status-dot"></span>
+                <span className="status-tag">
+                  <span className="status-dot"></span>
                   Posted now
                 </span>
               </div>
 
-              <h3 class="project-name">
+              <h3 className="project-name">
                 Floor Tiling for Residential Building
               </h3>
 
-              <h1 class="project-price">Open to Quote</h1>
+              <h1 className="project-price">Open to Quote</h1>
             </div>
 
-            <div class="hover-card">
-              <h3 class="project-name">
+            <div className="hover-card">
+              <h3 className="project-name">
                 Floor Tiling for Residential Building
               </h3>
 
-              <img src="../images/tiler.png" alt="" class="project-image" />
+              <img src="../images/tiler.png" alt="" className="project-image" />
 
-              <p class="project-subheading">
+              <p className="project-subheading">
                 Tiler needed for approximately 180 square metres of floor
                 space.{" "}
               </p>
 
-              <a href="" class="cta-button-hover cta-button">
+              <a href="" className="cta-button-hover cta-button">
                 Apply
               </a>
             </div>
           </div>
 
-          <div class="project-container">
-            <div class="normal-card">
+          <div className="project-container">
+            <div className="normal-card">
               <img
                 src="../images/electrician.png"
                 alt=""
-                class="project-image"
+                className="project-image"
               />
 
-              <div class="location-tag">
-                <h4 class="location"> ILORIN, KWARA</h4>
+              <div className="location-tag">
+                <h4 className="location"> ILORIN, KWARA</h4>
 
-                <span class="status-tag">
-                  <span class="status-dot"></span>
+                <span className="status-tag">
+                  <span className="status-dot"></span>
                   Posted now
                 </span>
               </div>
 
-              <h3 class="project-name">Electrical Wiring for a Shop</h3>
+              <h3 className="project-name">Electrical Wiring for a Shop</h3>
 
-              <h1 class="project-price">₦150,000 - ₦220,000</h1>
+              <h1 className="project-price">₦150,000 - ₦220,000</h1>
             </div>
 
-            <div class="hover-card">
-              <h3 class="project-name">Electrical Wiring for a Shop</h3>
+            <div className="hover-card">
+              <h3 className="project-name">Electrical Wiring for a Shop</h3>
 
               <img
                 src="../images/electrician.png"
                 alt=""
-                class="project-image"
+                className="project-image"
               />
 
-              <p class="project-subheading">
+              <p className="project-subheading">
                 Complete electrical wiring and fitting installation for a new
                 retail shop.
               </p>
 
-              <a href="" class="cta-button-hover cta-button">
+              <a href="" className="cta-button-hover cta-button">
                 Apply
               </a>
             </div>
-
-            <div class="location-tag">
-              <h4 class="location"> ILORIN, KWWARA</h4>
-
-              <span class="status-tag">
-                <span class="status-dot"></span>
-                Posted now
-              </span>
-            </div>
-
-            <h3 class="project-name">Need electrical wiring for a shop</h3>
-
-            <h1 class="project-price">₦150,000 - ₦220,000</h1>
           </div>
 
-          <div class="project-container">
-            <div class="normal-card">
-              <img src="../images/roofing.png" alt="" class="project-image" />
+          <div className="project-container">
+            <div className="normal-card">
+              <img
+                src="../images/roofing.png"
+                alt=""
+                className="project-image"
+              />
 
-              <div class="location-tag">
-                <h4 class="location">ABEOKUTA, OGUN</h4>
+              <div className="location-tag">
+                <h4 className="location">ABEOKUTA, OGUN</h4>
 
-                <span class="status-tag">
-                  <span class="status-dot"></span>
+                <span className="status-tag">
+                  <span className="status-dot"></span>
                   Posted now
                 </span>
               </div>
 
-              <h3 class="project-name">Roofing team needed</h3>
+              <h3 className="project-name">Roofing team needed</h3>
 
-              <h1 class="project-price">Open to Proposal</h1>
+              <h1 className="project-price">Open to Proposal</h1>
             </div>
 
-            <div class="hover-card">
-              <h3 class="project-name">Roofing team needed</h3>
+            <div className="hover-card">
+              <h3 className="project-name">Roofing team needed</h3>
 
-              <img src="../images/roofing.png" alt="" class="project-image" />
+              <img
+                src="../images/roofing.png"
+                alt=""
+                className="project-image"
+              />
 
-              <p class="project-subheading">
+              <p className="project-subheading">
                 A roofing team is required for a newly completed bungalow
                 structure.{" "}
               </p>
 
-              <a href="" class="cta-button-hover cta-button">
+              <a href="" className="cta-button-hover cta-button">
                 Apply
               </a>
             </div>
@@ -326,83 +394,90 @@ export function Website() {
         </div>
       </section>
 
-      <section class="why-choose-us-section available-project">
-        <div class="available-project-header">
-          <div class="project-wrapper">
-            <h1 class="project-header">
+      <section className="why-choose-us-section available-project">
+        <div className="available-project-header">
+          <div className="project-wrapper">
+            <h1 className="project-header">
               Built to help skilled artisans move forward
             </h1>
 
-            <p class="project-subheading">
+            <p className="project-subheading">
               Craft gives you the tools to showcase your work, find suitable
               projects, build trust, and grow your income.
             </p>
           </div>
         </div>
 
-        <div class="image-feature">
-          <div class="text-wrapper">
-            <div
-              class="feature-content active"
-              data-image="../images/showcase.png"
-            >
-              <h3 class="feature-title">
-                {" "}
-                Showcase your skills professionally
-              </h3>
-              <p class="feature-subheading">
-                Build a strong profile and portfolio that helps clients
-                understand your experience and the quality of your work.
-              </p>
-            </div>
+        <div className="image-feature">
+          <div className="text-wrapper">
+            {features.map((feature, index) => {
+              const mainActive = index === currentIndex;
 
-            <div
-              class="feature-content"
+              return (
+                <>
+                  <div
+                    key={feature.id}
+                    className={
+                      mainActive ? "feature-content active" : "feature-content "
+                    }
+                  >
+                    <h3 className="feature-title">{feature.heading}</h3>
+                    <p className="feature-subheading">{feature.subheading}</p>
+                  </div>
+
+
+                
+                </>
+              );
+            })}
+
+            {/* <div
+              className="feature-content"
               data-image="../images/find-project.png"
             >
-              <h3 class="feature-title">Find projects that match your craft</h3>
-              <p class="feature-subheading">
+              <h3 className="feature-title">Find projects that match your craft</h3>
+              <p className="feature-subheading">
                 Discover construction opportunities based on your trade,
                 location, experience, and availability.
               </p>
             </div>
 
             <div
-              class="feature-content"
+              className="feature-content"
               data-image="../images/reach-client.png"
             >
-              <h3 class="feature-title">Reach clients beyond referrals</h3>
-              <p class="feature-subheading">
+              <h3 className="feature-title">Reach clients beyond referrals</h3>
+              <p className="feature-subheading">
                 Get discovered by homeowners, developers, and contractors
                 outside your immediate network.
               </p>
             </div>
 
-            <div class="feature-content" data-image="../images/build-trust.png">
-              <h3 class="feature-title">Build trust through real work</h3>
-              <p class="feature-subheading">
+            <div className="feature-content" data-image="../images/build-trust.png">
+              <h3 className="feature-title">Build trust through real work</h3>
+              <p className="feature-subheading">
                 Use completed projects, client reviews, and verified information
                 to strengthen your reputation.
               </p>
-            </div>
+            </div> */}
           </div>
 
-          <div class="image-wrapper">
+          <div className="image-wrapper">
             <img
-              src="../images/showcase.png"
+              src={features[currentIndex].image}
               alt="showcase-image"
-              class="feature-image"
+              className="feature-image"
             />
           </div>
         </div>
       </section>
 
-      <section class="how-it-work-section available-project">
-        <div class="available-project-header">
-          <div class="project-wrapper">
-            <h1 class="project-header">Getting started is super-easy</h1>
+      <section className="how-it-work-section available-project">
+        <div className="available-project-header">
+          <div className="project-wrapper">
+            <h1 className="project-header">Getting started is super-easy</h1>
 
-            <p class="project-subheading">
+            <p className="project-subheading">
               Create your profile, showcase your completed projects, connect
               with matching opportunities, deliver great work, and grow your
               reputation on Craft.
@@ -410,77 +485,77 @@ export function Website() {
           </div>
         </div>
 
-        <div class="how-flex-grid">
-          <div class="how-project-container">
+        <div className="how-flex-grid">
+          <div className="how-project-container">
             <img
               src="../images/create account.png"
               alt="Create your account"
-              class="project-image"
+              className="project-image"
             />
 
-            <h5 class="about-heading">Create your account</h5>
+            <h5 className="about-heading">Create your account</h5>
 
-            <p class="about-subheading">
+            <p className="about-subheading">
               Join Craft as an artisan and add your basic information, trade,
               location, and contact details.
             </p>
           </div>
 
-          <div class="how-project-container">
+          <div className="how-project-container">
             <img
               src="../images/build portfolio.png"
               alt="Build your profile & portfolio"
-              class="project-image"
+              className="project-image"
             />
 
-            <h5 class="about-heading">Build your profile & portfolio</h5>
+            <h5 className="about-heading">Build your profile & portfolio</h5>
 
-            <p class="about-subheading">
+            <p className="about-subheading">
               Showcase your skills, experience, and completed projects so
               clients can see what you are capable of.
             </p>
           </div>
 
-          <div class="how-project-container">
+          <div className="how-project-container">
             <img
               src="../images/matching project.png"
               alt="Apply for matching projects"
-              class="project-image"
+              className="project-image"
             />
 
-            <h5 class="about-heading">Apply for matching projects</h5>
+            <h5 className="about-heading">Apply for matching projects</h5>
 
-            <p class="about-subheading">
+            <p className="about-subheading">
               Discover and apply for construction projects that match your
               trade, experience, location, and availability.
             </p>
           </div>
 
-          <div class="how-project-container">
+          <div className="how-project-container">
             <img
               src="../images/deliver great worl.png"
               alt="Deliver great work"
-              class="project-image"
+              className="project-image"
             />
 
-            <h5 class="about-heading">Deliver great work</h5>
+            <h5 className="about-heading">Deliver great work</h5>
 
-            <p class="about-subheading">
+            <p className="about-subheading">
               Communicate with the client, understand the project requirements,
               and complete the work professionally.
             </p>
           </div>
 
-          <div class="how-project-container">
+          <div className="how-project-container">
             <img
               src="../images/get paid.png"
               alt="Get paid"
-              class="project-image"
+              className="project-image"
             />
 
-            <h5 class="about-heading">Get paid</h5>
+            <h5 className="about-heading">Get paid</h5>
 
-            <p class="about-subheading">
+            <p className="about-subheading">
               Receive payment for your completed work and build a strong
               reputation through client reviews.
             </p>
@@ -488,23 +563,25 @@ export function Website() {
         </div>
       </section>
 
-      <section class="faq-section">
-        <div class="faq-question">
-          <h1 class="project-header">
+      <section className="faq-section">
+        <div className="faq-question">
+          <h1 className="project-header">
             We answered questions <br />
             so you don't have to ask them.
           </h1>
         </div>
 
-        <div class="accordion-wrapper">
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">What is Craft for artisans?</div>
+        <div className="accordion-wrapper">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
+                What is Craft for artisans?
+              </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer accord-active">
+            <div className="accordion-answer accord-active">
               Craft is a platform that helps skilled construction artisans
               create a professional profile, showcase their completed work, and
               connect with homeowners, developers, and contractors looking for
@@ -512,16 +589,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
                 Who can join Craft as an artisan?
               </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer  ">
+            <div className="accordion-answer  ">
               Craft is for skilled workers in construction-related trades,
               including bricklayers, masons, plumbers, electricians, painters,
               carpenters, tilers, welders, roofers, POP installers, and other
@@ -529,16 +606,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
                 Do I need to have a portfolio before joining?
               </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               No. You can start by creating your profile first. If you already
               have pictures of your past work, you can upload them to build
@@ -547,16 +624,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
                 How does Craft help me get projects?
               </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               No. You can start by creating your profile first. If you already
               have pictures of your past work, you can upload them to build
@@ -565,16 +642,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
                 Can I apply for projects myself?
               </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               Yes. You can browse available construction projects and apply for
               the ones that match your skills, experience, location, and
@@ -582,16 +659,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
                 What should I add to my profile?
               </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               Your profile should include your trade, skills, years of
               experience, location, service area, availability, short bio,
@@ -600,16 +677,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
                 Why is my portfolio important?
               </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               Your portfolio shows clients what you can do before they contact
               you. It helps you prove your skill, build credibility, and stand
@@ -617,14 +694,14 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">How do i get paid?</div>
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">How do i get paid?</div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               After completing a project, you receive payment based on the
               agreement between you and the client. Craft helps make the process
@@ -633,14 +710,16 @@ export function Website() {
             </div>
           </div>
 
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">How do Client contact me?</div>
+          <div className="accordion">
+            <div className="accordion-head">
+              <div className="accordion-question">
+                How do Client contact me?
+              </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
             </div>
 
-            <div class="accordion-answer ">
+            <div className="accordion-answer ">
               {" "}
               Clients can contact you through your profile or after you apply to
               a project. They can message you, ask questions about your
@@ -651,103 +730,103 @@ export function Website() {
       </section>
 
       <footer>
-        <div class="shadow-effect-foot"></div>
+        <div className="shadow-effect-foot"></div>
 
-        <div class="brand-side-and-footer-coloumn">
-          <div class="brand-goal">
-            <h2 class="craft-foot-logo">Craft</h2>
-            <p class="craft-goal">
+        <div className="brand-side-and-footer-coloumn">
+          <div className="brand-goal">
+            <h2 className="craft-foot-logo">Craft</h2>
+            <p className="craft-goal">
               {" "}
               Helping skilled artisans showcase their work, build trust, and
               connect with better construction opportunities.{" "}
             </p>
           </div>
 
-          <div class="footer-column">
-            <div class="link-nav">
-              <h5 class="link-title">Quick Links</h5>
+          <div className="footer-column">
+            <div className="link-nav">
+              <h5 className="link-title">Quick Links</h5>
 
-              <div class="foot-nav-container">
-                <a href="" class="foot-nav-btn">
+              <div className="foot-nav-container">
+                <a href="" className="foot-nav-btn">
                   Home
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   How it works
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Available Project
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Browse Artisan
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Contact
                 </a>
               </div>
             </div>
 
-            <div class="link-nav">
-              <h5 class="link-title">For Artisan</h5>
+            <div className="link-nav">
+              <h5 className="link-title">For Artisan</h5>
 
-              <div class="foot-nav-container">
-                <a href="" class="foot-nav-btn">
+              <div className="foot-nav-container">
+                <a href="" className="foot-nav-btn">
                   {" "}
                   Create profile{" "}
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Build portfoilio
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Find Project
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Get verified
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Get paid
                 </a>
               </div>
             </div>
 
-            <div class="link-nav">
-              <h5 class="link-title">Employer</h5>
+            <div className="link-nav">
+              <h5 className="link-title">Employer</h5>
 
-              <div class="foot-nav-container">
-                <a href="" class="foot-nav-btn">
+              <div className="foot-nav-container">
+                <a href="" className="foot-nav-btn">
                   Create Account
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Post job
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Hire Artisan
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Pay Artisan
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Project Support
                 </a>
               </div>
             </div>
 
-            <div class="link-nav">
-              <h5 class="link-title">Company</h5>
+            <div className="link-nav">
+              <h5 className="link-title">Company</h5>
 
-              <div class="foot-nav-container">
-                <a href="" class="foot-nav-btn">
+              <div className="foot-nav-container">
+                <a href="" className="foot-nav-btn">
                   About Craft
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Blog
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Help center
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Privacy policy
                 </a>
-                <a href="" class="foot-nav-btn">
+                <a href="" className="foot-nav-btn">
                   Term of Service
                 </a>
               </div>
@@ -755,28 +834,28 @@ export function Website() {
           </div>
         </div>
 
-        <div class="copyright-and-social-media">
-          <p class="copyright-text">
+        <div className="copyright-and-social-media">
+          <p className="copyright-text">
             {" "}
-            <span class="copy">©</span>Craft. All rights reserved.
+            <span className="copy">©</span>Craft. All rights reserved.
           </p>
 
-          <div class="social-media-icon">
-            <i class="hgi hgi-stroke hgi-rounded hgi-facebook-02"></i>
+          <div className="social-media-icon">
+            <i className="hgi hgi-stroke hgi-rounded hgi-facebook-02"></i>
 
-            <i class="hgi hgi-stroke hgi-rounded hgi-instagram"></i>
+            <i className="hgi hgi-stroke hgi-rounded hgi-instagram"></i>
 
-            <i class="hgi hgi-stroke hgi-rounded hgi-linkedin-02"></i>
+            <i className="hgi hgi-stroke hgi-rounded hgi-linkedin-02"></i>
 
-            <i class="hgi hgi-stroke hgi-rounded hgi-new-twitter"></i>
+            <i className="hgi hgi-stroke hgi-rounded hgi-new-twitter"></i>
           </div>
         </div>
 
-        <div class="big-craft-logo">
+        <div className="big-craft-logo">
           <img
             src="../images/Craft footer logo.png"
             alt="craft-logo"
-            class="big-craft-logo"
+            className="big-craft-logo"
           />
         </div>
       </footer>
