@@ -1,38 +1,95 @@
 import { useState, useEffect } from "react";
 import "./website.css";
 
+const accordionData = [
+  {
+    id: 0,
+    question: "What is Craft for artisans?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 1,
+    question: "Who can join Craft as an artisan?",
+    answer:
+      " Craft is for skilled workers in construction-related trades, including bricklayers, masons, plumbers, electricians, painters, carpenters, tilers, welders, roofers, POP installers, and other hands-on professionals.",
+  },
+  {
+    id: 2,
+    question: "Do I need to have a portfolio before joining?",
+    answer:
+      " No. You can start by creating your profile first. If you already have pictures of your past work, you can upload them to build trust faster. If not, you can add your portfolio later as you complete more projects.",
+  },
+  {
+    id: 3,
+    question: "How does Craft help me get projects?",
+    answer:
+      "No. You can start by creating your profile first. If you already have pictures of your past work, you can upload them to build trust faster. If not, you can add your portfolio later as you complete more projects.",
+  },
+  {
+    id: 4,
+    question: " Can I apply for projects myself?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 5,
+    question: "What should I add to my profile?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 6,
+    question: "Why is my portfolio important?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 7,
+    question: "How do i get paid?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 8,
+    question: "How do Client contact me?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+];
+
 const features = [
   {
     id: 0,
     heading: "Showcase your skills professionally",
     subheading:
       "Build a strong profile and portfolio that helps clients understand your experience and the quality of your work.",
-    image: "/images/showcase.png"
+    image: "/images/showcase.png",
   },
   {
     id: 1,
     heading: "Find projects that match your craft",
     subheading:
       "Discover construction opportunities based on your trade, location, experience, and availability.",
-    image: "/images/find-project.png"
+    image: "/images/find-project.png",
   },
   {
     id: 2,
     heading: "Reach clients beyond referrals",
     subheading:
       "Get discovered by homeowners, developers, and contractors outside your immediate network.",
-    image: "/images/reach-client.png"
+    image: "/images/reach-client.png",
   },
   {
     id: 3,
     heading: "Build trust through real work",
     subheading:
       "Use completed projects, client reviews, and verified information to strengthen your reputation.",
-    image: "/images/build-trust.png"
+    image: "/images/build-trust.png",
   },
 ];
 
-// console.log(feature)
+// console.log(features)
 
 export function Website() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,7 +109,7 @@ export function Website() {
     return () => clearInterval(set);
   });
 
-//   console.log(features[currentIndex].image)
+  //   console.log(features[currentIndex].image)
 
   return (
     <>
@@ -424,42 +481,9 @@ export function Website() {
                     <h3 className="feature-title">{feature.heading}</h3>
                     <p className="feature-subheading">{feature.subheading}</p>
                   </div>
-
-
-                
                 </>
               );
             })}
-
-            {/* <div
-              className="feature-content"
-              data-image="../images/find-project.png"
-            >
-              <h3 className="feature-title">Find projects that match your craft</h3>
-              <p className="feature-subheading">
-                Discover construction opportunities based on your trade,
-                location, experience, and availability.
-              </p>
-            </div>
-
-            <div
-              className="feature-content"
-              data-image="../images/reach-client.png"
-            >
-              <h3 className="feature-title">Reach clients beyond referrals</h3>
-              <p className="feature-subheading">
-                Get discovered by homeowners, developers, and contractors
-                outside your immediate network.
-              </p>
-            </div>
-
-            <div className="feature-content" data-image="../images/build-trust.png">
-              <h3 className="feature-title">Build trust through real work</h3>
-              <p className="feature-subheading">
-                Use completed projects, client reviews, and verified information
-                to strengthen your reputation.
-              </p>
-            </div> */}
           </div>
 
           <div className="image-wrapper">
@@ -572,6 +596,22 @@ export function Website() {
         </div>
 
         <div className="accordion-wrapper">
+          {accordionData.map((accordData) => {
+            <div  key={accordData.id} className="accordion">
+              <div className="accordion-head">
+                <div className="accordion-question">
+                  {accordData.question}
+                </div>
+
+                <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+              </div>
+
+              <div className="accordion-answer accord-active">
+                {accordData.answer}
+              </div>
+            </div>;
+          })}
+
           <div className="accordion">
             <div className="accordion-head">
               <div className="accordion-question">

@@ -18,8 +18,9 @@ function tabDisplay (index) {
     featureTab[index].classList.add("active") 
 
 
+
     const newTabImage = featureTab[index].dataset.image;
-    // console.log(newTabImage)
+    // console.log(dataset.image)
 
     tabImage.src = newTabImage;
 
