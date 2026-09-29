@@ -4,7 +4,7 @@ import "./website.css";
 const accordionData = [
   {
     id: 0,
-    question: "What is Craft for artisans?",
+    question: "What is Craft for ?",
     answer:
       " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
   },
@@ -92,6 +92,21 @@ const features = [
 // console.log(features)
 
 export function Website() {
+  //Accordion Code
+  const [open, setOpen] = useState(null);
+
+  const toggle = (index) => {
+    if (open === index) {
+      return setOpen(null);
+    }
+    setOpen(index);
+  }; 
+
+//   function clicktoggle (index)  {
+//     toggle(index)
+//   }
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -496,6 +511,7 @@ export function Website() {
         </div>
       </section>
 
+      
       <section className="how-it-work-section available-project">
         <div className="available-project-header">
           <div className="project-wrapper">
@@ -596,22 +612,39 @@ export function Website() {
         </div>
 
         <div className="accordion-wrapper">
-          {accordionData.map((accordData) => {
-            <div  key={accordData.id} className="accordion">
-              <div className="accordion-head">
-                <div className="accordion-question">
-                  {accordData.question}
+          {accordionData.map((accordData, index) => {
+            return (
+              <div
+                key={accordData.id}
+                className="accordion"
+                onClick={ () => toggle(index) }
+                // onClick={ clicktoggle }
+              >
+                <div className="accordion-head">
+                  <div className="accordion-question">
+                    {accordData.question}
+                  </div>
+
+                  {open === index ? 
+                    <i className="hgi hgi-stroke hgi-rounded hgi-multiplication-sign"></i>
+                  : 
+                    <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+                  }
                 </div>
 
-                <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+                <div
+                  className={
+                    open === index
+                      ? "accordion-answer accord-active"
+                      : "accordion-answer"
+                  }
+                >
+                  {accordData.answer}
+                </div>
               </div>
-
-              <div className="accordion-answer accord-active">
-                {accordData.answer}
-              </div>
-            </div>;
+            );
           })}
-
+          {/* 
           <div className="accordion">
             <div className="accordion-head">
               <div className="accordion-question">
@@ -765,7 +798,7 @@ export function Website() {
               a project. They can message you, ask questions about your
               experience, and discuss the project details before hiring.{" "}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
