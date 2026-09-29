@@ -106,7 +106,7 @@ export function Website() {
 //     toggle(index)
 //   }
 
-
+  //Auto Recycle code
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
