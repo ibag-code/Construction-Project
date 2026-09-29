@@ -95,11 +95,12 @@ export function Website() {
   //Accordion Code
   const [open, setOpen] = useState(null);
 
-  const toggle = (index) => {
-    if (open === index) {
-      return setOpen(null);
+  const toggle = (num) => {
+    setOpen(num);
+
+    if (open === num) {
+       setOpen(null); //Closes the tab
     }
-    setOpen(index);
   }; 
 
 //   function clicktoggle (index)  {
@@ -644,161 +645,7 @@ export function Website() {
               </div>
             );
           })}
-          {/* 
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                What is Craft for artisans?
-              </div>
 
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer accord-active">
-              Craft is a platform that helps skilled construction artisans
-              create a professional profile, showcase their completed work, and
-              connect with homeowners, developers, and contractors looking for
-              reliable workers.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                Who can join Craft as an artisan?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer  ">
-              Craft is for skilled workers in construction-related trades,
-              including bricklayers, masons, plumbers, electricians, painters,
-              carpenters, tilers, welders, roofers, POP installers, and other
-              hands-on professionals.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                Do I need to have a portfolio before joining?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              No. You can start by creating your profile first. If you already
-              have pictures of your past work, you can upload them to build
-              trust faster. If not, you can add your portfolio later as you
-              complete more projects.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                How does Craft help me get projects?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              No. You can start by creating your profile first. If you already
-              have pictures of your past work, you can upload them to build
-              trust faster. If not, you can add your portfolio later as you
-              complete more projects.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                Can I apply for projects myself?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              Yes. You can browse available construction projects and apply for
-              the ones that match your skills, experience, location, and
-              schedule.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                What should I add to my profile?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              Your profile should include your trade, skills, years of
-              experience, location, service area, availability, short bio,
-              portfolio images, completed projects, and any proof of work that
-              can help clients trust you.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                Why is my portfolio important?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              Your portfolio shows clients what you can do before they contact
-              you. It helps you prove your skill, build credibility, and stand
-              out from other artisans who only depend on word of mouth.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">How do i get paid?</div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              After completing a project, you receive payment based on the
-              agreement between you and the client. Craft helps make the process
-              more organized by connecting you with serious project
-              opportunities.
-            </div>
-          </div>
-
-          <div className="accordion">
-            <div className="accordion-head">
-              <div className="accordion-question">
-                How do Client contact me?
-              </div>
-
-              <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div className="accordion-answer ">
-              {" "}
-              Clients can contact you through your profile or after you apply to
-              a project. They can message you, ask questions about your
-              experience, and discuss the project details before hiring.{" "}
-            </div>
-          </div> */}
         </div>
       </section>
 
