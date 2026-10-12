@@ -1,0 +1,177 @@
+:root {
+  --bg-color: #f5f5f5;
+  --craft-black: #26282c;
+  --craft-white: #ffffff;
+  --border: #d2d3d7;
+
+  --craft-bc: #66217e;
+  --craft-bc-light: #f0e9f2;
+  --craft-bc-light-2: #e8deec;
+  --craft-bc-light-3: #d0bad7;
+  --craft-dark: #2e0f39;
+
+  --text-colour: #6d717f;
+
+  --danger: #ff383c;
+  --danger-light: #ffebec;
+  --danger-light-2: #ffe1e2;
+  --danger-light-3: #ffc1c3;
+  --danger-dark: #73191b;
+
+  --success: #34c759;
+  --success-light: #ebf9ee;
+  --success-light-2: #e1f7e6;
+  --success-light-3: #c0eecc;
+  --success-dark: #175a28;
+
+  --warning: #ffcc00;
+  --warning-light: #fffae6;
+  --warning-light-2: #fff7d9;
+  --warning-light-3: #ffefb0;
+  --warning-dark: #735c00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+  text-decoration: none;
+  color: var(--craft-white);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+.the-form {
+  background-color: var(--craft-white);
+  padding: 40px;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+.arrow-back {
+  display: flex;
+  background-color: var(--bg-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-back {
+  display: flex;
+  background-color: var(--bg-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-back i {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--craft-black);
+}
+
+.verify-text {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  gap: 12px;
+}
+.verify-text h3 {
+  font-family: "Faktum";
+  color: var(--craft-black);
+}
+.verify-text p {
+  font-family: "inter";
+  font-size: 12px;
+  color: var(--text-colour);
+  text-transform: uppercase;
+}
+
+#otpForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.otp-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.otp-field {
+  border: 1px solid var(--border);
+  height: 60px;
+  width: 60px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--craft-black);
+}
+
+
+.verify-btn {
+    background-color: var(--craft-bc);
+    height: 50px;
+    color: var(--craft-white);
+    border-radius: 12px;
+    font-family: "inter";
+    font-size: 16px;
+    border: none;
+}
