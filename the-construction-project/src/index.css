@@ -81,4 +81,5 @@ a {
 body {
     height: fit-content;
     font-family: inter;
+    display: flex;
 }

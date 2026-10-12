@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./website.css";
+import { Link } from "react-router";
 
 const accordionData = [
   {
@@ -153,12 +154,12 @@ export function Website() {
         </div>
 
         <div className="cta-container">
-          <a href="Craft-signin.html" className="cta-button-outline">
+          <Link to="/signin" className="cta-button-outline">
             Sign In
-          </a>
-          <a href="Craft-signup.html" className="cta-button">
+          </Link>
+          <Link to="/signup" className="cta-button">
             Sign Up
-          </a>
+          </Link>
         </div>
       </header>
 

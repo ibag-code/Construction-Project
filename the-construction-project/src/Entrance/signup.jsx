@@ -1,15 +1,17 @@
+import { Link } from "react-router";
+import "./signup.css";
+
 export function SignUp() {
   return (
-    <>
+    <div className="body">
       <div className="main-page">
-        <div className="craft-logo">
+        <Link to="/" className="craft-logo">
           <img
             src="../images/Craft-logo-icon.png"
             alt="craft-logo"
             className="main-logo"
           />
-          <a href="Craft-website.html"></a>
-        </div>
+        </Link>
 
         <div className="welcome-google-divider">
           <h3 className="welcome-txt">Get Started Now!</h3>
@@ -94,13 +96,13 @@ export function SignUp() {
             </div>
 
             <button type="submit" className="sign-cta">
-              {" "}
-              Sign Up{" "}
+              Sign Up
             </button>
           </form>
 
           <p className="signup">
-            Already have an Account: <a href="Craft-signin.html"> Sign in</a>
+            Already have an Account:
+            <Link to="/signin"> Sign in</Link>
           </p>
         </div>
       </div>
@@ -112,6 +114,6 @@ export function SignUp() {
           className="authentication-main-image"
         />
       </div>
-    </>
+    </div>
   );
 }
