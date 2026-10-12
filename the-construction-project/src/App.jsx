@@ -1,4 +1,4 @@
-import { Website } from './website'
+import { Website } from './Website/website'
 import './App.css'
 
 function App() {
