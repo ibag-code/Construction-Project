@@ -103,9 +103,7 @@ export function Website() {
     }
   }; 
 
-//   function clicktoggle (index)  {
-//     toggle(index)
-//   }
+
 
   //Auto Recycle code
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -647,6 +645,7 @@ export function Website() {
           })}
 
         </div>
+        
       </section>
 
       <footer>
