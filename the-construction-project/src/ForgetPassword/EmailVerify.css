@@ -1,0 +1,80 @@
+a {
+  text-decoration: none;
+  color: var(--craft-white);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+.the-form {
+  background-color: var(--craft-white);
+  padding: 40px;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.verify-text {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  gap: 12px;
+}
+.verify-text h3 {
+  font-family: "Faktum";
+  color: var(--craft-black);
+  font-size: 28px;
+}
+.verify-text p {
+  font-family: "inter";
+  font-size: 12px;
+  color: var(--text-colour);
+  text-transform: uppercase;
+}
+
+#otpForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 60px;
+}
+.otp-countdown {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.otp-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.otp-field {
+  border: 1px solid var(--border);
+  height: 60px;
+  width: 60px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--craft-black);
+}
+.count-down {
+  font-family: "inter";
+  color: var(--text-colour);
+}
+.count-down span {
+  font-family: "inter";
+  color: var(--craft-bc);
+  cursor: pointer;
+}
+.count-down span:hover {
+  text-decoration: underline;
+}
+

@@ -52,30 +52,6 @@ body {
   border-radius: 12px;
 }
 
-.arrow-back {
-  background-color: var(--bg-color);
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-}
-
-.arrow-back:hover {
-  background-color: var(--border);
-  color: var(--craft-black);
-}
-
-.arrow-back i {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--craft-black);
-}
-
 .verify-text {
   display: flex;
   flex-direction: column;
@@ -135,18 +111,3 @@ body {
   text-decoration: underline;
 }
 
-.verify-btn {
-  background-color: var(--craft-bc);
-  height: 50px;
-  width: 100%;
-  color: var(--craft-white);
-  border-radius: 12px;
-  font-family: "inter";
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.verify-btn:hover {
-  background-color: var(--craft-bc-light-2);
-  color: var(--craft-bc);
-}

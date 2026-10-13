@@ -1,9 +1,9 @@
-import { Link } from 'react-router'
-import './Signupauth.css'
+import { Link } from "react-router";
+import "./Signupauth.css";
 
 export function SignupAuth() {
   return (
-
+    <>
       <body>
         <div className="the-form">
           <Link to="/signup" className="arrow-back">
@@ -73,6 +73,6 @@ export function SignupAuth() {
           </form>
         </div>
       </body>
-
+    </>
   );
 }

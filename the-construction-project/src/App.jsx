@@ -4,6 +4,9 @@ import { SignUp } from "./Entrance/signup";
 import { SignIn } from "./Entrance/signin";
 import { SignupAuth } from "./Entrance/Verify/Signupauth";
 import { EmailAuth } from "./ForgetPassword/Emailauth";
+import { EmailVerify } from "./ForgetPassword/EmailVerify";
+import { PasswordReset } from "./ForgetPassword/PasswordReset"
+
 import "./App.css";
 
 function App() {
@@ -14,6 +17,8 @@ function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signupAuth" element={<SignupAuth />} />
       <Route path="/emailauth" element={<EmailAuth />} />
+      <Route path="/emailverify" element={<EmailVerify />} />
+      <Route path="/passwordreset" element={<PasswordReset />} />
     </Routes>
   );
 }
