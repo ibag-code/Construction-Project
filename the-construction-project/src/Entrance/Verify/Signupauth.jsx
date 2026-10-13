@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import './Signupauth.css'
 
 export function SignupAuth() {
@@ -5,9 +6,9 @@ export function SignupAuth() {
 
       <body>
         <div className="the-form">
-          <div className="arrow-back">
+          <Link to="/signup" className="arrow-back">
             <i className="hgi hgi-stroke hgi-rounded hgi-arrow-left-01"></i>
-          </div>
+          </Link>
 
           <div className="verify-text">
             <h3>Verify your email</h3>

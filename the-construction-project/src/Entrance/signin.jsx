@@ -58,10 +58,10 @@ export function SignIn() {
                 <i class="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
               </div>
 
-              <a href="" class="forget-password">
+              <Link to='/emailauth' class="forget-password">
                 {" "}
                 Forget Password
-              </a>
+              </Link>
             </div>
 
             <button type="submit" class="sign-cta">
