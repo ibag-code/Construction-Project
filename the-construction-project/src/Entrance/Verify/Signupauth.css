@@ -1,36 +1,3 @@
-/* :root {
-    --bg-color: #F5F5F5;
-    --craft-black: #26282C;
-    --craft-white: #FFFFFF;
-    --border: #D2D3D7;
-
-    --craft-bc: #66217E;
-    --craft-bc-light: #F0E9F2;
-    --craft-bc-light-2: #E8DEEC;
-    --craft-bc-light-3: #D0BAD7;
-    --craft-dark: #2E0F39;
-
-    --text-colour: #6D717F;
-
-    --danger: #FF383C;
-    --danger-light: #FFEBEC;
-    --danger-light-2: #FFE1E2;
-    --danger-light-3: #FFC1C3;
-    --danger-dark: #73191B;
-
-    --success: #34C759;
-    --success-light: #EBF9EE;
-    --success-light-2: #E1F7E6;
-    --success-light-3: #C0EECC;
-    --success-dark: #175A28;
-
-    --warning: #FFCC00;
-    --warning-light: #FFFAE6;
-    --warning-light-2: #FFF7D9;
-    --warning-light-3: #FFEFB0;
-    --warning-dark: #735C00;
-} */
-
 a {
   text-decoration: none;
   color: var(--craft-white);
@@ -42,14 +9,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color);
-}
-.the-form {
-  background-color: var(--craft-white);
-  padding: 40px;
-  gap: 60px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
 }
 
 .verify-text {

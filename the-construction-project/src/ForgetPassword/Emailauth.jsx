@@ -24,13 +24,11 @@ export function EmailAuth() {
               className="my-otp-field"
               />
             </div>
-            <p className="count-down">
-              Not yet received yet? <span>Resend Verification code </span>
-            </p>
+
           </div>
-          <button type="submit" className="verify-btn">
+          <Link to="/emailverify" type="submit" className="verify-btn">
             Continue
-          </button>
+          </Link>
         </form>
       </div>
     </>

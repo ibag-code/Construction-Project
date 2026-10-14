@@ -4,7 +4,7 @@ import './EmailVerify.css'
 export function EmailVerify() {
   return (
 
-      <body>
+      <>
         <div className="the-form">
           <Link to="/emailauth" className="arrow-back">
             <i className="hgi hgi-stroke hgi-rounded hgi-arrow-left-01"></i>
@@ -67,12 +67,12 @@ export function EmailVerify() {
                 Not yet received yet? <span>Resend Verification code </span>
               </p>
             </div>
-            <button type="submit" className="verify-btn">
+            <Link to='/passwordreset' type="submit" className="verify-btn">
               Continue
-            </button>
+            </Link>
           </form>
         </div>
-      </body>
+      </>
 
   );
 }

@@ -10,14 +10,6 @@ body {
   align-items: center;
   background-color: var(--bg-color);
 }
-.the-form {
-  background-color: var(--craft-white);
-  padding: 40px;
-  gap: 60px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 12px;
-}
 
 .verify-text {
   display: flex;

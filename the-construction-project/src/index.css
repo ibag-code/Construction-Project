@@ -258,3 +258,12 @@ form {
     border-radius: 12px;
     border: 1px solid var(--border);
 }
+.the-form {
+  background-color: var(--craft-white);
+  padding: 40px;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px;
+  width: 600px;
+}
