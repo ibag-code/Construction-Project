@@ -4,7 +4,7 @@ import "./signin.css";
 export function SignIn() {
   return (
     <div className="body">
-      <div class="form">
+      <div className="form">
         <Link to="/" className="craft-logo">
           <img
             src="../images/Craft-logo-icon.png"
@@ -13,40 +13,40 @@ export function SignIn() {
           />
         </Link>
 
-        <div class="welcome-google-divider">
-          <h3 class="welcome-txt">Welcome back!</h3>
+        <div className="welcome-google-divider">
+          <h3 className="welcome-txt">Welcome back!</h3>
 
-          <a href="Google Sign in" class="google-btn">
+          <a href="Google Sign in" className="google-btn">
             <img src="../images/google.png" alt="google-image" />
             Sign in with Google
           </a>
 
-          <div class="hr-login-option">
+          <div className="hr-login-option">
             <hr />
-            <div class="divider-txt">Or continue with</div>
+            <div className="divider-txt">Or continue with</div>
             <hr />
           </div>
 
           <form action="" id="form">
-            <div class="input">
+            <div className="input">
               <label for="email"> Email</label>
 
-              <div class="input-icon">
+              <div className="input-icon">
                 <input
                   type="email"
                   name="password"
                   id="email"
                   placeholder="Enter your email Address"
                   required
-                  class="email"
+                  className="email"
                 />
               </div>
             </div>
 
-            <div class="input">
+            <div className="input">
               <label for="password"> Password</label>
 
-              <div class="input-icon">
+              <div className="input-icon">
                 <input
                   type="password"
                   name="password"
@@ -55,32 +55,32 @@ export function SignIn() {
                   required
                 />
 
-                <i class="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
+                <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
               </div>
 
-              <Link to='/emailauth' class="forget-password">
+              <Link to='/emailauth' className="forget-password">
                 {" "}
                 Forget Password
               </Link>
             </div>
 
-            <button type="submit" class="sign-cta">
+            <button type="submit" className="sign-cta">
               {" "}
               Sign In{" "}
             </button>
           </form>
 
-          <p class="signup">
+          <p className="signup">
             Are you a new user: <Link to="/signup">Create a new Account</Link>
           </p>
         </div>
       </div>
 
-      <div class="authentication-image">
+      <div className="authentication-image">
         <img
           src="../images/authentication-image.png"
           alt=""
-          class="authentication-main-image"
+          className="authentication-main-image"
         />
       </div>
     </div>
