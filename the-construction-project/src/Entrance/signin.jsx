@@ -1,7 +1,29 @@
 import { Link } from "react-router";
 import "./signin.css";
 
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+const PWD_REGEX =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+
+
 export function SignIn() {
+
+  const email = "asimiyuabdulahi2@gmail.com";
+  const password = "Ojumirayo$2001";
+
+  if (!EMAIL_REGEX.test(email)) {
+    alert("Your email Address is not correct");
+    return;
+  }
+
+  if (!PWD_REGEX.test(password)) {
+    alert("Your Password is not correct");
+    return;
+  }
+  alert("Your inputs meet the requirements!");
+
   return (
     <div className="body">
       <div className="form">
@@ -58,7 +80,7 @@ export function SignIn() {
                 <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
               </div>
 
-              <Link to='/emailauth' className="forget-password">
+              <Link to="/emailauth" className="forget-password">
                 {" "}
                 Forget Password
               </Link>
