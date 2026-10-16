@@ -152,6 +152,7 @@ form {
 
 .input-icon {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   position: relative;
@@ -159,7 +160,7 @@ form {
 
 .input-icon input {
   height: 50px;
-  width: 50vw;
+  width: 100%;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -171,21 +172,34 @@ form {
   cursor: pointer;
   font-size: 20px;
   color: var(--text-colour);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .sign-cta {
   width: 100%;
   background-color: var(--craft-bc);
   height: 48px;
+  border: none;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--craft-white);
   font-family: "inter";
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+}
+.sign-cta:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .signup {
@@ -210,8 +224,17 @@ form {
   text-decoration: underline;
 }
 
-/* more specificity || inactive state */
-.input-icon input.wrong {
+.wrong {
   border: 1px solid var(--danger);
   background-color: var(--danger-light);
+}
+.error-message {
+  color: var(--danger);
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+}
+.block-message {
+  display: none;
 }
