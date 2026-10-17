@@ -166,7 +166,7 @@ form {
   border: 1px solid var(--border);
 }
 
-.input-icon i {
+.input-icon div {
   position: absolute;
   right: 12px;
   cursor: pointer;
@@ -178,6 +178,8 @@ form {
   width: 40px;
   justify-content: center;
   cursor: pointer;
+  background-color: none;
+  border: none;
 }
 
 .sign-cta {

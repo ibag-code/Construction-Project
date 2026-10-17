@@ -8,51 +8,51 @@ const PWD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 export function SignIn() {
-  // const email = "asimiyuabdulahi2gmail.com";
-  // const password = "Ojumirayo$2001";
-
-  // if (!EMAIL_REGEX.test(email)) {
-  //   alert("Your email Address is not correct");
-  //   return;
-  // }
-
-  // if (!PWD_REGEX.test(password)) {
-  //   alert("Your Password is not correct");
-  //   return;
-  // }
-  // alert("Your inputs meet the requirements!");
 
   const emailRef = useRef();
   const errRef = useRef();
 
   const [email, setEmail] = useState("");
-  const [validMail, setValidMail] = useState(false);
+  //   const [validMail, setValidMail] = useState(false);
   const [mailFocus, setMailFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
+
+  const [showPwd, setShowPwd] = useState(false);
+
+  function showPassword() {
+    setShowPwd((showPwd) => !showPwd);
+  }
+
+  console.log(showPwd);
+
+
   useEffect(() => {
     emailRef.current.focus();
   }, []);
 
-  useEffect(() => {
-    const result = EMAIL_REGEX.test(email);
-    console.log(result);
-    console.log(email);
-    setValidMail(result);
-    // console.log(validMail);
-  }, [email]);
+  //   useEffect(() => {
+  //     setValidMail((validMail) => validMail + EMAIL_REGEX.test(email));
+  //   }, [email]);
 
-  useEffect(() => {
-    setErrMsg("");
-  }, [email]);
+  const validMail = EMAIL_REGEX.test(email);
+
+  //   useEffect(() => {
+  //     setErrMsg("");
+  //   }, []);
 
   const submit = async (event) => {
     event.preventDefault();
-     
-    
-  }
+
+    const mailVal = EMAIL_REGEX.test(email.trim());
+
+    if (!mailVal) {
+      setErrMsg("Your Email is Invalid");
+      return;
+    }
+  };
 
   return (
     <div className="body">
@@ -86,15 +86,16 @@ export function SignIn() {
               <div className="input-icon">
                 <input
                   type="email"
-                  name="password"
+                  name="email"
                   id="email"
                   placeholder="Enter your email Address"
-                  className={`email ${email && !validMail ? "wrong" : ""}`}
+                  className={`email ${email.trim() && !validMail ? "wrong" : ""}`}
                   required
                   ref={emailRef}
                   autoComplete="off"
                   onChange={(e) => {
                     setEmail(e.target.value);
+                    setErrMsg("");
                   }}
                   onFocus={() => {
                     setMailFocus(true);
@@ -106,18 +107,29 @@ export function SignIn() {
                   aria-describedby="uidnote"
                 />
 
-                <p
+                {/* <p
                   ref={errRef}
                   className={
                     mailFocus && !validMail && email
                       ? "error-message"
                       : "block-message "
                   }
-                  //   className={errMsg ? "errMsg" : "Offscreen"}
                   aria-live="assertive"
                 >
-                  Kindly go through ur mail cus it is wrong
                   {errMsg}
+                </p> */}
+
+                <p
+                  id="uidnote"
+                  ref={errRef}
+                  className={
+                    (mailFocus && email.trim() && !validMail) || errMsg
+                      ? "error-message"
+                      : "block-message"
+                  }
+                  aria-live="polite"
+                >
+                  {errMsg || "Please enter a valid email address."}
                 </p>
               </div>
             </div>
@@ -127,18 +139,23 @@ export function SignIn() {
 
               <div className="input-icon">
                 <input
-                  type="password"
+                  type={showPwd ? "text" : "password"}
                   name="password"
                   placeholder="Enter your Password"
                   id="password"
                   required
                 />
 
-                <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
+                <div onClick={showPassword}>
+                  {showPwd ? (
+                    <i class="hgi hgi-stroke hgi-rounded hgi-eye"></i>
+                  ) : (
+                    <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
+                  )}
+                </div>
               </div>
 
               <Link to="/emailauth" className="forget-password">
-                {" "}
                 Forget Password
               </Link>
             </div>
