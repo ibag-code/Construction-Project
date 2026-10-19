@@ -35,16 +35,16 @@ export function SignIn() {
 
   //   useEffect(() => {
   //     setValidMail((validMail) => validMail + EMAIL_REGEX.test(email));
-  //   }, [email]);
+    // }, [email]);
 
   const validMail = EMAIL_REGEX.test(email);
 
-  //   useEffect(() => {
-  //     setErrMsg("");
-  //   }, []);
+    // useEffect(() => {
+    //   setErrMsg("");
+    // }, []);
 
-  const submit = async (event) => {
-    event.preventDefault();
+  const submit = async (e) => {
+    e.preventDefault();
 
     const mailVal = EMAIL_REGEX.test(email.trim());
 
@@ -52,6 +52,15 @@ export function SignIn() {
       setErrMsg("Your Email is Invalid");
       return;
     }
+
+    try{
+      const response = await 
+
+    }
+    catch(err) {
+
+    }
+
   };
 
   return (
