@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { useState, useRef, useEffect } from "react";
+import supabase from "../supabase-client";
 import "./signin.css";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
@@ -8,7 +9,6 @@ const PWD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 export function SignIn() {
-
   const emailRef = useRef();
   const errRef = useRef();
 
@@ -19,15 +19,13 @@ export function SignIn() {
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
-
   const [showPwd, setShowPwd] = useState(false);
 
   function showPassword() {
     setShowPwd((showPwd) => !showPwd);
   }
 
-  console.log(showPwd);
-
+  // console.log(showPwd);
 
   useEffect(() => {
     emailRef.current.focus();
@@ -35,13 +33,13 @@ export function SignIn() {
 
   //   useEffect(() => {
   //     setValidMail((validMail) => validMail + EMAIL_REGEX.test(email));
-    // }, [email]);
+  // }, [email]);
 
   const validMail = EMAIL_REGEX.test(email);
 
-    // useEffect(() => {
-    //   setErrMsg("");
-    // }, []);
+  // useEffect(() => {
+  //   setErrMsg("");
+  // }, []);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -53,14 +51,25 @@ export function SignIn() {
       return;
     }
 
-    try{
-      const response = await 
+    try {
+      const response = await supabase
+        .from("Craft Auth")
+        .insert({ Email: email })
+        .select();
 
+      if (response.error) {
+        throw response.error;
+      }
+      console.log("Inserted row:", response.data);
+      setSuccess(true);
+      console.log(response.data);
+      console.log (response)
+      console.log (response.status)
+
+    } catch (error) {
+      console.error("Insert failed:", error.message);
+      setErrMsg("Could not save your email");
     }
-    catch(err) {
-
-    }
-
   };
 
   return (
@@ -127,7 +136,6 @@ export function SignIn() {
                 >
                   {errMsg}
                 </p> */}
-                
 
                 <p
                   id="uidnote"
@@ -144,8 +152,8 @@ export function SignIn() {
               </div>
             </div>
 
-            <div className="input">
-              <label for="password"> Password</label>
+            {/* <div className="input">
+              <label htmlFor="password"> Password</label>
 
               <div className="input-icon">
                 <input
@@ -168,7 +176,7 @@ export function SignIn() {
               <Link to="/emailauth" className="forget-password">
                 Forget Password
               </Link>
-            </div>
+            </div> */}
 
             <button
               disabled={!validMail ? true : false}
