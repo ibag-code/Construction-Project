@@ -16,6 +16,10 @@ export function SignIn() {
   //   const [validMail, setValidMail] = useState(false);
   const [mailFocus, setMailFocus] = useState(false);
 
+  const [pwd, setPwd] = useState("");
+  // const [ validPwd, setValidPwd ] = useState(false)
+  // const [pwdFocus, setPwdFocus] = useState(false);
+
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
@@ -25,26 +29,20 @@ export function SignIn() {
     setShowPwd((showPwd) => !showPwd);
   }
 
-  // console.log(showPwd);
-
   useEffect(() => {
     emailRef.current.focus();
   }, []);
 
-  //   useEffect(() => {
-  //     setValidMail((validMail) => validMail + EMAIL_REGEX.test(email));
-  // }, [email]);
-
+  // let password = 'Crafting7@'
   const validMail = EMAIL_REGEX.test(email);
-
-  // useEffect(() => {
-  //   setErrMsg("");
-  // }, []);
+  const validPwd = PWD_REGEX.test(pwd);
+  // console.log(validPwd)
 
   const submit = async (e) => {
     e.preventDefault();
 
     const mailVal = EMAIL_REGEX.test(email.trim());
+    const pwdVal = PWD_REGEX.test(pwd.trim());
 
     if (!mailVal) {
       setErrMsg("Your Email is Invalid");
@@ -54,7 +52,7 @@ export function SignIn() {
     try {
       const response = await supabase
         .from("Craft Auth")
-        .insert({ Email: email })
+        .insert({ Email: email, password: pwd })
         .select();
 
       if (response.error) {
@@ -63,9 +61,8 @@ export function SignIn() {
       console.log("Inserted row:", response.data);
       setSuccess(true);
       console.log(response.data);
-      console.log (response)
-      console.log (response.status)
-
+      console.log(response);
+      console.log(response.status);
     } catch (error) {
       console.error("Insert failed:", error.message);
       setErrMsg("Could not save your email");
@@ -106,6 +103,7 @@ export function SignIn() {
                   type="email"
                   name="email"
                   id="email"
+                  value={email}
                   placeholder="Enter your email Address"
                   className={`email ${email.trim() && !validMail ? "wrong" : ""}`}
                   required
@@ -152,7 +150,7 @@ export function SignIn() {
               </div>
             </div>
 
-            {/* <div className="input">
+            <div className="input">
               <label htmlFor="password"> Password</label>
 
               <div className="input-icon">
@@ -161,12 +159,25 @@ export function SignIn() {
                   name="password"
                   placeholder="Enter your Password"
                   id="password"
+                  value={pwd}
+                  className={!validPwd && pwd ? "wrong" : ""}
+                  onFocus={() => {
+                    setPwdFocus(true);
+                  }}
+                  onBlur={() => {
+                    setPwdFocus(false);
+                  }}
+                  aria-invalid={pwd.trim() !== "" && !validPwd}
+                  onChange={(e) => {
+                    setPwd(e.target.value);
+                    console.log(`PwD: ${e.target.value}`);
+                  }}
                   required
                 />
 
                 <div onClick={showPassword}>
                   {showPwd ? (
-                    <i class="hgi hgi-stroke hgi-rounded hgi-eye"></i>
+                    <i className="hgi hgi-stroke hgi-rounded hgi-eye"></i>
                   ) : (
                     <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
                   )}
@@ -176,10 +187,10 @@ export function SignIn() {
               <Link to="/emailauth" className="forget-password">
                 Forget Password
               </Link>
-            </div> */}
+            </div>
 
             <button
-              disabled={!validMail ? true : false}
+              disabled={!validPwd || !validMail ? true : false}
               type="submit"
               className="sign-cta"
             >
