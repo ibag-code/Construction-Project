@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import "./signup.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
 
@@ -16,23 +16,22 @@ export function SignUp() {
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
 
-  const [matchPwd, setMatchPwd] = useState(false);
-
-  console.log(password);
 
   const validMail = EMAIL_REGEX.test(mail.trim());
   // console.log(validMail)
-
-  const validPwd = PWD_REGEX.test(password);
+  const validPwd = PWD_REGEX.test(password.trim());
   // console.log(validPwd);
 
-  const [showPwd, setShowPwd] = useState(false);
+  const setValidMatch = password === rePassword;
+  // console.log(setValidMatch)
 
+
+
+  const [showPwd, setShowPwd] = useState(false);
   function chgEye() {
     setShowPwd((showPwd) => {
       return !showPwd;
     });
-
     // setShowPwd((showPwd) => !showPwd);
   }
 
@@ -148,8 +147,11 @@ export function SignUp() {
                   placeholder="Enter your Password"
                   id="re-enter-password"
                   required
-                  className={password || rePassword ? "wrong" : ""}
-                  onChange={(e) => setRePassword(e.target.value)}
+                  className={ !setValidMatch && rePassword ? "wrong" : ""}
+                  onChange={(e) => {setRePassword(e.target.value)
+                    // console.log(e.target.value)
+                  }}
+                  
                 />
               </div>
             </div>
