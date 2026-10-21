@@ -1,7 +1,41 @@
 import { Link } from "react-router";
 import "./signup.css";
+import { useEffect, useState } from "react";
+
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
+
+const PWD_REGEX =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 export function SignUp() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
+  const [mail, setEmail] = useState("");
+
+  const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
+
+  const [matchPwd, setMatchPwd] = useState(false);
+
+  console.log(password);
+
+  const validMail = EMAIL_REGEX.test(mail.trim());
+  // console.log(validMail)
+
+  const validPwd = PWD_REGEX.test(password);
+  // console.log(validPwd);
+
+  const [showPwd, setShowPwd] = useState(false);
+
+  function chgEye() {
+    setShowPwd((showPwd) => {
+      return !showPwd;
+    });
+
+    // setShowPwd((showPwd) => !showPwd);
+  }
+
   return (
     <div className="body">
       <div className="main-page">
@@ -30,8 +64,12 @@ export function SignUp() {
           <form id="sign-up-form">
             <div className="input-fl">
               <div className="input-fl-name">
-                <label for="first-name"> First name</label>
+                <label htmlFor="first-name"> First name</label>
                 <input
+                  value={firstName}
+                  onChange={(e) => {
+                    setFirstName(e.target.value);
+                  }}
                   type="text"
                   name="first name"
                   placeholder="Enter your last name"
@@ -41,8 +79,12 @@ export function SignUp() {
               </div>
 
               <div className="input-fl-name">
-                <label for="last-name"> Last name</label>
+                <label htmlFor="last-name"> Last name</label>
                 <input
+                  value={lastName}
+                  onChange={(e) => {
+                    setLastName(e.target.value);
+                  }}
                   type="text"
                   name="last name"
                   placeholder="Enter your first name"
@@ -53,30 +95,46 @@ export function SignUp() {
             </div>
 
             <div className="input-fl-name">
-              <label for="email">Email Address </label>
+              <label htmlFor="email">Email Address </label>
               <input
-                type="text"
-                name="password"
-                placeholder="Enter your email Address"
+                type="email"
+                name="email"
                 id="email"
+                value={mail}
+                placeholder="Enter your email Address"
+                className={mail.trim() && !validMail ? "wrong" : ""}
                 required
+                autoComplete="off"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
             </div>
 
             <div className="input">
-              <label for="password"> Password</label>
+              <label htmlFor="password"> Password</label>
 
               <div className="input-icon">
                 <input
-                  type="password"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  type={!showPwd ? "password" : "text"}
                   name="password"
                   placeholder="Enter your Password"
                   id="password"
                   required
-                  className="password"
+                  className={!validPwd && password.trim() ? "wrong" : ""}
                 />
 
-                <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
+                <div onClick={chgEye}>
+                  {!showPwd ? (
+                    <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
+                  ) : (
+                    <i class="hgi hgi-stroke hgi-rounded hgi-eye"></i>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -85,12 +143,13 @@ export function SignUp() {
 
               <div className="input-icon">
                 <input
-                  type="password"
-                  name="password"
+                  type={!showPwd ? "password" : "text"}
+                  name="re-password"
                   placeholder="Enter your Password"
                   id="re-enter-password"
                   required
-                  className="re-password"
+                  className={password || rePassword ? "wrong" : ""}
+                  onChange={(e) => setRePassword(e.target.value)}
                 />
               </div>
             </div>

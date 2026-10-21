@@ -35,6 +35,7 @@ export function SignIn() {
 
   // let password = 'Crafting7@'
   const validMail = EMAIL_REGEX.test(email);
+  console.log(validMail)
   const validPwd = PWD_REGEX.test(pwd);
   // console.log(validPwd)
 
@@ -161,9 +162,7 @@ export function SignIn() {
                   id="password"
                   value={pwd}
                   className={!validPwd && pwd ? "wrong" : ""}
-                  onFocus={() => {
-                    setPwdFocus(true);
-                  }}
+                  onFocus={() => { setPwdFocus(true) }}
                   onBlur={() => {
                     setPwdFocus(false);
                   }}
