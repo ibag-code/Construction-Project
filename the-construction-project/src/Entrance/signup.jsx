@@ -147,7 +147,7 @@ export function SignUp() {
                   placeholder="Enter your Password"
                   id="re-enter-password"
                   required
-                  className={ !setValidMatch && rePassword ? "wrong" : ""}
+                  className={!setValidMatch && rePassword ? "wrong" : ""}
                   onChange={(e) => {setRePassword(e.target.value)
                     // console.log(e.target.value)
                   }}
