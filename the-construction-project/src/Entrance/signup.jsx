@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import "./signup.css";
 import { useState } from "react";
+import supabase from "../supabase-client";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
 
@@ -16,6 +17,8 @@ export function SignUp() {
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
 
+  const [errMsg, setErrMsg] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const validMail = EMAIL_REGEX.test(mail.trim());
   // console.log(validMail)
@@ -25,8 +28,7 @@ export function SignUp() {
   const setValidMatch = password === rePassword;
   // console.log(setValidMatch)
 
-
-
+  // Password Visibilty Control
   const [showPwd, setShowPwd] = useState(false);
   function chgEye() {
     setShowPwd((showPwd) => {
@@ -35,7 +37,48 @@ export function SignUp() {
     // setShowPwd((showPwd) => !showPwd);
   }
 
-  return (
+  const signup = async (e) => {
+    e.preventDefault();
+
+    setErrMsg("");
+    setSuccess(false);
+
+    if (!validMail && !validPwd && !setValidMatch) {
+      setErrMsg("Your Inputs are not correct");
+      return;
+    }
+    try {
+      const response = await supabase.auth.signUp({
+        email: mail.trim(),
+        password: password.trim(),
+        options: {
+          data: {
+            firt_Name: firstName,
+            last_Name: lastName,
+          },
+        },
+      });
+      if (response.error) {
+        throw response.error;
+      }
+
+      console.log("Signup response:", response);
+      console.log("New user:", response.data.user);
+
+      if (!response.data.session) {
+        setErrMsg(
+          "Account created! Please check your email to verify your account.",
+        );
+      } else {
+        setSuccess(true);
+      }
+    } catch (error) {
+      console.error("SignUp Failed", error.message);
+      setErrMsg("Unable to create your account, Please try again");
+    }
+  };
+  return ( 
+    // {success ? <SignIn /> : }
     <div className="body">
       <div className="main-page">
         <Link to="/" className="craft-logo">
@@ -60,7 +103,7 @@ export function SignUp() {
             <hr />
           </div>
 
-          <form id="sign-up-form">
+          <form id="sign-up-form" onSubmit={signup}>
             <div className="input-fl">
               <div className="input-fl-name">
                 <label htmlFor="first-name"> First name</label>
@@ -131,14 +174,14 @@ export function SignUp() {
                   {!showPwd ? (
                     <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
                   ) : (
-                    <i class="hgi hgi-stroke hgi-rounded hgi-eye"></i>
+                    <i className="hgi hgi-stroke hgi-rounded hgi-eye"></i>
                   )}
                 </div>
               </div>
             </div>
 
             <div className="input">
-              <label for="re-enter-password">Re-enter-Password</label>
+              <label htm="re-enter-password">Re-enter-Password</label>
 
               <div className="input-icon">
                 <input
@@ -148,10 +191,10 @@ export function SignUp() {
                   id="re-enter-password"
                   required
                   className={!setValidMatch && rePassword ? "wrong" : ""}
-                  onChange={(e) => {setRePassword(e.target.value)
+                  onChange={(e) => {
+                    setRePassword(e.target.value);
                     // console.log(e.target.value)
                   }}
-                  
                 />
               </div>
             </div>

@@ -1,180 +1,175 @@
 .body {
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .main-page {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 
-    padding: 40px 100px;
-    gap: 80px;
-    height: fit-content;
+  padding: 40px 100px;
+  gap: 80px;
+  height: fit-content;
 }
 
 .welcome-google-divider {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .craft-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: fit-content;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
 }
 
 .main-logo {
-    width: 120px;
+  width: 120px;
 }
 
 .welcome-txt {
-    font-family: "faktum";
-    font-size: 28px;
-    font-weight: 600;
+  font-family: "faktum";
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .google-btn {
-    width: 100%;
-    background-color: var(--border);
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "inter";
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--craft-black);
-    border-radius: 12px;
+  width: 100%;
+  background-color: var(--border);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "inter";
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--craft-black);
+  border-radius: 12px;
 }
 .google-btn:hover {
-
-    background-color: var(--craft-bc-light);
+  background-color: var(--craft-bc-light);
 }
-.google-btn img{
-    width: 42px;
-    height: 42px;
+.google-btn img {
+  width: 42px;
+  height: 42px;
 }
 .hr-login-option {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0px 30px;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0px 30px;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
- hr {
-    flex: 1;
-    height: 1px;
-    background: #d4d4d8;
+hr {
+  flex: 1;
+  height: 1px;
+  background: #d4d4d8;
 }
 
 .divider-txt {
-    font-family: "inter";
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--text-colour);
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-colour);
 }
 
 .authentication-image {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  overflow: hidden;
 }
 
 .authentication-main-image {
-    display: flex;
-    width: 100%;
-    object-fit: fill;
-    object-position: center;
+  display: flex;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
 }
-
 
 .forget-password {
-    display: flex;
-    color: var(--craft-bc);
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
-    font-family: "inter";
-    font-size: 14px;
-    font-weight: 400;
+  display: flex;
+  color: var(--craft-bc);
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
 }
 .forget-password:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .email-label {
-    font-family: "inter";
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--craft-black);
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--craft-black);
 }
 
 .input label {
-    font-family: "inter";
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--craft-black);
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--craft-black);
 }
 
 .input-icon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .input-icon input {
-    height: 50px;
-    width: 100%;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    overflow: hidden;
+  height: 50px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
 }
 
 .input-icon div {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 0px;
-    border-radius: 0px 12px 12px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  border-radius: 0px 12px 12px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .input-icon div.open-eye {
-    display: none;
-    opacity: 0px;
+  display: none;
+  opacity: 0px;
 }
 
-
-
 .input-icon i {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 12px;
-    cursor: pointer;
-    font-size: 20px;
-    color: var(--text-colour);
-    height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-colour);
+  height: 100%;
 }
 
 /* more specificity || inactive state */
@@ -183,43 +178,41 @@
   background-color: var(--danger-light);
 }
 
-
 .sign-cta {
-    width: 100%;
-    background-color: var(--craft-bc);
-    height: 48px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--craft-white);
-    font-family: "inter";
-    font-size: 16px;
-    font-weight: 400;
-    cursor: pointer;
+  width: 100%;
+  background-color: var(--craft-bc);
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--craft-white);
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .signup {
-    font-family: "inter";
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--craft-black);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--craft-black);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup a {
-    font-family: "inter";
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--craft-bc);
-    margin-left: 10px;
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--craft-bc);
+  margin-left: 10px;
 }
 .signup a:hover {
-    
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .input-fl-name input.wrong {

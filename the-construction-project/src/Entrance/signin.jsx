@@ -13,15 +13,17 @@ export function SignIn() {
   const errRef = useRef();
 
   const [email, setEmail] = useState("");
-  //   const [validMail, setValidMail] = useState(false);
   const [mailFocus, setMailFocus] = useState(false);
 
   const [pwd, setPwd] = useState("");
-  // const [ validPwd, setValidPwd ] = useState(false)
-  // const [pwdFocus, setPwdFocus] = useState(false);
+  const [pwdFocus, setPwdFocus] = useState(false);
+
+
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+
+
 
   const [showPwd, setShowPwd] = useState(false);
 
@@ -35,7 +37,7 @@ export function SignIn() {
 
   // let password = 'Crafting7@'
   const validMail = EMAIL_REGEX.test(email);
-  console.log(validMail)
+  // console.log(validMail);
   const validPwd = PWD_REGEX.test(pwd);
   // console.log(validPwd)
 
@@ -45,25 +47,28 @@ export function SignIn() {
     const mailVal = EMAIL_REGEX.test(email.trim());
     const pwdVal = PWD_REGEX.test(pwd.trim());
 
-    if (!mailVal) {
+    if (!mailVal && !pwdVal) {
       setErrMsg("Your Email is Invalid");
       return;
     }
 
     try {
-      const response = await supabase
-        .from("Craft Auth")
-        .insert({ Email: email, password: pwd })
-        .select();
+      const response = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password: pwd.trim(),
+      });
 
       if (response.error) {
-        throw response.error;
+        console.error (response.error)
+        return
       }
+
       console.log("Inserted row:", response.data);
       setSuccess(true);
       console.log(response.data);
       console.log(response);
       console.log(response.status);
+
     } catch (error) {
       console.error("Insert failed:", error.message);
       setErrMsg("Could not save your email");
@@ -162,7 +167,9 @@ export function SignIn() {
                   id="password"
                   value={pwd}
                   className={!validPwd && pwd ? "wrong" : ""}
-                  onFocus={() => { setPwdFocus(true) }}
+                  onFocus={() => {
+                    setPwdFocus(true);
+                  }}
                   onBlur={() => {
                     setPwdFocus(false);
                   }}
