@@ -16,14 +16,11 @@ export function SignIn() {
   const [mailFocus, setMailFocus] = useState(false);
 
   const [pwd, setPwd] = useState("");
-  const [pwdFocus, setPwdFocus] = useState(false);
-
-
+  // const [pwdFocus, setPwdFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
+  const [succMsg, setSuccMsg] = useState("");
   const [success, setSuccess] = useState(false);
-
-
 
   const [showPwd, setShowPwd] = useState(false);
 
@@ -59,8 +56,8 @@ export function SignIn() {
       });
 
       if (response.error) {
-        console.error (response.error)
-        return
+        console.error(response.error);
+        return;
       }
 
       console.log("Inserted row:", response.data);
@@ -69,14 +66,24 @@ export function SignIn() {
       console.log(response);
       console.log(response.status);
 
+      setSuccMsg("Login Successfully");
+
+      setTimeout(() => {
+        setSuccMsg("");
+        setSuccess(false);
+      }, 4000);
     } catch (error) {
       console.error("Insert failed:", error.message);
       setErrMsg("Could not save your email");
     }
   };
-
   return (
     <div className="body">
+      <div className="alert-container">
+        <div className={success ? "alert" : "visible"}> 
+          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>{succMsg} </div>
+      </div>
+
       <div className="form">
         <Link to="/" className="craft-logo">
           <img
@@ -167,16 +174,16 @@ export function SignIn() {
                   id="password"
                   value={pwd}
                   className={!validPwd && pwd ? "wrong" : ""}
-                  onFocus={() => {
-                    setPwdFocus(true);
-                  }}
-                  onBlur={() => {
-                    setPwdFocus(false);
-                  }}
+                  // onFocus={() => {
+                  //   setPwdFocus(true);
+                  // }}
+                  // onBlur={() => {
+                  //   setPwdFocus(false);
+                  // }}
                   aria-invalid={pwd.trim() !== "" && !validPwd}
                   onChange={(e) => {
                     setPwd(e.target.value);
-                    console.log(`PwD: ${e.target.value}`);
+                    // console.log(`PwD: ${e.target.value}`);
                   }}
                   required
                 />

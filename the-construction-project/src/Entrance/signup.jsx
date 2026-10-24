@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import "./signup.css";
 import { useState } from "react";
 import supabase from "../supabase-client";
@@ -19,6 +19,7 @@ export function SignUp() {
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+  const [succMsg, setSuccMsg] = useState("");
 
   const validMail = EMAIL_REGEX.test(mail.trim());
   // console.log(validMail)
@@ -37,6 +38,7 @@ export function SignUp() {
     // setShowPwd((showPwd) => !showPwd);
   }
 
+  const navigate = useNavigate();
   const signup = async (e) => {
     e.preventDefault();
 
@@ -65,21 +67,42 @@ export function SignUp() {
       console.log("Signup response:", response);
       console.log("New user:", response.data.user);
 
-      if (!response.data.session) {
-        setErrMsg(
-          "Account created! Please check your email to verify your account.",
-        );
-      } else {
-        setSuccess(true);
-      }
+      // if (!response.data.session) {
+      //   setErrMsg(
+      //     "Account created! Please check your email to verify your account.",
+      //   );
+      //   console.log(errMsg);
+      // } else {
+      //   setSuccess(true);
+      // }
+
+      const message = response.data.session
+        ? "Account created successfully. You can now sign in."
+        : "Account created! Please verify your email before signing in.";
+
+      navigate("/signin", {
+        state: { signupMessage: message },
+      });
+
+      setSuccMsg("Account Created Successfully");
+      
+      setTimeout(() => {
+        setSuccMsg("");
+        setSuccess(false);
+      }, 4000);
     } catch (error) {
       console.error("SignUp Failed", error.message);
       setErrMsg("Unable to create your account, Please try again");
     }
   };
-  return ( 
-    // {success ? <SignIn /> : }
+  return (
     <div className="body">
+      <div className="alert-container">
+        <div className={success ? "alert" : "visible"}>
+          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
+          {succMsg}{" "}
+        </div>
+      </div>
       <div className="main-page">
         <Link to="/" className="craft-logo">
           <img
