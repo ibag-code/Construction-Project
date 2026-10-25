@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useState, useRef, useEffect } from "react";
 import supabase from "../supabase-client";
 import "./signin.css";
@@ -9,6 +9,25 @@ const PWD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 export function SignIn() {
+
+
+  const location = useLocation();
+
+  const [signupMessage, setSignupMessage] = useState(
+    location.state?.signupMessage ?? "",
+  );
+  useEffect(() => {
+    if (!signupMessage) return;
+
+    const timer = setTimeout(() => {
+      setSignupMessage("");
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [signupMessage]);
+
+  
+
   const emailRef = useRef();
   const errRef = useRef();
 
@@ -71,6 +90,7 @@ export function SignIn() {
       setTimeout(() => {
         setSuccMsg("");
         setSuccess(false);
+        signupMessage("");
       }, 4000);
     } catch (error) {
       console.error("Insert failed:", error.message);
@@ -80,8 +100,11 @@ export function SignIn() {
   return (
     <div className="body">
       <div className="alert-container">
-        <div className={success ? "alert" : "visible"}> 
-          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>{succMsg} </div>
+        <div className={signupMessage ? "alert" : "visible"}>
+          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
+          {succMsg}
+          {signupMessage}
+        </div>
       </div>
 
       <div className="form">

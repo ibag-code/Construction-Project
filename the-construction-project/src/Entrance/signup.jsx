@@ -85,7 +85,7 @@ export function SignUp() {
       });
 
       setSuccMsg("Account Created Successfully");
-      
+
       setTimeout(() => {
         setSuccMsg("");
         setSuccess(false);
