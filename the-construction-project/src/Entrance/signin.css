@@ -9,6 +9,7 @@ a {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  background-color: var(--craft-white);
 }
 
 .form {

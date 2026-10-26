@@ -9,8 +9,6 @@ const PWD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 export function SignIn() {
-
-
   const location = useLocation();
 
   const [signupMessage, setSignupMessage] = useState(
@@ -25,8 +23,6 @@ export function SignIn() {
 
     return () => clearTimeout(timer);
   }, [signupMessage]);
-
-  
 
   const emailRef = useRef();
   const errRef = useRef();
@@ -90,7 +86,6 @@ export function SignIn() {
       setTimeout(() => {
         setSuccMsg("");
         setSuccess(false);
-        signupMessage("");
       }, 4000);
     } catch (error) {
       console.error("Insert failed:", error.message);
@@ -98,68 +93,69 @@ export function SignIn() {
     }
   };
   return (
-    <div className="body">
-      <div className="alert-container">
-        <div className={signupMessage ? "alert" : "visible"}>
-          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
-          {succMsg}
-          {signupMessage}
-        </div>
-      </div>
-
-      <div className="form">
-        <Link to="/" className="craft-logo">
-          <img
-            src="../images/Craft-logo-icon.png"
-            alt="craft-logo"
-            className="main-logo"
-          />
-        </Link>
-
-        <div className="welcome-google-divider">
-          <h3 className="welcome-txt">Welcome back!</h3>
-
-          <a href="Google Sign in" className="google-btn">
-            <img src="../images/google.png" alt="google-image" />
-            Sign in with Google
-          </a>
-
-          <div className="hr-login-option">
-            <hr />
-            <div className="divider-txt">Or continue with</div>
-            <hr />
+    <>
+      <div>
+        <div className="alert-container">
+          <div className={signupMessage ? "alert" : "visible"}>
+            <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
+            {succMsg}
+            {signupMessage}
           </div>
+        </div>
 
-          <form action="" id="form" onSubmit={submit}>
-            <div className="input">
-              <label htmlFor="email"> Email</label>
+        <div className="form">
+          <Link to="/" className="craft-logo">
+            <img
+              src="../images/Craft-logo-icon.png"
+              alt="craft-logo"
+              className="main-logo"
+            />
+          </Link>
 
-              <div className="input-icon">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value={email}
-                  placeholder="Enter your email Address"
-                  className={`email ${email.trim() && !validMail ? "wrong" : ""}`}
-                  required
-                  ref={emailRef}
-                  autoComplete="off"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setErrMsg("");
-                  }}
-                  onFocus={() => {
-                    setMailFocus(true);
-                  }}
-                  onBlur={() => {
-                    setMailFocus(false);
-                  }}
-                  aria-invalid={email.trim() !== "" && !validMail}
-                  aria-describedby="uidnote"
-                />
+          <div className="welcome-google-divider">
+            <h3 className="welcome-txt">Welcome back!</h3>
 
-                {/* <p
+            <a href="Google Sign in" className="google-btn">
+              <img src="../images/google.png" alt="google-image" />
+              Sign in with Google
+            </a>
+
+            <div className="hr-login-option">
+              <hr />
+              <div className="divider-txt">Or continue with</div>
+              <hr />
+            </div>
+
+            <form action="" id="form" onSubmit={submit}>
+              <div className="input">
+                <label htmlFor="email"> Email</label>
+
+                <div className="input-icon">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={email}
+                    placeholder="Enter your email Address"
+                    className={`email ${email.trim() && !validMail ? "wrong" : ""}`}
+                    required
+                    ref={emailRef}
+                    autoComplete="off"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      setErrMsg("");
+                    }}
+                    onFocus={() => {
+                      setMailFocus(true);
+                    }}
+                    onBlur={() => {
+                      setMailFocus(false);
+                    }}
+                    aria-invalid={email.trim() !== "" && !validMail}
+                    aria-describedby="uidnote"
+                  />
+
+                  {/* <p
                   ref={errRef}
                   className={
                     mailFocus && !validMail && email
@@ -171,82 +167,83 @@ export function SignIn() {
                   {errMsg}
                 </p> */}
 
-                <p
-                  id="uidnote"
-                  ref={errRef}
-                  className={
-                    (mailFocus && email.trim() && !validMail) || errMsg
-                      ? "error-message"
-                      : "block-message"
-                  }
-                  aria-live="polite"
-                >
-                  {errMsg || "Please enter a valid email address."}
-                </p>
-              </div>
-            </div>
-
-            <div className="input">
-              <label htmlFor="password"> Password</label>
-
-              <div className="input-icon">
-                <input
-                  type={showPwd ? "text" : "password"}
-                  name="password"
-                  placeholder="Enter your Password"
-                  id="password"
-                  value={pwd}
-                  className={!validPwd && pwd ? "wrong" : ""}
-                  // onFocus={() => {
-                  //   setPwdFocus(true);
-                  // }}
-                  // onBlur={() => {
-                  //   setPwdFocus(false);
-                  // }}
-                  aria-invalid={pwd.trim() !== "" && !validPwd}
-                  onChange={(e) => {
-                    setPwd(e.target.value);
-                    // console.log(`PwD: ${e.target.value}`);
-                  }}
-                  required
-                />
-
-                <div onClick={showPassword}>
-                  {showPwd ? (
-                    <i className="hgi hgi-stroke hgi-rounded hgi-eye"></i>
-                  ) : (
-                    <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
-                  )}
+                  <p
+                    id="uidnote"
+                    ref={errRef}
+                    className={
+                      (mailFocus && email.trim() && !validMail) || errMsg
+                        ? "error-message"
+                        : "block-message"
+                    }
+                    aria-live="polite"
+                  >
+                    {errMsg || "Please enter a valid email address."}
+                  </p>
                 </div>
               </div>
 
-              <Link to="/emailauth" className="forget-password">
-                Forget Password
-              </Link>
-            </div>
+              <div className="input">
+                <label htmlFor="password"> Password</label>
 
-            <button
-              disabled={!validPwd || !validMail ? true : false}
-              type="submit"
-              className="sign-cta"
-            >
-              Sign In
-            </button>
-          </form>
+                <div className="input-icon">
+                  <input
+                    type={showPwd ? "text" : "password"}
+                    name="password"
+                    placeholder="Enter your Password"
+                    id="password"
+                    value={pwd}
+                    className={!validPwd && pwd ? "wrong" : ""}
+                    // onFocus={() => {
+                    //   setPwdFocus(true);
+                    // }}
+                    // onBlur={() => {
+                    //   setPwdFocus(false);
+                    // }}
+                    aria-invalid={pwd.trim() !== "" && !validPwd}
+                    onChange={(e) => {
+                      setPwd(e.target.value);
+                      // console.log(`PwD: ${e.target.value}`);
+                    }}
+                    required
+                  />
 
-          <p className="signup">
-            Are you a new user: <Link to="/signup">Create a new Account</Link>
-          </p>
+                  <div onClick={showPassword}>
+                    {showPwd ? (
+                      <i className="hgi hgi-stroke hgi-rounded hgi-eye"></i>
+                    ) : (
+                      <i className="hgi hgi-stroke hgi-rounded hgi-view-off closed-eye"></i>
+                    )}
+                  </div>
+                </div>
+
+                <Link to="/emailauth" className="forget-password">
+                  Forget Password
+                </Link>
+              </div>
+
+              <button
+                disabled={!validPwd || !validMail ? true : false}
+                type="submit"
+                className="sign-cta"
+              >
+                Sign In
+              </button>
+            </form>
+
+            <p className="signup">
+              Are you a new user: <Link to="/signup">Create a new Account</Link>
+            </p>
+          </div>
+        </div>
+
+        <div className="authentication-image">
+          <img
+            src="../images/authentication-image.png"
+            alt=""
+            className="authentication-main-image"
+          />
         </div>
       </div>
-
-      <div className="authentication-image">
-        <img
-          src="../images/authentication-image.png"
-          alt=""
-          className="authentication-main-image"
-        />
-      </div>
-    </div>
+    </>
   );
 }

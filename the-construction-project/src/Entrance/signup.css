@@ -4,6 +4,7 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  background-color: var(--craft-white);
 }
 
 .main-page {
@@ -90,6 +91,7 @@ hr {
   flex-direction: column;
   max-width: 50%;
   overflow: hidden;
+  height: 100vh;
 }
 
 .authentication-main-image {

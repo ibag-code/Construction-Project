@@ -96,6 +96,7 @@ export function SignUp() {
     }
   };
   return (
+
     <div className="body">
       <div className="alert-container">
         <div className={success ? "alert" : "visible"}>
@@ -103,6 +104,7 @@ export function SignUp() {
           {succMsg}{" "}
         </div>
       </div>
+
       <div className="main-page">
         <Link to="/" className="craft-logo">
           <img
@@ -241,6 +243,7 @@ export function SignUp() {
           className="authentication-main-image"
         />
       </div>
+      
     </div>
   );
 }

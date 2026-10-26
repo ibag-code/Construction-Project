@@ -93,6 +93,13 @@ const features = [
 // console.log(features)
 
 export function Website() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, []);
   //Accordion Code
   const [open, setOpen] = useState(null);
 
@@ -100,30 +107,41 @@ export function Website() {
     setOpen(num);
 
     if (open === num) {
-       setOpen(null); //Closes the tab
+      setOpen(null); //Closes the tab
     }
-  }; 
-
-
+  };
 
   //Auto Recycle code
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // useEffect(() => {
+  //   const set = setInterval(() => {
+  //     setCurrentIndex(() => {
+  //       let nextIndex = currentIndex + 1;
+
+  //       if (nextIndex === features.length) {
+  //         nextIndex = 0;
+  //       }
+  //       return nextIndex;
+  //     });
+  //   }, 4000);
+
+  //   return () => clearInterval(set);
+  // }, []);
+
   useEffect(() => {
-    const set = setInterval(() => {
-      setCurrentIndex(() => {
-        let nextIndex = currentIndex + 1;
+  const interval = setInterval(() => {
+    setCurrentIndex((prevIndex) => {
+      let nextIndex = prevIndex + 1;
+      if (nextIndex === features.length) {
+        nextIndex = 0;
+      }
+      return nextIndex;
+    });
+  }, 4000);
 
-        if (nextIndex === features.length) {
-          nextIndex = 0;
-        }
-        return nextIndex;
-      });
-    }, 4000);
-
-    return () => clearInterval(set);
-  });
-
+  return () => clearInterval(interval);
+}, []); // No external dependencies needed now
   //   console.log(features[currentIndex].image)
 
   return (
@@ -466,7 +484,7 @@ export function Website() {
         </div>
       </section>
 
-      <section className="why-choose-us-section available-project">
+      <section className="why-choose-us-section">
         <div className="available-project-header">
           <div className="project-wrapper">
             <h1 className="project-header">
@@ -486,17 +504,15 @@ export function Website() {
               const mainActive = index === currentIndex;
 
               return (
-                <>
-                  <div
-                    key={feature.id}
-                    className={
-                      mainActive ? "feature-content active" : "feature-content "
-                    }
-                  >
-                    <h3 className="feature-title">{feature.heading}</h3>
-                    <p className="feature-subheading">{feature.subheading}</p>
-                  </div>
-                </>
+                <div
+                  key={feature.id}
+                  className={
+                    mainActive ? "feature-content active" : "feature-content "
+                  }
+                >
+                  <h3 className="feature-title">{feature.heading}</h3>
+                  <p className="feature-subheading">{feature.subheading}</p>
+                </div>
               );
             })}
           </div>
@@ -511,8 +527,7 @@ export function Website() {
         </div>
       </section>
 
-      
-      <section className="how-it-work-section available-project">
+      <section className="how-it-work-section">
         <div className="available-project-header">
           <div className="project-wrapper">
             <h1 className="project-header">Getting started is super-easy</h1>
@@ -617,7 +632,7 @@ export function Website() {
               <div
                 key={accordData.id}
                 className="accordion"
-                onClick={ () => toggle(index) }
+                onClick={() => toggle(index)}
                 // onClick={ clicktoggle }
               >
                 <div className="accordion-head">
@@ -625,11 +640,11 @@ export function Website() {
                     {accordData.question}
                   </div>
 
-                  {open === index ? 
+                  {open === index ? (
                     <i className="hgi hgi-stroke hgi-rounded hgi-multiplication-sign"></i>
-                  : 
-                    <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-                  }
+                  ) : (
+                    <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+                  )}
                 </div>
 
                 <div
@@ -644,9 +659,7 @@ export function Website() {
               </div>
             );
           })}
-
         </div>
-        
       </section>
 
       <footer>

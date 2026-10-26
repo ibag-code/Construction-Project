@@ -78,9 +78,9 @@ a {
     color: var(--craft-white);
 }
 
-body {
+/* body {
     height: fit-content;
-}
+} */
 
 header {
     width: 100%;
@@ -93,7 +93,7 @@ header {
     padding: 20px 60px;
     overflow: hidden;
     box-sizing: border-box;
-    position: fixed;
+    /* position: fixed; */
     top: 0px;
     right: 0px;
     left: 0px;
@@ -587,8 +587,6 @@ header {
     justify-content: start;
     width: 100%;
     top: 120px;
-    position: sticky;
-
 }
 
 .faq-text {
