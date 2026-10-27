@@ -52,11 +52,13 @@ header {
   padding-top: 100px;
   padding-left: 60px;
   padding-right: 60px;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
 }
+
 .hero-craft-bg {
   position: absolute;
   left: 0px;
@@ -88,7 +90,7 @@ header {
   justify-content: center;
   align-content: start;
   align-items: start;
-  gap: 32px;
+  gap: 12px;
 }
 
 .image-container {
@@ -113,15 +115,16 @@ header {
   font-weight: 600;
   line-height: 1.15;
   color: var(--craft-white);
+  margin: 0px;
 }
 
 .faktum-text span {
   display: block;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 .sub-heading {
-  font-family: "inter";
+  font-family: inter;
   font-weight: 200px;
   font-size: 16px;
   color: var(--bg-color);
@@ -135,4 +138,489 @@ header {
   align-content: start;
   gap: 12px;
   width: 100%;
+}
+
+.available-project {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  width: fit-content;
+  gap: 32px;
+}
+
+.available-project-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50vw;
+  max-width: 745px;
+  min-width: 500px;
+  overflow: hidden;
+}
+
+.project-header {
+  font-family: "Faktum";
+  font-size: 40px;
+  font-weight: 600px;
+  color: var(--craft-black);
+}
+
+.project-subheading {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-colour);
+  margin: 0px;
+  height: 40px;
+}
+
+.flex-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.project-container {
+  min-width: 100%;
+  height: 420px;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  padding: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.normal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: none;
+  height: fit-content;
+}
+
+.hover-card {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  height: fit-content;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Hover the parent */
+.project-container:hover .normal-card {
+  display: none;
+}
+
+.project-container:hover .hover-card {
+  display: flex;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.hover-card .project-image {
+  height: 240px;
+  width: 100%;
+}
+
+.location-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+
+.location {
+  font-family: "inter";
+  font-size: 12px;
+  color: var(--text-colour);
+  font-weight: 600;
+  height: fit-content;
+  margin: 0px;
+}
+
+.status-tag {
+  display: flex;
+  flex-direction: row;
+  padding: 6px 12px;
+  gap: 10px;
+  background-color: var(--success-light-2);
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  font-family: "inter";
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--success-dark);
+}
+
+.status-dot {
+  background-color: var(--success);
+  height: 10px;
+  width: 10px;
+  position: relative;
+  z-index: 10;
+  border-radius: 999px;
+}
+
+.project-name {
+  font-family: "inter";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--craft-black);
+  margin: 0px;
+}
+
+.project-price {
+  font-family: "inter";
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--craft-black);
+  margin: 0px;
+}
+
+.image-feature {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  border-left: 1px solid var(--border);
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  gap: 8px;
+  margin-left: -2px;
+  z-index: 2;
+}
+
+.feature-content-active {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  gap: 8px;
+
+  margin-left: -2px;
+  position: relative;
+  z-index: 2;
+}
+
+.active {
+  border-left: 4px solid var(--craft-bc);
+}
+
+.feature-title {
+  font-family: "faktum";
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.feature-subheading {
+  font-family: "inter";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-colour);
+}
+
+.feature-image {
+  width: 44vw;
+  height: 100%;
+}
+
+.how-flex-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.how-project-container {
+  /* Every card takes 2 columns */
+  grid-column: span 2;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background-color: var(--bg-color);
+  padding: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Push the 4th card to the center on second row */
+.how-project-container:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+/* 5th card stays beside it */
+.how-project-container:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.about-heading {
+  font-family: "inter";
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--craft-black);
+}
+
+.about-subheading {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-colour);
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 60px;
+  width: 100%;
+  position: relative;
+}
+
+.faq-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  top: 120px;
+}
+
+.faq-text {
+  font-family: "faktum";
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 32px 16px;
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+.accordion:hover {
+  background-color: var(--craft-bc-light);
+}
+
+.accordion-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.accordion i {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-colour);
+}
+
+.accordion-question {
+  font-family: "inter";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.accordion-answer {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-colour);
+  display: none;
+}
+
+.accordion-answer.accord-active {
+  display: block;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--craft-black);
+  width: 100%;
+  padding: 100px 60px;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-side-and-footer-coloumn {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  height: fit-content;
+  width: 100%;
+}
+
+.brand-goal {
+  display: flex;
+  flex-direction: column;
+  width: 36vw;
+}
+
+.craft-foot-logo {
+  font-family: "faktum";
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--craft-white);
+}
+
+.craft-goal {
+  font-family: "inter";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--border);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.link-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-title {
+  font-family: "faktum";
+  font-size: 20px;
+  color: var(--craft-white);
+  font-weight: 400;
+}
+
+.foot-nav-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 12px;
+  height: fit-content;
+}
+
+.foot-nav-btn {
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--border);
+}
+
+.copyright-and-social-media {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-text {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--border);
+}
+
+.social-media-icon {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.social-media-icon i {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--text-colour);
+  color: var(--craft-white);
+  border-radius: 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  cursor: pointer;
+}
+.social-media-icon i :hover {
+  background-color: var(--craft-bc-light-2);
+  color: var(--craft-bc);
+}
+
+.big-craft-logo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+}
+
+.shadow-effect-foot {
+  height: 500px;
+  width: 500px;
+  background-color: #d0bad7;
+  position: absolute;
+  bottom: -50px;
+
+  filter: blur(900px);
 }

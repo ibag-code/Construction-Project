@@ -93,6 +93,8 @@ const features = [
 // console.log(features)
 
 export function Website() {
+
+  
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -100,6 +102,8 @@ export function Website() {
       behavior: "auto",
     });
   }, []);
+
+
   //Accordion Code
   const [open, setOpen] = useState(null);
 
