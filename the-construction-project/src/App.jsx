@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import { Website } from "./Website/website";
+import { LandingPage } from "./LandingPage /LandingPage";
 import { SignUp } from "./Entrance/signup";
 import { SignIn } from "./Entrance/signin";
 import { SignupAuth } from "./Entrance/Verify/Signupauth";
@@ -13,6 +14,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Website />} />
+      <Route path="landingpage" element= { <LandingPage /> } />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signupAuth" element={<SignupAuth />} />

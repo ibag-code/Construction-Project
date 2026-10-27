@@ -1,0 +1,138 @@
+header {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--craft-black);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 999;
+  border-bottom: 1px solid #41444c;
+}
+
+.craft-logo-head {
+  width: 123px;
+  height: 38px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 28px;
+  height: fit-content;
+}
+
+.nav-btn {
+  font-family: inter;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.nav-btn:hover {
+  text-decoration: underline;
+  color: var(--craft-bc-light-3);
+}
+.nav-btn:active {
+  text-decoration: underline;
+  color: var(--craft-bc);
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--craft-black);
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.hero-craft-bg {
+  position: absolute;
+  left: 0px;
+  top: 30%;
+  width: 60vw;
+}
+
+.shadow-effect {
+  height: 500px;
+  width: 500px;
+  background-color: #d0bad7;
+  position: absolute;
+  right: 200px;
+  top: 300px;
+  filter: blur(900px);
+}
+
+.content-container {
+  position: relative;
+  left: 60px;
+  z-index: 72;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+  height: 100%;
+  width: 100%;
+
+  justify-content: center;
+  align-content: start;
+  align-items: start;
+  gap: 32px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  top: 28px;
+
+  width: 70vw;
+  max-width: 700px;
+  min-width: 580px;
+
+  z-index: 50;
+}
+
+.faktum-text {
+  font-family: "Faktum", Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--craft-white);
+}
+
+.faktum-text span {
+  display: block;
+  white-space: normal;
+}
+
+.sub-heading {
+  font-family: "inter";
+  font-weight: 200px;
+  font-size: 16px;
+  color: var(--bg-color);
+}
+
+.cta-container-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  align-content: start;
+  gap: 12px;
+  width: 100%;
+}

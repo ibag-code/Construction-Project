@@ -31,16 +31,6 @@
   --warning-dark: #735c00;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: "Faktum";
   src: url("./fonts/Faktum-Regular.otf") format("opentype");
@@ -81,17 +71,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
+body {
   margin: 0;
   min-height: 100vh;
   height: auto;
   font-family: Inter, sans-serif;
-} */
-
+  background-color: var(--bg-color);
+}
 #root {
   width: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .arrow-back {
   background-color: var(--bg-color);
   height: 50px;
@@ -270,4 +264,58 @@ form {
   flex-direction: column;
   border-radius: 32px;
   width: 600px;
+}
+
+/* CALL TO ACTION BUTTON */
+
+.cta-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-button {
+  width: fit-content;
+  height: fit-content;
+  color: var(--craft-white);
+  background-color: var(--craft-bc);
+  font-family: inter;
+  font-weight: normal;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 14px 20px;
+  border-radius: 12px;
+}
+
+.cta-button:hover {
+  background-color: #e8deec;
+  color: #66217e;
+}
+
+.cta-button:active {
+  background-color: #e8deec;
+  color: var(--craft-dark);
+}
+
+.cta-button-outline {
+  border: 0.5px var(--craft-white) solid;
+  border-radius: 12px;
+  color: var(--craft-white);
+  padding: 14px 20px;
+  font-family: inter;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-button-outline:hover {
+  background-color: var(--craft-bc-light-3);
+  color: var(--craft-bc);
 }
