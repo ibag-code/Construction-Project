@@ -33,23 +33,91 @@ const features = [
   },
 ];
 
+const accordionData = [
+  {
+    id: 0,
+    question: "What is Craft for ?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 1,
+    question: "Who can join Craft as an artisan?",
+    answer:
+      " Craft is for skilled workers in construction-related trades, including bricklayers, masons, plumbers, electricians, painters, carpenters, tilers, welders, roofers, POP installers, and other hands-on professionals.",
+  },
+  {
+    id: 2,
+    question: "Do I need to have a portfolio before joining?",
+    answer:
+      " No. You can start by creating your profile first. If you already have pictures of your past work, you can upload them to build trust faster. If not, you can add your portfolio later as you complete more projects.",
+  },
+  {
+    id: 3,
+    question: "How does Craft help me get projects?",
+    answer:
+      "No. You can start by creating your profile first. If you already have pictures of your past work, you can upload them to build trust faster. If not, you can add your portfolio later as you complete more projects.",
+  },
+  {
+    id: 4,
+    question: " Can I apply for projects myself?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 5,
+    question: "What should I add to my profile?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 6,
+    question: "Why is my portfolio important?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 7,
+    question: "How do i get paid?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+  {
+    id: 8,
+    question: "How do Client contact me?",
+    answer:
+      " Craft is a platform that helps skilled construction artisans create a professional profile, showcase their completed work, and connect with homeowners, developers, and contractors looking for reliable workers.",
+  },
+];
+
 export function LandingPage() {
-
-
-   //Auto Recycle code
-    const [currentIndex, setCurrentIndex] = useState(0);
   
-    useEffect(() => {
+  //Accordion Code
+  const [open, setOpen] = useState(null);
+
+  const toggle = (index) => {
+    setOpen(index);
+
+    if (open === index) {
+      setOpen(null); //Closes the tab
+    }
+  };
+
+  //Auto Recycle code
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         let nextIndex = prevIndex + 1;
+
         if (nextIndex === features.length) {
           nextIndex = 0;
         }
         return nextIndex;
       });
     }, 4000);
-  
+
     return () => clearInterval(interval);
   }, []);
   return (
@@ -409,7 +477,6 @@ export function LandingPage() {
         <div className="image-feature">
           <div className="text-wrapper">
             {features.map((feature, index) => {
-
               const mainActive = index === currentIndex;
 
               return (
@@ -475,7 +542,7 @@ export function LandingPage() {
 
           <div className="image-wrapper">
             <img
-              src="../images/showcase.png"
+              src={features[currentIndex].image}
               alt="showcase-image"
               className="feature-image"
             />
@@ -583,156 +650,39 @@ export function LandingPage() {
         </div>
 
         <div class="accordion-wrapper">
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">What is Craft for artisans?</div>
+          {accordionData.map((accordData, index) => {
+            const openActive = open === index;
+            return (
+              <div
+                key={accordData.id}
+                className="accordion"
+                onClick={() => toggle(index)}
+                // onClick={ clicktoggle }
+              >
+                <div className="accordion-head">
+                  <div className="accordion-question">
+                    {accordData.question}
+                  </div>
 
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
+                  {openActive ? (
+                    <i className="hgi hgi-stroke hgi-rounded hgi-multiplication-sign"></i>
+                  ) : (
+                    <i className="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
+                  )}
+                </div>
 
-            <div class="accordion-answer accord-active">
-              Craft is a platform that helps skilled construction artisans
-              create a professional profile, showcase their completed work, and
-              connect with homeowners, developers, and contractors looking for
-              reliable workers.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
-                Who can join Craft as an artisan?
+                <div
+                  className={
+                    openActive
+                      ? "accordion-answer accord-active"
+                      : "accordion-answer"
+                  }
+                >
+                  {accordData.answer}
+                </div>
               </div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer  ">
-              Craft is for skilled workers in construction-related trades,
-              including bricklayers, masons, plumbers, electricians, painters,
-              carpenters, tilers, welders, roofers, POP installers, and other
-              hands-on professionals.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
-                Do I need to have a portfolio before joining?
-              </div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              No. You can start by creating your profile first. If you already
-              have pictures of your past work, you can upload them to build
-              trust faster. If not, you can add your portfolio later as you
-              complete more projects.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
-                How does Craft help me get projects?
-              </div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              No. You can start by creating your profile first. If you already
-              have pictures of your past work, you can upload them to build
-              trust faster. If not, you can add your portfolio later as you
-              complete more projects.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
-                Can I apply for projects myself?
-              </div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              Yes. You can browse available construction projects and apply for
-              the ones that match your skills, experience, location, and
-              schedule.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
-                What should I add to my profile?
-              </div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              Your profile should include your trade, skills, years of
-              experience, location, service area, availability, short bio,
-              portfolio images, completed projects, and any proof of work that
-              can help clients trust you.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">
-                Why is my portfolio important?
-              </div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              Your portfolio shows clients what you can do before they contact
-              you. It helps you prove your skill, build credibility, and stand
-              out from other artisans who only depend on word of mouth.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">How do i get paid?</div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              After completing a project, you receive payment based on the
-              agreement between you and the client. Craft helps make the process
-              more organized by connecting you with serious project
-              opportunities.
-            </div>
-          </div>
-
-          <div class="accordion">
-            <div class="accordion-head">
-              <div class="accordion-question">How do Client contact me?</div>
-
-              <i class="hgi hgi-stroke hgi-rounded hgi-plus-sign"></i>
-            </div>
-
-            <div class="accordion-answer ">
-              {" "}
-              Clients can contact you through your profile or after you apply to
-              a project. They can message you, ask questions about your
-              experience, and discuss the project details before hiring.{" "}
-            </div>
-          </div>
+            );
+          })}
         </div>
       </section>
 
