@@ -94,7 +94,8 @@ export function SignIn() {
   };
   return (
     <>
-      <div>
+      <div className="main-container ">
+        
         <div className="alert-container">
           <div className={signupMessage ? "alert" : "visible"}>
             <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
@@ -243,6 +244,7 @@ export function SignIn() {
             className="authentication-main-image"
           />
         </div>
+
       </div>
     </>
   );

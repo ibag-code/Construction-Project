@@ -97,11 +97,11 @@ export function SignUp() {
   };
   return (
 
-    <div className="body">
+    <div className="main-container ">
       <div className="alert-container">
         <div className={success ? "alert" : "visible"}>
           <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
-          {succMsg}{" "}
+          {succMsg}
         </div>
       </div>
 

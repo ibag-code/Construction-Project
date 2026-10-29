@@ -1,11 +1,4 @@
-.body {
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  background-color: var(--craft-white);
-}
+
 
 .main-page {
   display: flex;
@@ -84,21 +77,6 @@ hr {
   font-size: 14px;
   font-weight: 400;
   color: var(--text-colour);
-}
-
-.authentication-image {
-  display: flex;
-  flex-direction: column;
-  max-width: 50%;
-  overflow: hidden;
-  height: 100vh;
-}
-
-.authentication-main-image {
-  display: flex;
-  width: 100%;
-  object-fit: fill;
-  object-position: center;
 }
 
 .forget-password {
