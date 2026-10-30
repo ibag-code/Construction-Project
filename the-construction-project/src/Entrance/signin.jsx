@@ -227,7 +227,7 @@ export function SignIn() {
               <button
                 disabled={!validPwd || !validMail ? true : false}
                 type="submit"
-                className="sign-cta"
+                className="action-btn"
               >
                 Sign In
               </button>

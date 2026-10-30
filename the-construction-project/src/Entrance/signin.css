@@ -1,37 +1,5 @@
 
-.alert-container {
-  position: absolute;
-  display: flex;
-  flex-direction: center;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  top: 120px;
-}
 
-.alert-container i {
-  color: rgb(4, 107, 42);
-  margin-right: 4px;
-  font-size: 24px;
-  font-weight: 400;
-}
-
-.alert {
-  background-color: rgb(188, 225, 199);
-  padding: 10px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  font-size: 16px;
-  color: rgb(4, 107, 42);
-  flex-direction: row;
-}
-
-.visible {
-  display: none;
-}
 
 .form {
   display: flex;
@@ -159,37 +127,7 @@ form {
   color: var(--craft-black);
 }
 
-.input-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  position: relative;
-}
 
-.input-icon inputr {
-  height: 50px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-}
-
-.input-icon div {
-  position: absolute;
-  right: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  color: var(--text-colour);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  width: 40px;
-  justify-content: center;
-  cursor: pointer;
-  background-color: none;
-  border: none;
-}
 
 .sign-cta {
   width: 100%;
@@ -206,6 +144,7 @@ form {
   font-weight: 400;
   cursor: pointer;
 }
+
 .sign-cta:disabled {
   background-color: #ccc;
   color: #666;
@@ -235,19 +174,6 @@ form {
   text-decoration: underline;
 }
 
-.wrong {
-  border: 1px solid var(--danger);
-  background-color: var(--danger-light);
-}
-.error-message {
-  color: var(--danger);
-  display: flex;
-  width: 100%;
-  font-size: 12px;
-  font-weight: 400;
-}
-.block-message {
-  display: none;
-}
+
 
 

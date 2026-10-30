@@ -38,8 +38,6 @@ export function SignUp() {
     // setShowPwd((showPwd) => !showPwd);
   }
 
-
-
   const navigate = useNavigate();
   const signup = async (e) => {
     e.preventDefault();
@@ -98,7 +96,6 @@ export function SignUp() {
     }
   };
   return (
-
     <div className="main-container ">
       <div className="alert-container">
         <div className={success ? "alert" : "visible"}>
@@ -226,7 +223,11 @@ export function SignUp() {
               </div>
             </div>
 
-            <button type="submit" className="sign-cta">
+            <button
+              type="submit"
+              className="action-btn"
+              disabled={!validMail || !validPwd || !setValidMatch ? true : false}
+            >
               Sign Up
             </button>
           </form>
@@ -245,7 +246,6 @@ export function SignUp() {
           className="authentication-main-image"
         />
       </div>
-      
     </div>
   );
 }

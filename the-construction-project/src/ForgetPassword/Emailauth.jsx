@@ -10,29 +10,100 @@ export function EmailAuth() {
 
   const [errMsg, setErrMsg] = useState("");
 
+  const [message, setMessage] = useState("");
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [success, setSuccess] = useState(false);
+
   const validMail = EMAIL_REGEX.test(email);
+  // console.log(validMail);
 
   const submit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
+    setMessage("");
+
+    console.log(isLoading);
+
     try {
-      const response = supabase.auth.resetPasswordForEmail(email);
+      const response = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: "http://localhost:5173/passwordreset",
+      });
 
       console.log(response.data);
       console.log(response.error);
+
+      setSuccess(true);
+
+      if (response.error) {
+        setErrMsg(`Error: ${response.error.message}`);
+      }
+      if (!response.error) {
+        setMessage("Password reset link sent! Check your email inbox.");
+      }
+
+      console.log(isLoading);
+
+      setTimeout(() => {
+        setIsLoading(false);
+        setMessage("");
+        setSuccess(false);
+      }, 4000);
     } catch (error) {
       setErrMsg("Could not save your email");
       console.log(error.message);
     }
   };
 
+  //   const submit = async (e) => {
+  //   e.preventDefault();
+
+  //   setIsLoading(true);
+  //   setMessage("");
+  //   setErrMsg("");
+
+  //   try {
+  //     const response =
+  //       await supabase.auth.resetPasswordForEmail(email, {
+  //         redirectTo: "http://localhost:5173/passwordreset",
+  //       });
+
+  //     if (response.error) {
+  //       setErrMsg(`Error: ${response.error.message}`);
+  //       return;
+  //     }
+
+  //     setMessage("Password reset link sent! Check your email inbox.");
+  //     setSuccess(true);
+
+  //     setTimeout(() => {
+  //       setMessage("");
+  //       setSuccess(false);
+  //     }, 4000);
+
+  //   } catch (error) {
+  //     setErrMsg("Could not send your password reset link.");
+  //     console.log(error.message);
+
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
+
   return (
     <>
+      <div className="alert-container">
+        <div className={success ? "alert" : "visible"}>
+          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
+          {message}
+        </div>
+      </div>
       <div className="the-form">
         <Link to="/signin" className="arrow-back">
           <i className="hgi hgi-stroke hgi-rounded hgi-arrow-left-01"></i>
         </Link>
-
-        {errMsg}
 
         <div className="verify-text">
           <h3>Forget password</h3>
@@ -44,11 +115,11 @@ export function EmailAuth() {
 
         <form id="otpForm" onSubmit={submit}>
           <div className="otp-countdown">
-            <div className="otp-inputs">
+            <div className="input-icon">
               <input
                 type="email"
                 placeholder="Enter your email Address"
-                className="my-otp-field"
+                className={`email ${email.trim() && !validMail ? "wrong" : ""}`}
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -57,12 +128,8 @@ export function EmailAuth() {
               />
             </div>
           </div>
-          <button
-            disabled={!validMail  ? true : false}
-            type="submit"
-            className="verify-btn"
-          >
-            Continue
+          <button disabled={!validMail} type="submit" className="action-btn ">
+            {isLoading ? "Sending..." : "Send Reset Link"}
           </button>
         </form>
       </div>
