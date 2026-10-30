@@ -82,12 +82,15 @@ export function SignIn() {
       console.log(response.status);
 
       setSuccMsg("Login Successfully");
+      alert(succMsg)
 
       setTimeout(() => {
         setSuccMsg("");
         setSuccess(false);
       }, 4000);
-    } catch (error) {
+    }
+    
+    catch (error) {
       console.error("Insert failed:", error.message);
       setErrMsg("Could not save your email");
     }
@@ -97,10 +100,9 @@ export function SignIn() {
       <div className="main-container ">
         
         <div className="alert-container">
-          <div className={signupMessage ? "alert" : "visible"}>
+          <div className={success ? "alert" : "visible"}>
             <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
             {succMsg}
-            {signupMessage}
           </div>
         </div>
 

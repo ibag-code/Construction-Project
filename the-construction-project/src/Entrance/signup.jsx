@@ -38,6 +38,8 @@ export function SignUp() {
     // setShowPwd((showPwd) => !showPwd);
   }
 
+
+
   const navigate = useNavigate();
   const signup = async (e) => {
     e.preventDefault();
