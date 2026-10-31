@@ -100,6 +100,7 @@ export function SignUp() {
       <div className="alert-container">
         <div className={success ? "alert" : "visible"}>
           <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
+          {errMsg}
           {succMsg}
         </div>
       </div>
@@ -226,7 +227,9 @@ export function SignUp() {
             <button
               type="submit"
               className="action-btn"
-              disabled={!validMail || !validPwd || !setValidMatch ? true : false}
+              disabled={
+                !validMail || !validPwd || !setValidMatch ? true : false
+              }
             >
               Sign Up
             </button>
