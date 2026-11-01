@@ -29,7 +29,7 @@ export function EmailAuth() {
 
     try {
       const response = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: "/api/passwordreset",
+        redirectTo: `${window.location.origin}/passwordreset`
       });
 
       console.log(response.data);
