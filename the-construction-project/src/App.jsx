@@ -7,8 +7,10 @@ import { SignupAuth } from "./Entrance/Verify/Signupauth";
 import { EmailAuth } from "./ForgetPassword/Emailauth";
 import { EmailVerify } from "./ForgetPassword/EmailVerify";
 import { PasswordReset } from "./ForgetPassword/PasswordReset"
+import { Dashboard } from "./Product/Dashbaord";
 
 import "./App.css";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
       <Route path="/emailauth" element={<EmailAuth />} />
       <Route path="/emailverify" element={<EmailVerify />} />
       <Route path="/passwordreset" element={<PasswordReset />} />
+      <Route path="dashboard" element={<Dashboard />}/>
     </Routes>
   );
 }
