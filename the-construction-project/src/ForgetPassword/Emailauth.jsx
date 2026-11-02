@@ -10,6 +10,8 @@ export function EmailAuth() {
 
   const [errMsg, setErrMsg] = useState("");
 
+  const [ error, setErr ] = useState(false)
+
   const [message, setMessage] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -38,6 +40,7 @@ export function EmailAuth() {
       setSuccess(true);
 
       if (response.error) {
+        setErr(true)
         setErrMsg(`Error: ${response.error.message}`);
       }
       if (!response.error) {
@@ -50,7 +53,9 @@ export function EmailAuth() {
         setIsLoading(false);
         setMessage("");
         setSuccess(false);
+        setErr(false)
       }, 4000);
+      
     } catch (error) {
       setErrMsg("Could not save your email");
       console.log(error.message);
@@ -98,6 +103,12 @@ export function EmailAuth() {
         <div className={success ? "alert" : "visible"}>
           <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
           {message}
+        </div>
+      </div>
+      <div className="alert-danger">
+        <div className={error ? "alert" : "visible"}>
+          <i class="hgi hgi-stroke hgi-rounded hgi-checkmark-circle-01"></i>
+          {errMsg}
         </div>
       </div>
       <div className="the-form">

@@ -372,8 +372,6 @@ form {
   color: #66217e;
 }
 
-
-
 /* POP UP MESSAGE */
 
 .alert-container {
@@ -391,7 +389,6 @@ form {
   margin-right: 4px;
   font-size: 24px;
   font-weight: 400;
-
 }
 
 .alert {
@@ -412,6 +409,37 @@ form {
 }
 
 
+/* ERROR MESSAGE */
+.alert-danger {
+  position: absolute;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 80px;
+}
+
+.alert-danger i {
+  color: var(--danger);
+  margin-right: 4px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.alert {
+  background-color: var(--danger-light);
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  font-size: 16px;
+  color: rgb(4, 107, 42);
+  flex-direction: row;
+}
+
 /* ERROR VALIDATION */
 
 .wrong {
@@ -428,7 +456,6 @@ form {
 .block-message {
   display: none;
 }
-
 
 /* INPUT FIELD */
 .input label {
