@@ -1,0 +1,38 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+}
+.sidebar-logo {
+  width: 310px;
+  height: 1300px;
+  background-color: var(--craft-white);
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  border-right: 1px solid var(--border);
+}
+.logo-closebtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.logo-closebtn img {
+  width: 120px;
+  height: 30px;
+}
+.logo-closebtn .nav-icon {
+  width: 20px;
+  height: 18px;
+}
+
+.work-section {
+  height: fit-content;
+  margin-left: 40px;
+}

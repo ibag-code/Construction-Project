@@ -1,12 +1,13 @@
 import { Link } from "react-router";
+import "./Dashboard.css";
 
 export function Dashboard() {
   return (
-    <>
+    <div className="dashboard">
       <div className="sidebar-logo">
         <div className="logo-closebtn">
-          <img src="" alt="logo" />
-          <img src="" alt="back-icon" />
+          <img src="../images/craft-brand-logo.png" alt="craft-logo" />
+          <img src="../images/nav-icon.png" alt="" className="nav-icon"/>
         </div>
 
         <section className="work-section">
@@ -364,6 +365,6 @@ export function Dashboard() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
