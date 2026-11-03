@@ -1,93 +1,93 @@
-import { Link } from "react-router";
+// import {  Link } from "react-router";
 import "./Dashboard.css";
 
 export function Dashboard() {
   return (
     <div className="dashboard">
-      <div className="sidebar-logo">
+      <div className="sidebar">
         <div className="logo-closebtn">
           <img src="../images/craft-brand-logo.png" alt="craft-logo" />
-          <img src="../images/nav-icon.png" alt="" className="nav-icon"/>
+          <img src="../images/nav-icon.png" alt="" className="nav-icon" />
         </div>
 
-        <section className="work-section">
-          <p>work</p>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+        <section className="section">
+          <span>work</span>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-dashboard-square-02"></i>
             <p>Dashboard</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-briefcase-business"></i>
             <p>Project Feed</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-file-02"></i>
             <p>Application</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-message-01"></i>
             <p>Messages</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-hard-hat"></i>
             <p>Active Project</p>
-          </Link>
+          </a>
         </section>
-        <section className="reputation-section">
-          <p>reputation</p>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+        <section className="section">
+          <span>reputation</span>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-user-02"></i>{" "}
             <p>My profile</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-images"></i>{" "}
             <p>Portfolio</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-user-question-02"></i>{" "}
             <p>Requested Project</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-credit-card"></i>{" "}
             <p>Craft Pay</p>
-          </Link>
-          <Link>
-            <img src="" alt="dashbord-icon" />
+          </a>
+          <a>
+            <i class="hgi hgi-stroke hgi-rounded hgi-settings-02"></i>{" "}
             <p>Setting</p>
-          </Link>
+          </a>
         </section>
 
-        <div>
-          <img src="" alt="user-image" />
+        <div className="user-info">
+          <img src="../images/USER.png" alt="user-image" />
           <div className="name-status">
-            <p className="name">Salisu Abubakar</p>
-
-            <div>
-              <div></div>
-              <p>Available Now</p>
+            <div className="name-and-status">
+              <p className="name">Salisu Abubakar</p>
+              <div className="status-sign">
+                <div></div>
+                <p>Available Now</p>
+              </div>
             </div>
-
-            <img src="" alt="log-out-icon" />
+            <i class="hgi hgi-stroke hgi-rounded hgi-log-out"></i>
           </div>
         </div>
       </div>
 
       <div className="dashboard-content">
         <div className="header">
-          <div>
-            <h3>Good Morning, Salisu</h3>
+          <div className="header-text">
+            <h5>Good Morning, Salisu</h5>
             <p>You have 3 new project matches and 2 unread messages.</p>
           </div>
 
-          <div>
+          <div className="main-header-icons">
             <div className="header-icons">
-              <img src="" alt="search-icon" />
+              <i class="hgi hgi-stroke hgi-rounded hgi-search-01"></i>{" "}
             </div>
             <div className="header-icons">
-              <img src="" alt="notification-icon" />
+              <i class="hgi hgi-stroke hgi-rounded hgi-notification-01"></i>{" "}
             </div>
             <div className="header-icons">
-              <img src="" alt="user-icon" />
+              <img src="../images/USER.png" alt="user-icon" />
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export function Dashboard() {
           <div className="metric-jobrecomended">
             <div className="metric-container">
               <div className="main-metric">
-                <p>Total Amount Earned</p>
+                <span>Total Amount Earned</span>
 
                 <div className="money-icon-amount">
                   <div className="money-digit">
@@ -108,7 +108,7 @@ export function Dashboard() {
                 <p>Total earnings this quarter</p>
               </div>
               <div className="main-metric">
-                <p>Active applications</p>
+                <span>Active applications</span>
 
                 <div className="money-icon-amount">
                   <div className="money-digit">
@@ -120,7 +120,7 @@ export function Dashboard() {
                 <p>Total earnings this quarter</p>
               </div>
               <div className="main-metric">
-                <p>Completed jobs</p>
+                <span>Completed jobs</span>
 
                 <div className="money-icon-amount">
                   <div className="money-digit">
@@ -197,7 +197,8 @@ export function Dashboard() {
                 <div className="job-tittle-context">
                   <h4>Café Fit-Out — Bespoke Joinery & Counters</h4>
                   <p>
-                    Rewire an 800m² office floor, replace distribution board and install recessed LED lighting.
+                    Rewire an 800m² office floor, replace distribution board and
+                    install recessed LED lighting.
                   </p>
 
                   <div className="relating-job">
@@ -239,7 +240,8 @@ export function Dashboard() {
                 <div className="job-tittle-context">
                   <h4>Office Floor Rewiring & Lighting Upgrade</h4>
                   <p>
-                    Rewire an 800m² office floor, replace distribution board and install recessed LED lighting.
+                    Rewire an 800m² office floor, replace distribution board and
+                    install recessed LED lighting.
                   </p>
 
                   <div className="relating-job">
@@ -281,7 +283,9 @@ export function Dashboard() {
                 <div className="job-tittle-context">
                   <h4>Full electrical wiring of 5-bedroom duplex</h4>
                   <p>
-                    Complete electrical wiring for a 5-bedroom duplex, including lighting points, sockets, distribution board setup, and safety fittings.
+                    Complete electrical wiring for a 5-bedroom duplex, including
+                    lighting points, sockets, distribution board setup, and
+                    safety fittings.
                   </p>
 
                   <div className="relating-job">

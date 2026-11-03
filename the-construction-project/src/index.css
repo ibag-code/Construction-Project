@@ -81,6 +81,7 @@ body {
   height: auto;
   font-family: Inter, sans-serif;
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 #root {
@@ -407,7 +408,6 @@ form {
 .visible {
   display: none;
 }
-
 
 /* ERROR MESSAGE */
 .alert-danger {

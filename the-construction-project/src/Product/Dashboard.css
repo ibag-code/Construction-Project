@@ -2,16 +2,20 @@
   display: flex;
   flex-direction: row;
 }
-.sidebar-logo {
-  width: 310px;
-  height: 1300px;
+
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  flex: 0 0 320px;
+
   background-color: var(--craft-white);
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  position: absolute;
   border-right: 1px solid var(--border);
 }
+
 .logo-closebtn {
   display: flex;
   flex-direction: row;
@@ -32,7 +36,217 @@
   height: 18px;
 }
 
-.work-section {
+.section {
   height: fit-content;
   margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-right: 12px;
+}
+.section span {
+  font-family: "inter";
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-colour);
+  text-transform: uppercase;
+}
+.section a {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* background-color: var(--craft-bc-light-3); */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 12px;
+}
+.section i {
+  font-family: "inter";
+  font-size: 20px;
+  color: var(--text-colour);
+  font-weight: 400;
+  margin-right: 6px;
+  margin-left: 12px;
+}
+.section p {
+  font-family: "inter";
+  font-size: 16px;
+  color: var(--text-colour);
+  font-weight: 400;
+}
+.user-info {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+  padding-right: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--border);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.user-info img {
+  height: 50px;
+  width: 50px;
+  margin-right: 7px;
+}
+.name-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.name-and-status {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.name-and-status i {
+  font-size: 24px;
+  font-weight: 400;
+}
+.name {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--craft-black);
+}
+.status-sign {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.status-sign div {
+  width: 10px;
+  height: 10px;
+  background-color: var(--success);
+  border-radius: 100px;
+}
+.status-sign p {
+  font-family: "inter";
+  font-size: 12px;
+  color: var(--text-colour);
+  font-weight: 400;
+}
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: var(--craft-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+.header-text h5 {
+  font-family: "Faktum";
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--craft-black);
+}
+.header-text p {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-colour);
+}
+.main-header-icons {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: fit-content;
+  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-icons {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-icons i {
+  font-size: 24px;
+  color: var(--text-colour);
+  font-weight: 400;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+  margin: 20px;
+  gap: 20px;
+}
+.metric-jobrecomended {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: aquamarine;
+}
+.metric-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.main-metric {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  justify-content: space-between;
+  background-color: var(--craft-white);
+  width: 100%;
+  border-radius: 12px;
+}
+.main-metric span{
+font-family: "inter";
+font-weight: 400;
+font-size: 16px;
+ color: var(--text-colour); 
+ height: 60px;
+}
+.money-icon-amount {
+    display: flex;
+    
+}
+
+.user-stat-ads {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+.user-stat {
+  background-color: var(--craft-white);
+  padding: 20px;
+}
+.ads-search {
+  background-color: var(--craft-white);
+  padding: 20px;
 }
