@@ -100,41 +100,41 @@ export function Dashboard() {
 
                 <div className="money-icon-amount">
                   <div className="money-digit">
-                    <img src="" alt="money-icon" />
+                    <i class="hgi hgi-stroke hgi-rounded hgi-cash-02"></i>
                   </div>
                   <p>₦2.24M</p>
                 </div>
 
-                <p>Total earnings this quarter</p>
+                <small>Total earnings this quarter</small>
               </div>
               <div className="main-metric">
                 <span>Active applications</span>
 
                 <div className="money-icon-amount">
                   <div className="money-digit">
-                    <img src="" alt="application-icon" />
+                    <i class="hgi hgi-stroke hgi-rounded hgi-user-account"></i>
                   </div>
                   <p>3</p>
                 </div>
 
-                <p>Total earnings this quarter</p>
+                <small>Total earnings this quarter</small>
               </div>
               <div className="main-metric">
                 <span>Completed jobs</span>
 
                 <div className="money-icon-amount">
                   <div className="money-digit">
-                    <img src="" alt="job-icon" />
+                    <i class="hgi hgi-stroke hgi-rounded hgi-password-validation"></i>
                   </div>
                   <p>47</p>
                 </div>
 
-                <p>Total earnings this quarter</p>
+                <small>Total earnings this quarter</small>
               </div>
             </div>
 
             <div className="recommended-view-all">
-              <h4>Recomended Job</h4>
+              <h4>Recomended Project</h4>
               <p>View all</p>
             </div>
 
@@ -143,13 +143,17 @@ export function Dashboard() {
                 <p>Posted Just Now</p>
 
                 <div className="container-icon">
-                  <img src="" alt="save-icon" />
-                  <img src="" alt="love-icon" />
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
                 </div>
               </div>
 
               <div className="job-image-texts">
-                <img src="" alt="job-image" />
+                <img src="../images/Duplex.png" alt="job-image" />
 
                 <div className="job-tittle-context">
                   <h4>4-Bedroom Duplex , Block Work & Plastering</h4>
@@ -166,15 +170,15 @@ export function Dashboard() {
 
                   <div className="status-applicant-location">
                     <div className="status-text-badge">
-                      <img src="" alt="verify-badge" />
+                      <img src="../images/Validation.png" alt="verify-badge" />
                       <p>Payment Verified</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="user-icon" />
+                      <img src="../images/users.png" alt="user-icon" />
                       <p>5 Applicant</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="location-icon" />
+                      <img src="../images/location.png" alt="location-icon" />
                       <p>Ikoyi, Lagos</p>
                     </div>
                   </div>
@@ -186,13 +190,17 @@ export function Dashboard() {
                 <p>Posted Just Now</p>
 
                 <div className="container-icon">
-                  <img src="" alt="save-icon" />
-                  <img src="" alt="love-icon" />
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
                 </div>
               </div>
 
               <div className="job-image-texts">
-                <img src="" alt="job-image" />
+                <img src="../images/cafe.png" alt="job-image" />
 
                 <div className="job-tittle-context">
                   <h4>Café Fit-Out — Bespoke Joinery & Counters</h4>
@@ -209,16 +217,16 @@ export function Dashboard() {
 
                   <div className="status-applicant-location">
                     <div className="status-text-badge">
-                      <img src="" alt="verify-badge" />
+                      <img src="../images/Validation.png" alt="verify-badge" />
                       <p>Payment Verified</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="user-icon" />
-                      <p>5 Applicant</p>
+                      <img src="../images/users.png" alt="user-icon" />
+                      <p>15 Applicant</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="location-icon" />
-                      <p>Ikoyi, Lagos</p>
+                      <img src="../images/location.png" alt="location-icon" />
+                      <p>Agric Ikorodu, Lagos</p>
                     </div>
                   </div>
                 </div>
@@ -229,13 +237,17 @@ export function Dashboard() {
                 <p>Posted Just Now</p>
 
                 <div className="container-icon">
-                  <img src="" alt="save-icon" />
-                  <img src="" alt="love-icon" />
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
                 </div>
               </div>
 
               <div className="job-image-texts">
-                <img src="" alt="job-image" />
+                <img src="../images/tile.png" alt="job-image" />
 
                 <div className="job-tittle-context">
                   <h4>Office Floor Rewiring & Lighting Upgrade</h4>
@@ -252,15 +264,15 @@ export function Dashboard() {
 
                   <div className="status-applicant-location">
                     <div className="status-text-badge">
-                      <img src="" alt="verify-badge" />
+                      <img src="../images/Validation.png" alt="verify-badge" />
                       <p>Payment Verified</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="user-icon" />
+                      <img src="../images/users.png" alt="user-icon" />
                       <p>4 Applicant</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="location-icon" />
+                      <img src="../images/location.png" alt="location-icon" />
                       <p>Ifo, Ogun State</p>
                     </div>
                   </div>
@@ -272,13 +284,17 @@ export function Dashboard() {
                 <p>Posted Just Now</p>
 
                 <div className="container-icon">
-                  <img src="" alt="save-icon" />
-                  <img src="" alt="love-icon" />
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
+                  <div>
+                    <i class="hgi hgi-stroke hgi-rounded hgi-heart"></i>
+                  </div>
                 </div>
               </div>
 
               <div className="job-image-texts">
-                <img src="" alt="job-image" />
+                <img src="../images/wire.png" alt="job-image" />
 
                 <div className="job-tittle-context">
                   <h4>Full electrical wiring of 5-bedroom duplex</h4>
@@ -296,15 +312,15 @@ export function Dashboard() {
 
                   <div className="status-applicant-location">
                     <div className="status-text-badge">
-                      <img src="" alt="verify-badge" />
+                      <img src="../images/Validation.png" alt="verify-badge" />
                       <p>Payment Verified</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="user-icon" />
+                      <img src="../images/users.png" alt="user-icon" />
                       <p>24 Applicant</p>
                     </div>
                     <div className="status-text-badge">
-                      <img src="" alt="location-icon" />
+                      <img src="../images/location.png" alt="location-icon" />
                       <p>Oke odo, Kwara State</p>
                     </div>
                   </div>
@@ -315,22 +331,24 @@ export function Dashboard() {
 
           <div className="user-stat-ads">
             <div className="user-stat">
-              <img src="" alt="user-image" />
-              <div className="name">
-                <h4>Salisu Abubakar</h4>
-                <p>Bricklayer · Ikorodu </p>
+              <div className="user-profile-visibility">
+                <img src="../images/USER.png" alt="user-image" />
+                <div className="name">
+                  <h4>Salisu Abubakar</h4>
+                  <p>Bricklayer · Ikorodu </p>
+                </div>
               </div>
 
               <div className="profile-and-plublic">
                 <p>Profile Visibilty</p>
-                <p>Public</p>
+                <span>Public</span>
               </div>
 
               <div className="pogress-bar-text">
-                <h3>Complete your profile</h3>
+                <p>Complete your profile</p>
                 <div className="progress-bar-percent">
                   <div className="progress-bar">
-                    <div className=""></div>
+                    <div></div>
                   </div>
                   <p> 50%</p>
                 </div>
@@ -343,20 +361,20 @@ export function Dashboard() {
                 <p>We’ve got you covered</p>
               </div>
               <div className="ads-search-icons">
-                <div className="ads-icon-img">
-                  <img src="" alt="setting" />
+                <div className="ads-icon">
+                  <i class="hgi hgi-stroke hgi-rounded hgi-dashboard-square-02"></i>
                 </div>
-                <div className="ads-icon-img">
-                  <img src="" alt="motor" />
+                <div className="ads-icon">
+                  <i class="hgi hgi-stroke hgi-rounded hgi-dashboard-square-02"></i>
                 </div>
-                <div className="ads-icon-img">
-                  <img src="" alt="bridge" />
+                <div className="ads-icon">
+                  <i class="hgi hgi-stroke hgi-rounded hgi-dashboard-square-02"></i>
                 </div>
-                <div className="ads-icon-img">
-                  <img src="" alt="home" />
+                <div className="ads-icon">
+                  <i class="hgi hgi-stroke hgi-rounded hgi-dashboard-square-02"></i>
                 </div>
-                <div className="ads-icon-img">
-                  <img src="" alt="circle-setting" />
+                <div className="ads-icon">
+                  <i class="hgi hgi-stroke hgi-rounded hgi-dashboard-square-02"></i>
                 </div>
               </div>
 
