@@ -1,4 +1,4 @@
-import SideBar from "../General Component/sidebar";
+import SideBar from "../../General Component/sidebar";
 import "./ProjectFeed.css";
 
 export function ProjectFeed() {

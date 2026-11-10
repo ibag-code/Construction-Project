@@ -8,8 +8,11 @@ import { EmailAuth } from "./ForgetPassword/Emailauth";
 import { EmailVerify } from "./ForgetPassword/EmailVerify";
 import { PasswordReset } from "./ForgetPassword/PasswordReset";
 import { Dashboard } from "./Product/Dashbaord";
-import { ProjectFeed } from "./Product/ProjectFeed";
-
+import { ProjectFeed } from "./Product/ProjectFeed/ProjectFeed";
+import { ProjectDetail } from "./Product/ProjectFeed/ProjectDetail";
+import { ProjectProposal } from "./Product/ProjectFeed/ProjectProposal"
+import { ProjectAvailabilityPrice } from "./Product/ProjectFeed/ProjectAvailabilityPrice";
+import { ProjectReview } from "./Product/ProjectFeed/ProjectReview";
 import "./App.css";
 
 function App() {
@@ -24,13 +27,12 @@ function App() {
       <Route path="/emailverify" element={<EmailVerify />} />
       <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="dashboard" element={<Dashboard />} />
+
       {/* 
       <Route path="projectFeed" element={<ProjectFeed />} /> */}
 
       <Route path="/projectFeed">
-      
         <Route index element={<ProjectFeed />} />
-
         <Route
           path="projectdetail"
           element={<ProjectDetail />}
@@ -38,22 +40,17 @@ function App() {
 
         <Route
           path="apply"
-          element={<ApplyProject />}
+          element={<ProjectProposal />}
         />
 
         <Route
           path="applicationconfirmation"
-          element={<ApplicationConfirmation />}
-        />
-
-        <Route
-          path="projectrequirements"
-          element={<ProjectRequirements />}
+          element={<ProjectAvailabilityPrice />}
         />
 
         <Route
           path="applicationpreview"
-          element={<ApplicationPreview />}
+          element={<ProjectReview />}
         />
       </Route>
     </Routes>
