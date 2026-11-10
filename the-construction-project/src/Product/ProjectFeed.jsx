@@ -53,7 +53,6 @@ export function ProjectFeed() {
           <section className="project-list">
             {/* PROJECT CARD 1 */}
             <article className="project-card">
-                
               <div className="project-card-top">
                 <span>Posted just now</span>
 
@@ -118,9 +117,7 @@ export function ProjectFeed() {
                   </div>
                 </div>
               </div>
-
             </article>
-
             {/* PROJECT CARD 2 */}
             <article className="project-card">
               <div className="project-card-top">
@@ -139,15 +136,14 @@ export function ProjectFeed() {
 
               <div className="project-card-content">
                 <img
-                  src="/images/projects/office.jpg"
-                  alt="Office floor renovation"
+                  src="../images/cafe.png"
+                  alt="Four bedroom duplex construction"
                   className="project-image"
                 />
 
                 <div className="project-information">
                   <div className="project-title">
-                    <h3>Office Floor Rewiring & Lighting Upgrade</h3>
-                    <strong>₦480k–₦620k</strong>
+                    <h3>Café Fit-Out — Bespoke Joinery & Counters</h3>
                   </div>
 
                   <p className="project-description">
@@ -168,7 +164,7 @@ export function ProjectFeed() {
                     </span>
 
                     <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>4
+                      <i className="hgi hgi-stroke hgi-user-group"></i>12
                       Applicant
                     </span>
 
@@ -179,13 +175,16 @@ export function ProjectFeed() {
                   </div>
                 </div>
 
-                <div className="project-card-buttons">
-                  <button className="view-details">View details</button>
-                  <button className="apply-button">Apply</button>
+                <div className="Price-button">
+                  <strong>₦780k–₦920k</strong>
+
+                  <div className="project-card-buttons">
+                    <button className="view-details">View details</button>
+                    <button className="apply-button">Apply</button>
+                  </div>
                 </div>
               </div>
             </article>
-
             {/* PROJECT CARD 3 */}
             <article className="project-card">
               <div className="project-card-top">
@@ -204,20 +203,19 @@ export function ProjectFeed() {
 
               <div className="project-card-content">
                 <img
-                  src="/images/projects/tiling.jpg"
-                  alt="Floor finishing work"
+                  src="../images/tile.png"
+                  alt="Four bedroom duplex construction"
                   className="project-image"
                 />
 
                 <div className="project-information">
                   <div className="project-title">
-                    <h3>Office Floor Rewiring & Lighting Upgrade</h3>
-                    <strong>₦480k–₦620k</strong>
+                    <h3>4-Bedroom Duplex, Block Work & Plastering</h3>
                   </div>
 
                   <p className="project-description">
-                    Rewire an 800m² office floor, replace distribution board and
-                    install recessed LED lighting.
+                    Full block work and internal plastering for a two-unit
+                    duplex at foundation completion stage.
                   </p>
 
                   <div className="project-tags">
@@ -233,24 +231,27 @@ export function ProjectFeed() {
                     </span>
 
                     <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>4
+                      <i className="hgi hgi-stroke hgi-user-group"></i>5
                       Applicant
                     </span>
 
                     <span>
                       <i className="hgi hgi-stroke hgi-location-01"></i>
-                      Ifo, Ogun State
+                      Ikoyi, Lagos
                     </span>
                   </div>
                 </div>
 
-                <div className="project-card-buttons">
-                  <button className="view-details">View details</button>
-                  <button className="apply-button">Apply</button>
+                <div className="Price-button">
+                  <strong>₦480k–₦620k</strong>
+
+                  <div className="project-card-buttons">
+                    <button className="view-details">View details</button>
+                    <button className="apply-button">Apply</button>
+                  </div>
                 </div>
               </div>
             </article>
-
             {/* PROJECT CARD 4 */}
             <article className="project-card">
               <div className="project-card-top">
@@ -269,15 +270,14 @@ export function ProjectFeed() {
 
               <div className="project-card-content">
                 <img
-                  src="/images/projects/electrical.jpg"
-                  alt="Electrical wiring installation"
+                  src="../images/wire.png"
+                  alt="Four bedroom duplex construction"
                   className="project-image"
                 />
 
                 <div className="project-information">
                   <div className="project-title">
-                    <h3>Full Electrical Wiring of 5-Bedroom Duplex</h3>
-                    <strong>₦480k–₦620k</strong>
+                    <h3>Full electrical wiring of 5-bedroom duplex</h3>
                   </div>
 
                   <p className="project-description">
@@ -287,9 +287,9 @@ export function ProjectFeed() {
                   </p>
 
                   <div className="project-tags">
-                    <span>Piping</span>
-                    <span>Transition</span>
-                    <span>Circuiting</span>
+                    <span>Plastering</span>
+                    <span>Decking</span>
+                    <span>Bricklaying</span>
                   </div>
 
                   <div className="project-meta">
@@ -299,20 +299,24 @@ export function ProjectFeed() {
                     </span>
 
                     <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>
-                      24 Applicant
+                      <i className="hgi hgi-stroke hgi-user-group"></i>24
+                      Applicant
                     </span>
 
                     <span>
                       <i className="hgi hgi-stroke hgi-location-01"></i>
-                      Oke Odo, Kwara State
+                      Sango,Kwara
                     </span>
                   </div>
                 </div>
 
-                <div className="project-card-buttons">
-                  <button className="view-details">View details</button>
-                  <button className="apply-button">Apply</button>
+                <div className="Price-button">
+                  <strong>₦480k–₦620k</strong>
+
+                  <div className="project-card-buttons">
+                    <button className="view-details">View details</button>
+                    <button className="apply-button">Apply</button>
+                  </div>
                 </div>
               </div>
             </article>
