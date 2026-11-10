@@ -1,0 +1,519 @@
+/* ==================================
+   PROJECT FEED
+================================== */
+
+.project-feed {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  overflow-x: clip;
+}
+
+.feed-body {
+  width: 100%;
+  min-width: 0;
+  padding: 22px 18px 30px;
+}
+
+/* ==================================
+   TOOLBAR
+================================== */
+
+.feed-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  padding: 0 10px;
+  margin: 20px;
+}
+
+.save-search,
+.saved-jobs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: transparent;
+  border: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #66217e;
+}
+
+.save-search i,
+.saved-jobs i {
+  font-size: 21px;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sort-select {
+  min-width: 186px;
+  height: 39px;
+  padding: 0px 12px;
+
+  background: transparent;
+  border: 1px solid #dedee3;
+  border-radius: 12px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #26282c;
+}
+
+/* ==================================
+   MAIN FEED LAYOUT
+================================== */
+
+/* ==================================
+   PROJECT LIST
+================================== */
+
+.project-list {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ==================================
+   PROJECT CARD
+================================== */
+
+/* CARD TOP */
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.project-card-top > span {
+  font-family: "Inter";
+  font-size: 11px;
+  color: var(--text-colour);
+}
+
+.project-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.project-actions button {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--craft-white);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+
+.project-actions i {
+  font-size: 17px;
+  color: #26282c;
+}
+
+.project-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 200px;
+
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--craft-white);
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+/* CARD CONTENT */
+
+.project-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  gap: 12px;
+
+  flex: 1;
+  min-height: 0;
+
+  background-color: transparent;
+}
+
+.project-image {
+  width: 148px;
+  flex-shrink: 0;
+
+  align-self: stretch;
+  height: auto;
+
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* PROJECT INFORMATION */
+
+.project-information {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.project-title h3 {
+  margin: 0;
+  font-family: "Faktum";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--craft-black);
+}
+
+.project-description {
+  width: 100%;
+  margin: 6px 0 8px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #777b89;
+}
+
+/* PROJECT TAGS */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 13px;
+}
+
+.project-tags span {
+  padding: 6px 12px;
+  background-color: #f4f4f5;
+  border-radius: 2px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #777b89;
+}
+
+/* PROJECT META */
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.project-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #777b89;
+}
+
+.project-meta i {
+  font-size: 16px;
+}
+
+.project-meta .verified i {
+  color: #26c66b;
+}
+
+.Price-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  flex: 1;
+  height: 100%;
+}
+.Price-button strong {
+  flex-shrink: 0;
+  font-family: "Faktum";
+  font-size: 18px;
+  font-weight: 600;
+  color: #26282c;
+}
+
+/* CARD BUTTONS */
+
+.project-card-buttons {
+  display: flex;
+  align-self: end;
+  gap: 10px;
+}
+
+.project-card-buttons button {
+  height: 33px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 9px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+}
+
+.view-details {
+  background-color: #f1e8f4;
+  color: #66217e;
+}
+
+.apply-button {
+  background-color: #66217e;
+  color: #fff;
+}
+
+/* ==================================
+   FILTER SIDEBAR
+================================== */
+
+.feed-filters {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.filter-card {
+  width: 100%;
+  padding: 14px 13px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.filter-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.filter-card-heading h3 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #26282c;
+}
+
+.filter-card-heading i {
+  font-size: 19px;
+  color: #777b89;
+}
+
+/* LOCATION */
+
+.filter-card > input[type="text"] {
+  width: 100%;
+  height: 39px;
+  padding: 0 12px;
+
+  border: 1px solid #dedee3;
+  border-radius: 9px;
+  outline: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+}
+
+.filter-card > input[type="text"]::placeholder {
+  color: #777b89;
+}
+
+/* FILTER CHECKBOXES */
+
+.filter-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 10px;
+}
+
+.filter-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #777b89;
+}
+
+.filter-checkboxes input {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  accent-color: #66217e;
+}
+
+/* BUDGET */
+
+.budget-control {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.budget-control span {
+  width: fit-content;
+  padding: 7px 10px;
+
+  background-color: #f1e8f4;
+  border-radius: 5px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #66217e;
+}
+
+.budget-control input {
+  width: 100%;
+  accent-color: #66217e;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 1200px) {
+  .feed-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+
+  .project-card-content {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .project-image {
+    width: 120px;
+    height: 115px;
+  }
+
+  .project-card-buttons {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .project-title strong {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 950px) {
+  .feed-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .feed-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .feed-header {
+    min-height: 75px;
+    padding: 12px 16px;
+  }
+
+  .feed-header-text h1 {
+    font-size: 17px;
+  }
+
+  .feed-header-text p {
+    font-size: 11px;
+  }
+
+  .feed-header-actions {
+    gap: 6px;
+  }
+
+  .header-icon,
+  .feed-user-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feed-body {
+    padding: 15px 10px;
+  }
+
+  .feed-toolbar {
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #26282c;
+  }
+
+  .toolbar-actions {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .sort-select {
+    min-width: 145px;
+  }
+
+  .project-card-content {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
+  .project-image {
+    width: 100px;
+    height: 110px;
+  }
+
+  .project-title {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .project-meta {
+    gap: 8px;
+  }
+
+  .project-card-buttons {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+  }
+
+  .project-card-buttons button {
+    flex: 1;
+  }
+
+  .feed-filters {
+    grid-template-columns: 1fr;
+  }
+}

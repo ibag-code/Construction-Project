@@ -8,6 +8,7 @@ import { EmailAuth } from "./ForgetPassword/Emailauth";
 import { EmailVerify } from "./ForgetPassword/EmailVerify";
 import { PasswordReset } from "./ForgetPassword/PasswordReset"
 import { Dashboard } from "./Product/Dashbaord";
+import { ProjectFeed } from "./Product/ProjectFeed";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="/emailverify" element={<EmailVerify />} />
       <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="dashboard" element={<Dashboard />}/>
+      <Route path="projectFeed" element={<ProjectFeed />}/>
     </Routes>
   );
 }

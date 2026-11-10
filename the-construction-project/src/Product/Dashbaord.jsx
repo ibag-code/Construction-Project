@@ -1,5 +1,4 @@
 import SideBar from "../General Component/sidebar";
-import Header from "../General Component/Header";
 import "./Dashboard.css";
 
 export function Dashboard() {
@@ -7,8 +6,8 @@ export function Dashboard() {
     <div className="dashboard">
       <SideBar />
 
-      <div className="dashboard-content">
-        {/* <header className="header">
+      <main>
+        <header className="header">
           <div className="header-text">
             <h5>Good Morning, Salisu</h5>
             <p>You have 3 new project matches and 2 unread messages.</p>
@@ -25,8 +24,7 @@ export function Dashboard() {
               <img src="../images/USER.png" alt="user-icon" />
             </div>
           </div>
-        </header> */}
-        <Header />
+        </header>
         <div className="main-content">
           <div className="metric-jobrecomended">
             <div className="metric-container">
@@ -321,7 +319,7 @@ export function Dashboard() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
