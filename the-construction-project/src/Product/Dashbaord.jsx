@@ -1,4 +1,4 @@
-import SideBar from "../General Component/sidebar";
+import SideBar from "../GeneralComponent/sidebar";
 import "./Dashboard.css";
 
 export function Dashboard() {

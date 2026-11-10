@@ -1,4 +1,4 @@
-import SideBar from "../../General Component/sidebar";
+import SideBar from "../../GeneralComponent/sidebar";
 import "./ProjectFeed.css";
 
 export function ProjectFeed() {
@@ -28,6 +28,7 @@ export function ProjectFeed() {
             </div>
           </div>
         </header>
+        
         {/* TOOLBAR */}
         <div className="feed-toolbar">
           <button className="save-search">
@@ -431,6 +432,7 @@ export function ProjectFeed() {
             </section>
           </aside>
         </div>
+
       </main>
     </div>
   );

@@ -11,7 +11,7 @@ import { Dashboard } from "./Product/Dashbaord";
 import { ProjectFeed } from "./Product/ProjectFeed/ProjectFeed";
 import { ProjectDetail } from "./Product/ProjectFeed/ProjectDetail";
 import { ProjectProposal } from "./Product/ProjectFeed/ProjectProposal"
-import { ProjectAvailabilityPrice } from "./Product/ProjectFeed/ProjectAvailabilityPrice";
+import { ProjectAvailabilityPrice } from "./Product/ProjectFeed/ProjectAvailPrice";
 import { ProjectReview } from "./Product/ProjectFeed/ProjectReview";
 import "./App.css";
 
