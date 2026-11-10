@@ -50,23 +50,19 @@
 
 .detail-heading-text h1 {
   margin: 0 0 6px;
-  color: #26282c;
-  font-family: "Faktum", "Inter", sans-serif;
-  font-size: 19px;
-  line-height: 1.35;
+  color: var(--craft-black);
+  font-family: "Faktum";
+  font-size: 24px;
   font-weight: 500;
 }
 
 .detail-heading-text p {
-  margin: 0;
-  color: #777b89;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
+  color: var(--text-colour);
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.5;
 }
-
-
-
 
 /* ===================================
    MAIN TWO-COLUMN LAYOUT
@@ -161,13 +157,12 @@
 .project-description-card {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
 
   width: 100%;
   min-width: 0;
   padding: 16px 7px 10px;
 
-  background: #fff;
   box-sizing: border-box;
 }
 
@@ -176,18 +171,17 @@
 }
 
 .description-section h2 {
-  margin: 0 0 7px;
-  color: #26282c;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 650;
+  color: var(--craft-black);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .description-section p {
-  margin: 0 0 12px;
-  color: #777b89;
-  font-family: "Inter", sans-serif;
-  font-size: 10.5px;
+  color: var(--text-colour);
+  font-family: "Inter";
+  font-size: 14px;
   line-height: 1.45;
 }
 
@@ -198,24 +192,24 @@
 .description-section ul {
   margin: 0;
   padding-left: 17px;
-  color: #777b89;
-  font-family: "Inter", sans-serif;
-  font-size: 10.5px;
+  color: var(--text-colour);
+  font-family: "Inter";
+  font-size: 14px;
   line-height: 1.4;
 }
 
 .required-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 8px;
 }
 
 .required-skills span {
-  padding: 5px 10px;
-  background: #f3f3f4;
-  color: #777b89;
+  padding: 12px 12px;
+  background-color: var(--bg-color);
+  color: var(--text-colour);
   font-family: "Inter", sans-serif;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 /* ===================================
@@ -229,18 +223,17 @@
 
 .sidebar-section-title {
   margin: 2px 0 10px;
-  color: #26282c;
+  color: var(--craft-black);
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 650;
 }
 
 .sidebar-card {
   width: 100%;
-  min-width: 0;
-  padding: 10px;
-  background: #fff;
-  border-radius: 11px;
+  padding: 14px;
+  background: var(--craft-white);
+  border-radius: 12px;
   box-sizing: border-box;
 }
 
@@ -261,7 +254,8 @@
   gap: 8px;
 
   min-height: 37px;
-  border-bottom: 1px solid #dedee3;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0px;
 }
 
 .summary-item:last-child {
@@ -269,42 +263,38 @@
 }
 
 .summary-item span {
-  color: #777b89;
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
+  color: var(--text-colour);
+  font-family: "Inter";
+  font-size: 14px;
   flex-shrink: 0;
 }
 
 .summary-item strong {
-  color: #26282c;
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
+  color: var(--craft-black);
+  font-family: "Inter";
+  font-size: 14px;
   font-weight: 500;
   text-align: right;
 }
 
 .sidebar-apply-btn {
   width: 100%;
-  height: 32px;
+  height: 42px;
   margin-top: 8px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
 
-  background: #66217e;
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
+  background: var(--craft-bc);
+  color: var(--craft-white);
+  font-family: "Inter";
+  font-size: 14px;
   cursor: pointer;
 }
 
 /* ===================================
    CLIENT PROFILE
 =================================== */
-
-.client-card {
-  padding: 10px;
-}
 
 .client-profile {
   display: flex;
@@ -328,9 +318,9 @@
 
 .client-details h3 {
   margin: 0 0 5px;
-  color: #26282c;
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
+  color: var(--craft-black);
+  font-family: "Inter";
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -338,32 +328,31 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #777b89;
-  font-family: "Inter", sans-serif;
-  font-size: 9px;
+  color: var(--text-colour);
+  font-family: "Inter";
+  font-size: 12px;
 }
 
 .client-verified i {
   color: #27c76f;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .client-message-btn {
-  width: 22px;
-  height: 22px;
+  font-size: 24px;
+  color: var(--craft-bc-light);
+  background-color: var(--craft-bc);
+  border-radius: 900px;
+  height: 40px;
+  width: 40px;
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  flex-shrink: 0;
-  border: none;
-  border-radius: 50%;
-  background: #66217e;
-  color: #fff;
+  align-items: center;
 }
-
 .client-message-btn i {
-  font-size: 12px;
+  font-size: 24px;
+  color: var(--craft-bc-light);
+  height: fit-content;
 }
 
 /* ===================================
@@ -371,43 +360,43 @@
 =================================== */
 
 .client-statistics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   width: 100%;
-  min-height: 79px;
-  border: 1px solid #dedee3;
-  border-radius: 9px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
   box-sizing: border-box;
+  padding: 20px, 0px;
+  height: 100px;
 }
 
 .client-stat {
   display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 13px;
-  min-width: 0;
+  width: 100%;
   padding: 8px 3px;
   text-align: center;
-}
-
-.client-stat + .client-stat {
-  border-left: 1px solid #dedee3;
+  border-right: 1px solid var(--border);
 }
 
 .client-stat span {
-  color: #777b89;
-  font-family: "Inter", sans-serif;
-  font-size: 9px;
-  white-space: nowrap;
+  color: var(--text-colour);
+  font-family: "Inter";
+  font-size: 14px;
 }
 
 .client-stat strong {
-  color: #26282c;
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 500;
+  color: var(--craft-black);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* ===================================

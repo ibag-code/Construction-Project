@@ -87,9 +87,7 @@ export function ProjectDetail() {
                     two-unit duplex and are ready for superstructure block work.
                     The site is fenced, secured and has water and power
                     available.
-                  </p>
 
-                  <p>
                     You will be working alongside our site engineer who runs
                     weekly quality checks. Materials are supplied by the client;
                     you quote labour only.
@@ -172,7 +170,7 @@ export function ProjectDetail() {
               <div className="sidebar-card client-card">
                 <div className="client-profile">
                   <img
-                    src="/images/client-avatar.jpg"
+                    src="/images/client-user.png"
                     alt="Kofoworola Ibrahim"
                   />
 
@@ -185,13 +183,13 @@ export function ProjectDetail() {
                     </span>
                   </div>
 
-                  <button
+                  <div
                     type="button"
                     className="client-message-btn"
                     aria-label="Message client"
                   >
                     <i className="hgi hgi-stroke hgi-message-01"></i>
-                  </button>
+                  </div>
                 </div>
 
                 <div className="client-statistics">
