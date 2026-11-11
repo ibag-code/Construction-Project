@@ -35,10 +35,11 @@
    MAIN CONTAINER
 ================================ */
 
-.proposal-container {
+.application-container {
   width: 100%;
   max-width: 714px;
   margin: 26px auto 0;
+  /* background-color: #26282c; */
 }
 
 .main-prop {

@@ -34,7 +34,7 @@ export function ProjectProposal() {
           </Link>
 
           {/* PAGE HEADING */}
-          <section className="proposal-container">
+          <section className="application-container">
             <div className="proposal-heading">
               <h2>Why you're right for this job</h2>
 
