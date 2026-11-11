@@ -1,0 +1,303 @@
+/* ================================
+   PROPOSAL PAGE
+================================ */
+
+.proposal-page {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  padding: 28px 30px;
+  box-sizing: border-box;
+  background-color: var(--bg-color, #f5f5f5);
+}
+
+/* ================================
+   BACK NAVIGATION
+================================ */
+
+.proposal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--craft-black, #26282c);
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.proposal-back i {
+  font-size: 17px;
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.proposal-container {
+  width: 100%;
+  max-width: 714px;
+  margin: 26px auto 0;
+}
+
+.main-prop {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* ================================
+   HEADING
+================================ */
+
+.proposal-heading {
+  text-align: start;
+}
+
+.proposal-heading h2 {
+  margin: 0;
+
+  font-family: "Faktum";
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--craft-black);
+}
+
+.proposal-heading p {
+  margin: 10px 0 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #73788a;
+}
+
+/* ================================
+   PROGRESS STEPPER
+================================ */
+
+.proposal-stepper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  margin: 30px 0 48px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  font-family: "Inter";
+  font-size: 14px;
+  color: #687083;
+}
+
+.step p {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #687083;
+}
+
+/* Active step */
+
+.step.active .step-number {
+  border-color: var(--craft-bc);
+  color: var(--craft-bc);
+}
+
+.step.active p {
+  color: var(--craft-bc);
+}
+
+/* Lines between steps */
+
+.step-line {
+  width: 100%;
+  max-width: 138px;
+  height: 1px;
+  background-color: var(--border);
+  flex: 1;
+}
+
+/* ================================
+   PROPOSAL CARD
+================================ */
+
+.proposal-card {
+  width: 100%;
+  min-height: 322px;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  background-color: var(--craft-white, #ffffff);
+  border-radius: 12px;
+}
+
+/* Text area */
+
+.proposal-textarea {
+  display: block;
+  width: 100%;
+  height: 232px;
+
+  padding: 12px;
+  box-sizing: border-box;
+
+  resize: none;
+
+  border: 1px solid #d1d2da;
+  border-radius: 12px;
+  outline: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--craft-black, #26282c);
+}
+
+.proposal-textarea::placeholder {
+  color: #73788a;
+  opacity: 1;
+}
+
+.proposal-textarea:focus {
+  border-color: var(--craft-bc, #66217e);
+}
+
+/* Character guidance */
+
+.proposal-counter {
+  margin: 12px 0 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #73788a;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.proposal-actions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.proposal-back-btn,
+.proposal-continue-btn {
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.proposal-back-btn {
+  background: transparent;
+  color: var(--craft-bc, #66217e);
+  padding: 0 28px;
+}
+
+.proposal-continue-btn {
+  width: 121px;
+  background-color: var(--craft-bc, #66217e);
+  color: white;
+}
+
+/* ================================
+   RESPONSIVENESS
+================================ */
+
+@media (max-width: 768px) {
+  .proposal-page {
+    padding: 22px 18px;
+  }
+
+  .proposal-container {
+    margin-top: 35px;
+  }
+
+  .proposal-heading h2 {
+    font-size: 20px;
+  }
+
+  .proposal-heading p {
+    font-size: 13px;
+  }
+
+  .proposal-stepper {
+    gap: 8px;
+    margin: 28px 0 35px;
+  }
+
+  .step {
+    gap: 5px;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .step p {
+    font-size: 12px;
+  }
+
+  .step-line {
+    max-width: 50px;
+  }
+
+  .proposal-card {
+    padding: 18px;
+    min-height: 280px;
+  }
+
+  .proposal-textarea {
+    height: 210px;
+  }
+}
+
+@media (max-width: 420px) {
+  .proposal-stepper {
+    gap: 5px;
+  }
+
+  .step p {
+    font-size: 11px;
+  }
+
+  .step-line {
+    max-width: 25px;
+  }
+}
