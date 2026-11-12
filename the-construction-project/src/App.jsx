@@ -15,6 +15,10 @@ import { ProjectAvailabilityPrice } from "./Product/ProjectFeed/ProjectAvailPric
 import { ProjectReview } from "./Product/ProjectFeed/ProjectReview";
 import "./App.css";
 import { Application } from "./Product/ApplicationFile/Application";
+import { AcceptedAppliication } from "./Product/ApplicationFile/AcceptApp";
+import { PendingAppliication } from "./Product/ApplicationFile/PendingApp";
+import { RejectedAppliication } from "./Product/ApplicationFile/RejectApp";
+import { ArchiveAppliication } from "./Product/ApplicationFile/ArchiveApp";
 
 function App() {
   return (
@@ -55,23 +59,23 @@ function App() {
       <Route path="/application">
         <Route index element={<Application />} />
         <Route
-          path="projectdetail"
-          element={<ProjectDetail />}
+          path="accept"
+          element={<AcceptedAppliication/>}
         />
 
         <Route
-          path="apply"
-          element={<ProjectProposal />}
+          path="pending"
+          element={<PendingAppliication />}
         />
 
         <Route
-          path="applicationconfirmation"
-          element={<ProjectAvailabilityPrice />}
+          path="Rejected"
+          element={<RejectedAppliication />}
         />
 
         <Route
-          path="applicationpreview"
-          element={<ProjectReview />}
+          path="archive"
+          element={<ArchiveAppliication />}
         />
       </Route>
     </Routes>
