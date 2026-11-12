@@ -14,6 +14,7 @@ import { ProjectProposal } from "./Product/ProjectFeed/ProjectProposal"
 import { ProjectAvailabilityPrice } from "./Product/ProjectFeed/ProjectAvailPrice";
 import { ProjectReview } from "./Product/ProjectFeed/ProjectReview";
 import "./App.css";
+import { Application } from "./Product/ApplicationFile/Application";
 
 function App() {
   return (
@@ -28,11 +29,31 @@ function App() {
       <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="dashboard" element={<Dashboard />} />
 
-      {/* 
-      <Route path="projectFeed" element={<ProjectFeed />} /> */}
-
       <Route path="/projectFeed">
         <Route index element={<ProjectFeed />} />
+        <Route
+          path="projectdetail"
+          element={<ProjectDetail />}
+        />
+
+        <Route
+          path="apply"
+          element={<ProjectProposal />}
+        />
+
+        <Route
+          path="applicationconfirmation"
+          element={<ProjectAvailabilityPrice />}
+        />
+
+        <Route
+          path="applicationpreview"
+          element={<ProjectReview />}
+        />
+      </Route>
+
+      <Route path="/application">
+        <Route index element={<Application />} />
         <Route
           path="projectdetail"
           element={<ProjectDetail />}
