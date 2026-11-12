@@ -1,4 +1,6 @@
+import { FilterSidebar } from "../../GeneralComponent/FilterSideBar";
 import SideBar from "../../GeneralComponent/sidebar";
+
 import "./Application.css";
 
 export function Application() {
@@ -11,9 +13,7 @@ export function Application() {
         <header className="header">
           <div className="header-text">
             <h5>Track your applications</h5>
-            <p>
-              Everything you've sent, from first proposal to signed job.
-            </p>
+            <p>Everything you've sent, from first proposal to signed job.</p>
           </div>
 
           <div className="main-header-icons">
@@ -28,392 +28,189 @@ export function Application() {
             </div>
           </div>
         </header>
-        
+
+        {/* STATUS TABS */}
+        <div className="application-tabs">
+          <button className="application-tab active">
+            All <span>1</span>
+          </button>
+
+          <button className="application-tab">
+            Accepted <span>1</span>
+          </button>
+
+          <button className="application-tab">
+            Pending <span>1</span>
+          </button>
+
+          <button className="application-tab">
+            Rejected <span>2</span>
+          </button>
+
+          <button className="application-tab">
+            Archived <span>2</span>
+          </button>
+        </div>
+
         {/* PROJECTS AND FILTERS */}
         <div className="main-content">
           {/* PROJECT LIST */}
           <section className="project-list">
-            {/* PROJECT CARD 1 */}
-            <article className="project-card">
-              <div className="project-card-top">
-                <span>Posted just now</span>
-
-                <div className="project-actions">
-                  <button>
-                    <i className="hgi hgi-stroke hgi-bookmark-02"></i>
-                  </button>
-
-                  <button>
-                    <i className="hgi hgi-stroke hgi-heart"></i>
-                  </button>
+            {/* APPLICATION 1 */}
+            <article className="application-card">
+              <div className="application-card-top">
+                <div className="application-status accepted">
+                  <span></span>
+                  Accepted
                 </div>
+
+                <p>Submitted Just now</p>
+
+                <button className="application-more">
+                  <i className="hgi hgi-stroke hgi-information-circle"></i>
+                </button>
               </div>
 
-              <div className="project-card-content">
+              <div className="application-card-body">
                 <img
-                  src="../images/Duplex.png"
+                  src="/images/Duplex.png"
                   alt="Four bedroom duplex construction"
-                  className="project-image"
+                  className="application-project-image"
                 />
 
-                <div className="project-information">
-                  <div className="project-title">
-                    <h3>4-Bedroom Duplex, Block Work & Plastering</h3>
-                  </div>
+                <div className="application-project-details">
+                  <h3>4-Bedroom Duplex, Block Work &amp; Plastering</h3>
 
-                  <p className="project-description">
-                    Full block work and internal plastering for a two-unit
-                    duplex at foundation completion stage.
+                  <p className="application-client">
+                    Adeyemi Estates · Lekki Phase 1, Lagos · Your price
+                    ₦2,750,000
                   </p>
 
-                  <div className="project-tags">
-                    <span>Plastering</span>
-                    <span>Decking</span>
-                    <span>Bricklaying</span>
-                  </div>
-
-                  <div className="project-meta">
-                    <span className="verified">
-                      <i className="hgi hgi-stroke hgi-checkmark-badge-01"></i>
-                      Payment Verified
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>5
-                      Applicant
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-location-01"></i>
-                      Ikoyi, Lagos
-                    </span>
-                  </div>
-                </div>
-
-                <div className="Price-button">
-                  <strong>₦480k–₦620k</strong>
-
-                  <div className="project-card-buttons">
-                    <button className="view-details">View details</button>
-                    <button className="apply-button">Apply</button>
-                  </div>
+                  <p className="application-description">
+                    I completed a similar mason package on a three-unit terrace
+                    in Ikoyi earlier this year — 640m² of block work delivered
+                    two weeks ahead of programme...
+                  </p>
                 </div>
               </div>
             </article>
-            {/* PROJECT CARD 2 */}
-            <article className="project-card">
-              <div className="project-card-top">
-                <span>Posted just now</span>
 
-                <div className="project-actions">
-                  <button>
-                    <i className="hgi hgi-stroke hgi-bookmark-02"></i>
-                  </button>
-
-                  <button>
-                    <i className="hgi hgi-stroke hgi-heart"></i>
-                  </button>
+            {/* APPLICATION 2 */}
+            <article className="application-card">
+              <div className="application-card-top">
+                <div className="application-status pending">
+                  <span></span>
+                  Pending
                 </div>
+
+                <p>Submitted 2 days ago</p>
+
+                <button className="application-more">
+                  <i className="hgi hgi-stroke hgi-information-circle"></i>
+                </button>
               </div>
 
-              <div className="project-card-content">
+              <div className="application-card-body">
                 <img
-                  src="../images/cafe.png"
-                  alt="Four bedroom duplex construction"
-                  className="project-image"
+                  src="/images/electrical.png"
+                  alt="Electrical wiring project"
+                  className="application-project-image"
                 />
 
-                <div className="project-information">
-                  <div className="project-title">
-                    <h3>Café Fit-Out — Bespoke Joinery & Counters</h3>
-                  </div>
+                <div className="application-project-details">
+                  <h3>Full electrical wiring of 5-bedroom duplex</h3>
 
-                  <p className="project-description">
-                    Rewire an 800m² office floor, replace distribution board and
-                    install recessed LED lighting.
+                  <p className="application-client">
+                    Northgate Facilities · Victoria Island, Lagos · Your price
+                    ₦980,000
                   </p>
 
-                  <div className="project-tags">
-                    <span>Plastering</span>
-                    <span>Decking</span>
-                    <span>Bricklaying</span>
-                  </div>
-
-                  <div className="project-meta">
-                    <span className="verified">
-                      <i className="hgi hgi-stroke hgi-checkmark-badge-01"></i>
-                      Payment Verified
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>12
-                      Applicant
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-location-01"></i>
-                      Ifo, Ogun State
-                    </span>
-                  </div>
-                </div>
-
-                <div className="Price-button">
-                  <strong>₦780k–₦920k</strong>
-
-                  <div className="project-card-buttons">
-                    <button className="view-details">View details</button>
-                    <button className="apply-button">Apply</button>
-                  </div>
+                  <p className="application-description">
+                    Submitted with 3 reference projects and a phased weekend
+                    schedule.
+                  </p>
                 </div>
               </div>
             </article>
-            {/* PROJECT CARD 3 */}
-            <article className="project-card">
-              <div className="project-card-top">
-                <span>Posted just now</span>
 
-                <div className="project-actions">
-                  <button>
-                    <i className="hgi hgi-stroke hgi-bookmark-02"></i>
-                  </button>
-
-                  <button>
-                    <i className="hgi hgi-stroke hgi-heart"></i>
-                  </button>
+            {/* APPLICATION 3 */}
+            <article className="application-card">
+              <div className="application-card-top">
+                <div className="application-status rejected">
+                  <span></span>
+                  Rejected
                 </div>
+
+                <p>Submitted 2 weeks ago</p>
+
+                <button className="application-more">
+                  <i className="hgi hgi-stroke hgi-information-circle"></i>
+                </button>
               </div>
 
-              <div className="project-card-content">
+              <div className="application-card-body">
                 <img
-                  src="../images/tile.png"
-                  alt="Four bedroom duplex construction"
-                  className="project-image"
+                  src="/images/plastering.png"
+                  alt="Plastering project"
+                  className="application-project-image"
                 />
 
-                <div className="project-information">
-                  <div className="project-title">
-                    <h3>4-Bedroom Duplex, Block Work & Plastering</h3>
-                  </div>
+                <div className="application-project-details">
+                  <h3>Office Floor Rewiring &amp; Lighting Upgrade</h3>
 
-                  <p className="project-description">
-                    Full block work and internal plastering for a two-unit
-                    duplex at foundation completion stage.
+                  <p className="application-client">
+                    Chinelo O. · Maitama, Abuja · Your price Contact for quote
                   </p>
 
-                  <div className="project-tags">
-                    <span>Plastering</span>
-                    <span>Decking</span>
-                    <span>Bricklaying</span>
-                  </div>
-
-                  <div className="project-meta">
-                    <span className="verified">
-                      <i className="hgi hgi-stroke hgi-checkmark-badge-01"></i>
-                      Payment Verified
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>5
-                      Applicant
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-location-01"></i>
-                      Ikoyi, Lagos
-                    </span>
-                  </div>
-                </div>
-
-                <div className="Price-button">
-                  <strong>₦480k–₦620k</strong>
-
-                  <div className="project-card-buttons">
-                    <button className="view-details">View details</button>
-                    <button className="apply-button">Apply</button>
-                  </div>
+                  <p className="application-description">
+                    Client selected an artisan already based in Abuja to reduce
+                    travel cost.
+                  </p>
                 </div>
               </div>
             </article>
-            {/* PROJECT CARD 4 */}
-            <article className="project-card">
-              <div className="project-card-top">
-                <span>Posted just now</span>
 
-                <div className="project-actions">
-                  <button>
-                    <i className="hgi hgi-stroke hgi-bookmark-02"></i>
-                  </button>
-
-                  <button>
-                    <i className="hgi hgi-stroke hgi-heart"></i>
-                  </button>
+            {/* APPLICATION 4 */}
+            <article className="application-card">
+              <div className="application-card-top">
+                <div className="application-status archived">
+                  <span></span>
+                  Archived
                 </div>
+
+                <p>Submitted 2 months ago</p>
+
+                <button className="application-more">
+                  <i className="hgi hgi-stroke hgi-information-circle"></i>
+                </button>
               </div>
 
-              <div className="project-card-content">
+              <div className="application-card-body">
                 <img
-                  src="../images/wire.png"
-                  alt="Four bedroom duplex construction"
-                  className="project-image"
+                  src="/images/pop-ceiling.png"
+                  alt="POP ceiling installation"
+                  className="application-project-image"
                 />
 
-                <div className="project-information">
-                  <div className="project-title">
-                    <h3>Full electrical wiring of 5-bedroom duplex</h3>
-                  </div>
+                <div className="application-project-details">
+                  <h3>POP Ceiling &amp; Cornice Installation</h3>
 
-                  <p className="project-description">
-                    Complete electrical wiring for a 5-bedroom duplex, including
-                    lighting points, sockets, distribution board setup, and
-                    safety fittings.
+                  <p className="application-client">
+                    Chinelo O. · Maitama, Abuja · Your price Contact for quote
                   </p>
 
-                  <div className="project-tags">
-                    <span>Plastering</span>
-                    <span>Decking</span>
-                    <span>Bricklaying</span>
-                  </div>
-
-                  <div className="project-meta">
-                    <span className="verified">
-                      <i className="hgi hgi-stroke hgi-checkmark-badge-01"></i>
-                      Payment Verified
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-user-group"></i>24
-                      Applicant
-                    </span>
-
-                    <span>
-                      <i className="hgi hgi-stroke hgi-location-01"></i>
-                      Sango,Kwara
-                    </span>
-                  </div>
-                </div>
-
-                <div className="Price-button">
-                  <strong>₦480k–₦620k</strong>
-
-                  <div className="project-card-buttons">
-                    <button className="view-details">View details</button>
-                    <button className="apply-button">Apply</button>
-                  </div>
+                  <p className="application-description">
+                    Client selected an artisan already based in Abuja to reduce
+                    travel cost.
+                  </p>
                 </div>
               </div>
             </article>
           </section>
 
           {/* FILTER SIDEBAR */}
-          <aside className="feed-filters">
-            {/* LOCATION */}
-            <section className="filter-card">
-              <div className="filter-card-heading">
-                <h3>Location</h3>
-                <i className="hgi hgi-stroke hgi-arrow-up-01"></i>
-              </div>
-
-              <input type="text" placeholder="Search client location" />
-            </section>
-
-            {/* TRADE */}
-            <section className="filter-card">
-              <div className="filter-card-heading">
-                <h3>Trade</h3>
-                <i className="hgi hgi-stroke hgi-arrow-down-01"></i>
-              </div>
-            </section>
-
-            {/* PROJECT TYPE */}
-            <section className="filter-card">
-              <div className="filter-card-heading">
-                <h3>Project Type</h3>
-                <i className="hgi hgi-stroke hgi-arrow-up-01"></i>
-              </div>
-
-              <div className="filter-checkboxes">
-                <label>
-                  <input type="checkbox" />
-                  Residential
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  Commercial
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  Renovation
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  New Build
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  Repair
-                </label>
-              </div>
-            </section>
-
-            {/* TIMELINE */}
-            <section className="filter-card">
-              <div className="filter-card-heading">
-                <h3>Timeline</h3>
-                <i className="hgi hgi-stroke hgi-arrow-up-01"></i>
-              </div>
-
-              <div className="filter-checkboxes">
-                <label>
-                  <input type="checkbox" />
-                  Residential
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  Commercial
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  Renovation
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  New Build
-                </label>
-
-                <label>
-                  <input type="checkbox" />
-                  Repair
-                </label>
-              </div>
-            </section>
-
-            {/* MINIMUM BUDGET */}
-            <section className="filter-card">
-              <div className="filter-card-heading">
-                <h3>Min Budget</h3>
-                <i className="hgi hgi-stroke hgi-arrow-up-01"></i>
-              </div>
-
-              <div className="budget-control">
-                <span>Below 250k</span>
-                <input
-                  type="range"
-                  min="0"
-                  max="2000000"
-                  defaultValue="250000"
-                />
-              </div>
-            </section>
-          </aside>
+          <FilterSidebar />
         </div>
-
       </main>
     </div>
   );

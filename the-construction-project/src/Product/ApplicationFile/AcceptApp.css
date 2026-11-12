@@ -1,0 +1,451 @@
+
+/* =========================================
+   ACCEPTED APPLICATIONS
+========================================= */
+
+.accepted-applications {
+  width: 100%;
+  min-width: 0;
+  padding: 18px 17px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color, #f5f5f5);
+}
+
+/* =========================================
+   STATUS TABS
+========================================= */
+
+.accepted-tabs {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  min-height: 34px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #e5e5e9;
+  overflow-x: auto;
+  padding: 16px 20px;
+}
+
+.accepted-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  padding: 0 0 12px;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.accepted-tab span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #26282c;
+  font-size: 9px;
+}
+
+.active {
+  color: var(--craft-bc, #702184);
+}
+
+.accepted-tab.active span {
+  color: #fff;
+  background: var(--craft-bc, #702184);
+}
+
+.accepted-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--craft-bc, #702184);
+}
+
+/* =========================================
+   TWO-COLUMN CONTENT
+========================================= */
+
+.accepted-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 18px;
+  align-items: start;
+}
+
+.accepted-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* =========================================
+   APPLICATION CARD
+========================================= */
+
+.accepted-card {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 9px 8px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* CARD STATUS AND SUBMISSION DATE */
+
+.accepted-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 18px;
+  margin-bottom: 9px;
+}
+
+.accepted-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 7px;
+  border-radius: 20px;
+  background: #e9f8ed;
+  color: #28bd5c;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.accepted-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #28bd5c;
+}
+
+.accepted-card-top > p {
+  margin: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+}
+
+.accepted-info-button {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #777d90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.accepted-info-button i {
+  font-size: 17px;
+}
+
+/* CARD IMAGE AND DETAILS */
+
+.accepted-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  min-width: 0;
+}
+
+.accepted-card-body > img {
+  width: 134px;
+  height: 107px;
+  flex: 0 0 134px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.accepted-project-info {
+  flex: 1;
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.accepted-project-info h3 {
+  margin: 0 0 5px;
+  color: #26282c;
+  font-family: "Faktum", "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.accepted-project-meta {
+  margin: 0 0 15px;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.accepted-project-description {
+  max-width: 480px;
+  margin: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+/* =========================================
+   FILTER PANEL
+========================================= */
+
+.accepted-filters {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.accepted-filter-card {
+  width: 100%;
+  padding: 13px 11px;
+  border-radius: 12px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.accepted-filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.accepted-filter-heading h3 {
+  margin: 0;
+  color: #26282c;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.accepted-filter-heading i {
+  color: #777d90;
+  font-size: 16px;
+}
+
+/* LOCATION */
+
+.accepted-filter-card > input[type="text"] {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #dedee3;
+  border-radius: 7px;
+  outline: none;
+  box-sizing: border-box;
+  color: #26282c;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.accepted-filter-card > input[type="text"]::placeholder {
+  color: #777d90;
+}
+
+.accepted-filter-closed {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.accepted-filter-closed .accepted-filter-heading {
+  margin-bottom: 0;
+}
+
+/* PROJECT TYPE AND TIMELINE */
+
+.accepted-filter-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 8px;
+  row-gap: 17px;
+}
+
+.accepted-filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.accepted-filter-options input {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  margin: 0;
+  accent-color: var(--craft-bc, #702184);
+  cursor: pointer;
+}
+
+/* =========================================
+   MINIMUM BUDGET
+========================================= */
+
+.accepted-budget-label {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 21px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #f1e8f4;
+  color: var(--craft-bc, #702184);
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+}
+
+.accepted-budget-label::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: -7px;
+  border-top: 8px solid #f1e8f4;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.accepted-budget-slider {
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin: 4px 0 5px;
+  appearance: none;
+  border-radius: 10px;
+  background: #eee5f1;
+  outline: none;
+}
+
+.accepted-budget-slider::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border: 1px solid #d7b6e1;
+  border-radius: 50%;
+  background: #f1e8f4;
+  cursor: pointer;
+}
+
+/* =========================================
+   FOOTER NOTICE
+========================================= */
+
+.accepted-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 35px 10px 0;
+}
+
+.accepted-footer i {
+  color: #777d90;
+  font-size: 16px;
+}
+
+.accepted-footer p {
+  margin: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .accepted-layout {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 12px;
+  }
+
+  .accepted-card-body > img {
+    width: 110px;
+    height: 100px;
+    flex-basis: 110px;
+  }
+
+  .accepted-filter-options {
+    column-gap: 5px;
+  }
+
+  .accepted-filter-options label {
+    font-size: 10px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 720px) {
+  .accepted-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .accepted-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accepted-footer {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accepted-applications {
+    padding: 14px 10px;
+  }
+
+  .accepted-tabs {
+    gap: 17px;
+  }
+
+  .accepted-card-body > img {
+    width: 90px;
+    height: 90px;
+    flex-basis: 90px;
+  }
+
+  .accepted-project-info h3 {
+    font-size: 11px;
+  }
+
+  .accepted-project-meta,
+  .accepted-project-description {
+    font-size: 9px;
+  }
+
+  .accepted-filters {
+    grid-template-columns: 1fr;
+  }
+}
