@@ -839,3 +839,65 @@ main {
   width: 100%;
   accent-color: #66217e;
 }
+
+
+/* =========================================
+   STATUS TABS
+========================================= */
+
+.accepted-tabs {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  min-height: 34px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #e5e5e9;
+  overflow-x: auto;
+  padding: 16px 20px;
+}
+
+.accepted-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  padding: 0 0 12px;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.accepted-tab span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #26282c;
+  font-size: 9px;
+}
+
+.active {
+  color: var(--craft-bc, #702184);
+}
+
+.accepted-tab.active span {
+  color: #fff;
+  background: var(--craft-bc, #702184);
+}
+
+.accepted-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--craft-bc, #702184);
+}

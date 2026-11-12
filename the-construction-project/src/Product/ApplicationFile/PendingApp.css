@@ -1,0 +1,465 @@
+
+/* =====================================
+   SHARED APPLICATION STATUS CONTENT
+===================================== */
+
+.application-status-page {
+  width: 100%;
+  min-width: 0;
+  min-height: calc(100vh - 90px);
+  padding: 18px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--bg-color, #f5f5f5);
+}
+
+/* =====================================
+   STATUS TABS
+===================================== */
+
+.application-tabs {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 37px;
+  margin-bottom: 19px;
+  border-bottom: 1px solid #e3e3e8;
+  overflow-x: auto;
+}
+
+.application-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 0 0 12px;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.application-tab span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 50%;
+  color: #26282c;
+  font-size: 10px;
+}
+
+.application-tab.active {
+  color: var(--craft-bc, #702184);
+}
+
+.application-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--craft-bc, #702184);
+}
+
+.application-tab .tab-count-active {
+  color: #fff;
+  background: var(--craft-bc, #702184);
+}
+
+/* =====================================
+   APPLICATION LIST + FILTERS
+===================================== */
+
+.application-status-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 302px;
+  gap: 20px;
+  align-items: start;
+}
+
+.application-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* =====================================
+   APPLICATION CARD
+===================================== */
+
+.application-card {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 9px 8px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+}
+
+/* CARD TOP ROW */
+
+.application-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+
+.application-card-top > p {
+  margin: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+}
+
+.application-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* PENDING STATUS */
+
+.status-pending {
+  color: #d69d00;
+  background: #fff8df;
+}
+
+.status-pending .status-dot {
+  background: #ffc400;
+}
+
+/* ACCEPTED STATUS - REUSE THIS ON ACCEPTED ROUTE */
+
+.status-accepted {
+  color: #28bd5c;
+  background: #e9f8ed;
+}
+
+.status-accepted .status-dot {
+  background: #28bd5c;
+}
+
+/* INFORMATION BUTTON */
+
+.application-info-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #777d90;
+  cursor: pointer;
+}
+
+.application-info-button i {
+  font-size: 18px;
+}
+
+/* CARD IMAGE + PROJECT DETAILS */
+
+.application-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.application-card-body > img {
+  display: block;
+  width: 150px;
+  height: 120px;
+  flex: 0 0 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.application-project-info {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.application-project-info h3 {
+  margin: 0 0 7px;
+  color: #26282c;
+  font-family: "Faktum", "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.application-project-meta {
+  margin: 0 0 19px;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.application-project-description {
+  max-width: 550px;
+  margin: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* =====================================
+   FILTER PANEL
+===================================== */
+
+.application-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.application-filter-card {
+  width: 100%;
+  padding: 14px 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.application-filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.application-filter-heading h3 {
+  margin: 0;
+  color: #26282c;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.application-filter-heading i {
+  color: #777d90;
+  font-size: 17px;
+}
+
+/* LOCATION INPUT */
+
+.application-filter-card > input[type="text"] {
+  width: 100%;
+  height: 40px;
+  padding: 0 11px;
+  box-sizing: border-box;
+  border: 1px solid #dedee3;
+  border-radius: 8px;
+  outline: none;
+  color: #26282c;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.application-filter-card > input[type="text"]::placeholder {
+  color: #777d90;
+}
+
+.filter-collapsed {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.filter-collapsed .application-filter-heading {
+  margin-bottom: 0;
+}
+
+/* CHECKBOX FILTERS */
+
+.application-filter-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 10px;
+  row-gap: 17px;
+}
+
+.application-filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.application-filter-options input {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+  accent-color: var(--craft-bc, #702184);
+  cursor: pointer;
+}
+
+/* =====================================
+   BUDGET SLIDER
+===================================== */
+
+.application-budget-label {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 23px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: #f1e8f4;
+  color: var(--craft-bc, #702184);
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+}
+
+.application-budget-label::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: -7px;
+  border-top: 8px solid #f1e8f4;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.application-budget-slider {
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin: 4px 0;
+  appearance: none;
+  border-radius: 10px;
+  background: #eee5f1;
+  outline: none;
+}
+
+.application-budget-slider::-webkit-slider-thumb {
+  width: 19px;
+  height: 19px;
+  appearance: none;
+  border: 1px solid #d7b6e1;
+  border-radius: 50%;
+  background: #f1e8f4;
+  cursor: pointer;
+}
+
+/* =====================================
+   FOOTER NOTICE
+===================================== */
+
+.application-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 35px 10px 8px;
+}
+
+.application-footer-note i {
+  color: #777d90;
+  font-size: 17px;
+}
+
+.application-footer-note p {
+  margin: 0;
+  color: #777d90;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+  .application-status-layout {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 14px;
+  }
+
+  .application-card-body > img {
+    width: 125px;
+    height: 110px;
+    flex-basis: 125px;
+  }
+
+  .application-filter-options label {
+    gap: 5px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 760px) {
+  .application-status-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .application-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .application-status-page {
+    padding: 14px 10px;
+  }
+
+  .application-tabs {
+    gap: 17px;
+  }
+
+  .application-card-body > img {
+    width: 95px;
+    height: 95px;
+    flex-basis: 95px;
+  }
+
+  .application-project-info h3 {
+    font-size: 12px;
+  }
+
+  .application-project-meta,
+  .application-project-description {
+    font-size: 10px;
+  }
+
+  .application-filters {
+    grid-template-columns: 1fr;
+  }
+}

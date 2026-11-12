@@ -1,0 +1,11 @@
+
+/* REJECTED APPLICATION STATUS */
+
+.status-rejected {
+  color: #ff3b45;
+  background-color: #fff0f0;
+}
+
+.status-rejected .status-dot {
+  background-color: #ff3b45;
+}
