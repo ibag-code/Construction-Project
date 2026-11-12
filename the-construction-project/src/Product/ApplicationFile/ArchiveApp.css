@@ -1,0 +1,11 @@
+
+/* ARCHIVED STATUS */
+
+.status-archived {
+  color: #777985;
+  background-color: #eeeeF1;
+}
+
+.status-archived .status-dot {
+  background-color: #777985;
+}
