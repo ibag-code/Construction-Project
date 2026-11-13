@@ -20,6 +20,7 @@ import { PendingAppliication } from "./Product/ApplicationFile/PendingApp";
 import { RejectedAppliication } from "./Product/ApplicationFile/RejectApp";
 import { ArchiveAppliication } from "./Product/ApplicationFile/ArchiveApp";
 import { Messages } from "./Product/Messages/Message";
+import { Emptyproject } from "./Product/ActiveProject/Emptyproject";
 
 function App() {
   return (
@@ -57,6 +58,11 @@ function App() {
         <Route path="archive" element={<ArchiveAppliication />} />
       </Route>
       <Route path="Message" element={<Messages />} />
+
+      <Route path="/project">
+        <Route path="empty" element={<Emptyproject />} />
+        <Route path="project" element={<Emptyproject />} />
+      </Route>
     </Routes>
   );
 }

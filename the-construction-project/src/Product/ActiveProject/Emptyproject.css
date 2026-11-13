@@ -1,0 +1,39 @@
+.emptystate-image {
+  flex: 1;
+  background-color: var(--craft-white);
+  margin: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emptystate-image img {
+  width: 500px;
+}
+.emptystate-image h4 {
+  font-family: "Faktum";
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.emptystate-image p {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-colour);
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.emptystate-image button {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--craft-white);
+  max-width: 600px;
+  text-align: center;
+  padding: 12px;
+  border: none;
+  background-color: var(--craft-bc);
+  border-radius: 12px;
+}
