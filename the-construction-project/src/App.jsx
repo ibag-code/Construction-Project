@@ -21,6 +21,7 @@ import { RejectedAppliication } from "./Product/ApplicationFile/RejectApp";
 import { ArchiveAppliication } from "./Product/ApplicationFile/ArchiveApp";
 import { Messages } from "./Product/Messages/Message";
 import { Emptyproject } from "./Product/ActiveProject/Emptyproject";
+import { ApprovedProject } from "./Product/ActiveProject/ApprovedProject";
 
 function App() {
   return (
@@ -61,7 +62,8 @@ function App() {
 
       <Route path="/project">
         <Route path="empty" element={<Emptyproject />} />
-        <Route path="project" element={<Emptyproject />} />
+        <Route path="approved" element={<ApprovedProject />} />
+        <Route path="approved" element={<ApprovedProject />} />
       </Route>
     </Routes>
   );

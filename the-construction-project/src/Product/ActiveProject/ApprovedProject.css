@@ -1,0 +1,168 @@
+
+/* =====================================
+   APPROVED PROJECT LIST
+===================================== */
+
+.approved-project-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* =====================================
+   APPROVED PROJECT CARD
+===================================== */
+
+.approved-project-card {
+  width: 100%;
+  min-height: 172px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: #fff;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+/* =====================================
+   APPROVED STATUS
+===================================== */
+
+.approved-status {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 9px;
+
+  background-color: #f1e7f5;
+  color: #66217e;
+  border-radius: 20px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.approved-status span {
+  width: 8px;
+  height: 8px;
+  background-color: #66217e;
+  border-radius: 50%;
+}
+
+/* =====================================
+   PROJECT CONTENT
+===================================== */
+
+.approved-project-content {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* PROJECT IMAGE */
+
+.approved-project-image {
+  width: 153px;
+  height: 122px;
+  flex-shrink: 0;
+
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* =====================================
+   PROJECT INFORMATION
+===================================== */
+
+.approved-project-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.approved-project-info h3 {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  color: #26282c;
+}
+
+.approved-project-meta {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+
+  color: #777985;
+}
+
+.approved-project-description {
+  margin: 10px 0 0;
+  max-width: 650px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+
+  color: #777985;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+  .approved-project-card {
+    min-height: auto;
+  }
+
+  .approved-project-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .approved-project-info h3 {
+    font-size: 13px;
+  }
+
+  .approved-project-meta,
+  .approved-project-description {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .approved-project-content {
+    flex-direction: column;
+  }
+
+  .approved-project-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .approved-project-description {
+    max-width: 100%;
+  }
+}
